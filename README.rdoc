@@ -1,3 +1,25 @@
+== Rails Templates
+
+Starter Rails based web apps, or templates. Each template is placed into a branch for easy access. 
+
+== Templates
+
+BASE: Core items used in all other templates. 
+
+Includes:
+* Git
+* MySQL
+* Haml
+* AuthLogic
+* RSpec
+
+  
+BOOTSTRAP: BASE template plus Twitter Bootstrap framework and Less CSS.
+
+Includes:
+* Twitter Bootstrap
+* Less CSS
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
