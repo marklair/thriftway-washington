@@ -20,6 +20,17 @@ Includes:
 * Twitter Bootstrap
 * Less CSS
 
+== Setup Notes
+
+1. Duplicate the app and change the name of the folder to your app's name
+
+2. In the /config/database.yml file change the database names to match your app
+
+3. Run $ bundle install
+
+4. Run $ rake db:migrate
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
