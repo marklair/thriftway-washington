@@ -1,0 +1,40 @@
+- if flash[:notice]
+  #notice.alert-message.information.fade.in{'data-alert' => 'alert'}
+    %a.close{:href => '#'} x
+    %p
+      %strong Please note:  
+      = flash[:notice]
+/ - if flash[:error]
+/   #error.alert-message.error
+/     - if flash[:error].is_a?(Hash)
+/       %p.title
+/         Please correct the following errors:
+/       %ul.errors
+/         - flash[:error].each_full do |alert-message|
+/           %li.an_error
+/             = raw alert-message
+/       - if flash[:note]
+/         %p.note= flash[:note]
+/     - else
+/       %p.title= raw flash[:error]
+/       - if flash[:note]
+/         %p.note= flash[:note]
+- if flash[:warning]
+  #warning.alert-message.warning.fade.in{'data-alert' => 'alert'}
+    %a.close{:href => '#'} x
+    %p
+      %strong Notice! 
+      = flash[:warning]
+- if flash[:error]
+  #warning.alert-message.error.fade.in{'data-alert' => 'alert'}
+    %a.close{:href => '#'} x
+    %p
+      %strong Oh no, an error! 
+      = flash[:error]
+- if flash[:success]
+  #success.alert-message.success.fade.in{'data-alert' => 'alert'}
+    %a.close{:href => '#'} x
+    %p
+      %strong Congratulations! 
+      = flash[:success]
+
