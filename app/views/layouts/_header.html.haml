@@ -1,2 +1,8 @@
 .header
   %h1 Header
+  - if current_user
+    %p= link_to "Edit Account", edit_user_path(current_user.id)
+    %p= link_to "Logout", :logout
+  - else
+    %p= link_to "Register", new_user_path
+    %p= link_to "Login", :login
