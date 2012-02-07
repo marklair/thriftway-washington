@@ -19,6 +19,9 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.6'
 end
 
+# Authlogic User Authentication 
+gem 'authlogic'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
