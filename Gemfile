@@ -10,6 +10,7 @@ gem 'mysql2', '>= 0.3.10'
 
 # View scripts
 gem 'haml'
+gem 'haml-rails'
 
 # Web Services
 gem 'json'
