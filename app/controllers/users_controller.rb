@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  
+  if User.all.count >= 1
+    # Users require another user to register them
+    before_filter :require_user
+  else
+    # First user can add himself
+    before_filter :require_user, :except => [:new, :create]
+  end
+  
   # GET /users
   # GET /users.json
   def index
