@@ -10,7 +10,9 @@
   %body
     = render :partial => "layouts/header"
     .container
+      %p messages start
       = render :partial => "layouts/messages"
+      %p message end
       = yield
     .footer
       = yield :footer

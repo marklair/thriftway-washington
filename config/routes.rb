@@ -1,5 +1,6 @@
 Template::Application.routes.draw do
-  resources :users, :user_sessions
+  resources :users, :user_sessions, :password_resets
+  resources :account, :controller => "users"
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
