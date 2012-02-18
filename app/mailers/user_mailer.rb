@@ -2,8 +2,9 @@ class UserMailer < ActionMailer::Base
   default :from => "greg@webstop.com"
   
   def password_reset_instructions(user)
+    user.reset_perishable_token!
     @user = user
-    mail(:to => "#{user.username} <#{user.email}>", :subject => "Password Reset Instructions")
+    mail(:to => "#{@user.username} <#{@user.email}>", :subject => "Password Reset Instructions")
   end
   
   # def password_reset_instructions(user)
