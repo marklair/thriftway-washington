@@ -1,9 +1,36 @@
-.header
-  %h1 Header
-  - if current_user
-    %p= link_to "Edit Account", edit_user_path(current_user.id)
-    %p= link_to "Logout", :logout
-  - else
-    %p= link_to "Register", new_account_path
-    %p= link_to "Login", :login
-    %p=link_to "Forgot password", new_password_reset_path
+/ .header
+/   %h1 Header
+/   - if current_user
+/     %p= link_to "Edit Account", edit_user_path(current_user.id)
+/     %p= link_to "Logout", :logout
+/   - else
+/     %p= link_to "Register", new_account_path
+/     %p= link_to "Login", :login
+/     %p=link_to "Forgot password", new_password_reset_path
+
+
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{'data-toggle' => 'collapse', 'data-target' => '.collapse'}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "#"}Some App
+      .nav-collapse
+        %ul.nav.pull-right
+          %li.divider-vertical
+          %li.dropdown
+            %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown"}
+              Account
+              %b.caret
+            %ul.dropdown-menu
+              - if current_user
+                %li= link_to "Edit Account", edit_user_path(current_user.id)
+                %li.divider
+                %li= link_to "Logout", :logout
+              - else
+                %li= link_to "Register", new_account_path
+                %li= link_to "Login", :login
+                %li.divider
+                %pli=link_to "Forgot password", new_password_reset_path
