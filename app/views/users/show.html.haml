@@ -1,31 +1,45 @@
-%label{:class => "label"}= t("activerecord.attributes.user.username", :default => t("activerecord.labels.username", :default => "Username")) + ":"
-%p= @user.username
-%label{:class => "label"}= t("activerecord.attributes.user.email", :default => t("activerecord.labels.email", :default => "Email")) + ":"
-%p= @user.email
-%label{:class => "label"}= t("activerecord.attributes.user.crypted_password", :default => t("activerecord.labels.crypted_password", :default => "Crypted password")) + ":"
-%p= @user.crypted_password
-%label{:class => "label"}= t("activerecord.attributes.user.password_salt", :default => t("activerecord.labels.password_salt", :default => "Password salt")) + ":"
-%p= @user.password_salt
-%label{:class => "label"}= t("activerecord.attributes.user.persistence_token", :default => t("activerecord.labels.persistence_token", :default => "Persistence token")) + ":"
-%p= @user.persistence_token
-%label{:class => "label"}= t("activerecord.attributes.user.single_access_token", :default => t("activerecord.labels.single_access_token", :default => "Single access token")) + ":"
-%p= @user.single_access_token
-%label{:class => "label"}= t("activerecord.attributes.user.perishable_token", :default => t("activerecord.labels.perishable_token", :default => "Perishable token")) + ":"
-%p= @user.perishable_token
-%label{:class => "label"}= t("activerecord.attributes.user.login_count", :default => t("activerecord.labels.login_count", :default => "Login count")) + ":"
-%p= @user.login_count
-%label{:class => "label"}= t("activerecord.attributes.user.failed_login_count", :default => t("activerecord.labels.failed_login_count", :default => "Failed login count")) + ":"
-%p= @user.failed_login_count
-%label{:class => "label"}= t("activerecord.attributes.user.last_request_at", :default => t("activerecord.labels.last_request_at", :default => "Last request at")) + ":"
-%p= @user.last_request_at
-%label{:class => "label"}= t("activerecord.attributes.user.current_login_at", :default => t("activerecord.labels.current_login_at", :default => "Current login at")) + ":"
-%p= @user.current_login_at
-%label{:class => "label"}= t("activerecord.attributes.user.last_login_at", :default => t("activerecord.labels.last_login_at", :default => "Last login at")) + ":"
-%p= @user.last_login_at
-%label{:class => "label"}= t("activerecord.attributes.user.current_login_ip", :default => t("activerecord.labels.current_login_ip", :default => "Current login ip")) + ":"
-%p= @user.current_login_ip
-%label{:class => "label"}= t("activerecord.attributes.user.last_login_ip", :default => t("activerecord.labels.last_login_ip", :default => "Last login ip")) + ":"
-%p= @user.last_login_ip
+%h1 User Account Information
+
+/ %table.table.table-striped
+/   %tbody
+/     %tr
+/       %td
+/         %strong User Name
+/       %td= @user.username
+/     %tr
+/       %td 
+/         %strong Email Address
+/       %td= @user.email
+%table.table.table-striped
+  %thead
+    %tr
+      %th User Name
+      %th Email Address
+      %th Last Request At
+  %tbody
+    %tr
+      %td= @user.username
+      %td= @user.email
+      %td= @user.last_request_at
+
+%h2 Login Information
+%table.table.table-striped
+  %thead
+    %tr
+      %th Login Count
+      %th Failed Login Count
+      %th Current Login At
+      %th Last Login At
+      %th Current Login IP Address
+      %th Last Login IP Address
+  %tbody
+    %tr
+      %td= @user.login_count
+      %td= @user.failed_login_count
+      %td= @user.current_login_at
+      %td= @user.last_login_at
+      %td= @user.current_login_ip
+      %td= @user.last_login_ip
 
 .form-actions
   = link_to "Back", users_path, :class => 'btn'
