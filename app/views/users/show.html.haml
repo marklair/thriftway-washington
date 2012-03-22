@@ -42,6 +42,6 @@
       %td= @user.last_login_ip
 
 .form-actions
-  = link_to "Back", users_path, :class => 'btn'
+  = link_to "List Users", users_path, :class => 'btn'
   = link_to "Edit", edit_user_path(@user), :class => 'btn'
   = link_to "Delete", user_path(@user), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn'

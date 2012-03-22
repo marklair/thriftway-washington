@@ -35,7 +35,7 @@ class UserSessionsController < ApplicationController
     if @user_session.destroy
       flash[:success] = 'Logout Successful. Goodbye!'
     else
-      flash[:error] = 'Unable to logout. Oh no!'
+      flash[:error] = 'Unable to logout. Oh No!'
     end
 
     respond_to do |format|

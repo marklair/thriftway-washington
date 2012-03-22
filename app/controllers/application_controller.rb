@@ -18,8 +18,13 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:error] = "You must be logged in to access this page"
-        redirect_to new_user_session_url
+        if User.all.count >= 1
+          flash[:error] = "You must be logged in to access this page"
+          redirect_to new_user_session_url
+        else
+          flash[:information] = 'The first user can be created now. All subsequent users will need to be added by an existing user.'
+          redirect_to new_user_url
+        end
         return false
       end
     end
