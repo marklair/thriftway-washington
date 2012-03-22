@@ -10,12 +10,12 @@ class PasswordResetsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user
       UserMailer.password_reset_instructions(@user).deliver
-      flash[:notice] = "Instructions to reset your password have been emailed to you. " +
+      flash[:success] = "Instructions to reset your password have been emailed to you. " +
         "Please check your email."
       # redirect_to new_account_url
       render :action => :new
     else
-      flash[:notice] = "No user was found with that email address"
+      flash[:error] = "No user was found with that email address"
       render :action => :new
     end
   end
@@ -28,7 +28,7 @@ class PasswordResetsController < ApplicationController
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.save
-      flash[:notice] = "Password successfully updated"
+      flash[:success] = "Password successfully updated"
       redirect_to account_url(@user)
     else
       render :action => :edit
@@ -39,7 +39,7 @@ class PasswordResetsController < ApplicationController
     def load_user_using_perishable_token
       @user = User.find_using_perishable_token(params[:id], 1.year)
       unless @user
-        flash[:notice] = "We're sorry, but we could not locate your account." +
+        flash[:error] = "We're sorry, but we could not locate your account." +
           "If you are having issues try copying and pasting the URL " +
           "from your email into your browser or restarting the " +
           "reset password process." + params[:id]

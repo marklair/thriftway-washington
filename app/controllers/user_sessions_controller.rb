@@ -18,7 +18,8 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to(:users, :notice => 'Login Successful') }
+        flash[:success] = 'Login Successful.'
+        format.html { redirect_to(:users) }
         format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else
         format.html { render :action => "new" }
@@ -31,10 +32,14 @@ class UserSessionsController < ApplicationController
   # DELETE /user_sessions/1.xml
   def destroy
     @user_session = UserSession.find
-    @user_session.destroy
+    if @user_session.destroy
+      flash[:success] = 'Logout Successful. Goodbye!'
+    else
+      flash[:error] = 'Unable to logout. Oh no!'
+    end
 
     respond_to do |format|
-      format.html { redirect_to(:users, :notice => 'Goodbye!') }
+      format.html { redirect_to(:users) }
       format.xml  { head :ok }
     end
   end
