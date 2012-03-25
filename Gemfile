@@ -6,7 +6,7 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Database
-gem 'mysql2', '>= 0.3.10'
+gem 'mysql2', '~> 0.3.11'
 
 # View scripts
 gem 'haml', '~> 3.1.4'
@@ -33,7 +33,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
-  gem 'uglifier', '~> 1.0.3'
+  gem 'uglifier', '~> 1.2.3'
   
   gem 'twitter-bootstrap-rails', '~> 2.0.1'
 end
