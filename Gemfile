@@ -9,11 +9,11 @@ gem 'rails', '3.2.1'
 gem 'mysql2', '>= 0.3.10'
 
 # View scripts
-gem 'haml'
-gem 'haml-rails'
+gem 'haml', '~> 3.1.4'
+gem 'haml-rails', '~> 0.3.4'
 
 # Web Services
-gem 'json'
+gem 'json', '~> 1.6.5'
 
 # RSpec Tests
 group :test, :development do
@@ -21,7 +21,8 @@ group :test, :development do
 end
 
 # Authlogic User Authentication 
-gem 'authlogic'
+gem 'authlogic', '~> 3.0.3'
+gem 'cancan', '~> 1.6.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,12 +33,12 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '~> 1.0.3'
   
-  gem 'twitter-bootstrap-rails'
+  gem 'twitter-bootstrap-rails', '~> 2.0.1'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
