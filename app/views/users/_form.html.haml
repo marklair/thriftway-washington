@@ -16,5 +16,13 @@
   .field
     = f.label :password_confirmation
     = f.password_field :password_confirmation
+  .field
+    = f.label :roles
+    %ul.unstyled
+      -for role in User::ROLES
+        %li
+          = check_box_tag "user[roles][]", role, @user.roles.include?(role)
+          =h role.humanize
+    = hidden_field_tag "user[roles][]", "" 
   .form-actions
     = f.submit :class => 'btn btn-primary'

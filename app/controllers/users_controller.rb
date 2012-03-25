@@ -22,19 +22,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    # begin
-    #         search_by = Integer(params[:id])
-    #         is_perishable_token = nil
-    #     rescue ArgumentError
-    #         is_perishable_token = true
-    #     end
-    #     
-    #     if is_perishable_token == true
-    #       @user = User.find_using_perishable_token(params[:id])
-    #       # @user = User.find(1)
-    #     else
-    #       @user = User.find(params[:id])
-    #     end
     @user = User.find(params[:id])
 
     respond_to do |format|
