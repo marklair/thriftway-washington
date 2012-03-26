@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  authorize_resource
   
   if User.all.count >= 1
     # Users require another user to register them
