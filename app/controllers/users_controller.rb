@@ -1,11 +1,12 @@
-class UsersController < ApplicationController
-  authorize_resource
+class UsersController < ApplicationController  
   
   if User.all.count >= 1
     # Users require another user to register them
+    authorize_resource
     before_filter :require_user
   else
     # First user can add himself
+    authorize_resource :except => [:new, :create]
     before_filter :require_user, :except => [:new, :create]
   end
   
