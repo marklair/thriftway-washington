@@ -1,5 +1,9 @@
 Template::Application.routes.draw do
 
+  get "guides/index"
+
+  get "guides/bootstrap"
+
   resources :users, :user_sessions, :password_resets
   resources :account, :controller => "users"
   match 'login' => 'user_sessions#new', :as => :login
