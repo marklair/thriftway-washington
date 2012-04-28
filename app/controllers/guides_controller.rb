@@ -3,5 +3,6 @@ class GuidesController < ApplicationController
   end
 
   def bootstrap
+    render 'bootstrap/index'
   end
 end
