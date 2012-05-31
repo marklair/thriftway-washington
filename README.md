@@ -10,4 +10,4 @@ Adding and Removing Files
 
 To add or remove a page simply place the page or preferably folder containing the page in the guides folder.
 
-The High Voltage plugin will handle routing URLs to the new file. For example lets say you added the following file: "/app/view/guides/awesome\_thing/examples.html.erb". You can get there with the following URL: http://example.com/guides/awesome\_thing/examples
+The High Voltage plugin will handle routing URLs to the new file. For example lets say you added the following file: "/app/view/guides/awesome\_thing/examples.html.erb". You can get there with the following URL: [http://localhost:3000/guides/awesome\_thing/example](http://localhost:3000/guides/awesome_thing/example)
