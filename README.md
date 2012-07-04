@@ -20,3 +20,4 @@ The High Voltage plugin will handle routing URLs to the new file. For example le
 2. Remove everything starting with and including the body tag at the end of the page.
 3. Place the styles from docs.css file into the guides.css.less file. 
 4. Install the google/prettify javascript and css files in the vendor assets folder.
+5. Changed image paths in javascript plugins page under example carousel section.
