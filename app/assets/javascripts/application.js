@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require google/prettify
+//= require handlebars_helpers
 //= require_tree .
