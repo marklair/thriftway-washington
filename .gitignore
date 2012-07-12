@@ -21,19 +21,11 @@ tmp/apache.log
 *.DS_Store
 
 # Ignore generated database files
-db/schema.rb
 config/database.yml
 
 # Ignore Vi & Vim files
 *.swp
 *.swo
 
-# Ignore RVM files
-.rvmrc
-
 # Ignore Paperclip file uploads
 public/system/
-
-# Ignore XML files
-*.xml
-*.output.xml
