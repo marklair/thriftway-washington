@@ -15,4 +15,5 @@
 //= require twitter/bootstrap
 //= require google/prettify
 //= require handlebars_helpers
+//= require date_picker/bootstrap-datepicker
 //= require_tree .
