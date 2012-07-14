@@ -3,6 +3,9 @@
 !function ($) {
 
   $(function(){
+    
+    $('.datepicker').datepicker();
+    
 
     // Disable certain links in docs
     $('section [href^=#]').click(function (e) {

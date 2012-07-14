@@ -1,14 +1,21 @@
 /* I is a comment */
 @import "twitter/bootstrap";
 
+
 body { padding-top: 60px; }
 
 // import responsive layout
 @import "twitter/bootstrap/responsive";
 
-h1, h2, h3, h4, h5, h6, a { color: #369; }
 
+h1, h2, h3, h4, h5, h6, a { color: #369; }
 // Your custom stylesheets goes here (override Less here)
 .navbar .icon { opacity:0.45; filter:alpha(opacity=45); /* For IE8 and earlier */ }
 .navbar a:hover .icon { opacity:1.0; filter:alpha(opacity=100); /* For IE8 and earlier */ }
 
+// Something strage is going on here...
+// when I put a ; at the end of the following import line, the rails app returns a 500 
+// erro due to not finding the file, but imports fine, if the ; if left off.
+// However, leaving off the ; make all styles and import rules to follow break.
+// So it's at the end of the file for now
+@import "date_picker/bootstrap-datepicker"

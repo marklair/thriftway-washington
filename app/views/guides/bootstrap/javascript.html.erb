@@ -1,11 +1,11 @@
 <!-- Masthead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
-  <h1>Javascript for Bootstrap</h1>
-  <p class="lead">Bring Bootstrap's components to life&mdash;now with 12 custom <a href="http://jquery.com/" target="_blank">jQuery</a> plugins.
+  <h1>Javascript Plugins</h1>
+  <p class="lead">Bring components to life with these <a href="http://jquery.com/" target="_blank">jQuery</a> plugins.
   <div class="subnav">
     <ul class="nav nav-pills">
-      <li><a href="#javascript">All plugins</a></li>
+      <li><a href="#javascript">Index</a></li>
       <li><a href="#modals">Modal</a></li>
       <li><a href="#dropdowns">Dropdown</a></li>
       <li><a href="#scrollspy">Scrollspy</a></li>
@@ -17,10 +17,45 @@
       <li><a href="#collapse">Collapse</a></li>
       <li><a href="#carousel">Carousel</a></li>
       <li><a href="#typeahead">Typeahead</a></li>
+      <li><a href="#cycle">Cycle</a></li>
       <li><a href="#datatables">DataTables</a></li>
+      <li><a href="#datepicker">DatePicker</a></li>
+      <li><a href="#wymeditor">WYMeditor</a></li>
     </ul>
   </div>
 </header>
+
+<div style="clear:both;" class="alert alert-error"><strong>To Dos:</strong> We have so many plugins the navigation wraps to two lines on all but 
+  the widest break point. Sub-navigation with dropdowns is needed here. Considering the following organization (looking for feed back on this 
+  organization):
+<pre>
+Pop-ups
+- Modal
+- Dropdown
+- Tooltip
+- Popover
+  
+Scrollspy
+
+Containers
+- Tab
+- Alert
+- Collapse
+  
+Slide Shows (only use cycle and remove the second layer?)
+- Carousel 
+- Cycle
+  
+DataTables
+
+Forms
+- Typeahead
+- Button
+- DatePicker
+- WYMeditor
+</pre>
+The order of these hasn't been thought out.
+</div>
 
 
   <!-- Using Javascript w/ Bootstrap
@@ -111,7 +146,13 @@
   <div class="row">
     <div class="span3">
       <label>
-        <h3><a href="./javascript#datatables">Date Picker</a></h3>
+        <h3><a href="./javascript#cycle">Cycle</a></h3>
+        <p>The Cycle Plugin is a slideshow plugin that supports many different types of transition effects.</p>
+      </label>
+    </div>
+    <div class="span3">
+      <label>
+        <h3><a href="./javascript#datepicker">Date Picker</a></h3>
         <p>Adds a stylish date picker to forms. Covers a hole missing from Bootstrap form controls.</p>
       </label>
     </div>

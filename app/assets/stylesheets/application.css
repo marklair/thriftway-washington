@@ -11,6 +11,5 @@
  *= require_self
  *= require twitter/bootstrap
  *= require google/prettify
- *= require date_picker/bootstrap-datepicker
  *= require_tree .
 */
