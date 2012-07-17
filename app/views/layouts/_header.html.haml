@@ -17,9 +17,11 @@
           %li#components-nav
             %a{:href => '/guides/bootstrap/components'} Components
           %li#javascript-nav
-            %a{:href => '/guides/bootstrap/javascript'} Javascript plugins
+            %a{:href => '/guides/bootstrap/javascript'} Plugins
           %li#less-nav
-            %a{:href => '/guides/bootstrap/less'} Using LESS
+            %a{:href => '/guides/bootstrap/less'} Themes
+          %li#testing-nav
+            %a{:href => '/guides/bootstrap/testing'} Testing
         %ul.nav.pull-right
           %li.divider-vertical
           %li.dropdown
@@ -28,7 +30,7 @@
               Account
               %span.caret
             %ul.dropdown-menu
-              
+
               - if current_user
                 %li= link_to "View Account", user_path(current_user.id)
                 %li= link_to "Edit Account", edit_user_path(current_user.id)
@@ -41,4 +43,4 @@
               -if can? :read, User
                 %li.divider
                 %li= link_to "Browse Accounts", users_path
-                
+
