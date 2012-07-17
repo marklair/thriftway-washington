@@ -6,16 +6,18 @@
   <div class="subnav">
     <ul class="nav nav-pills">
       <li><a href="#typography">Typography</a></li>
-      <li><a href="#code">Code</a></li>
       <li><a href="#tables">Tables</a></li>
+      <li><a href="#datatables">DataTables</a></li>
       <li><a href="#forms">Forms</a></li>
+      <li><a href="#datepicker">DatePicker</a></li>
       <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#icons">Icons by Glyphicons</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#icons">Icons</a></li>
     </ul>
   </div>
 </header>
 
-<!-- Page Settings 
+<!-- Page Settings
 ================================================== -->
 <% section_path = 'guides/bootstrap/base/' %>
 <!-- makes navbar section highlighted -->
@@ -26,21 +28,30 @@
 ================================================== -->
 <%= render section_path + 'typography' %>
 
-<!-- Code
-================================================== -->
-<%= render section_path + 'code' %>
 
 <!-- Tables
 ================================================== -->
 <%= render section_path + 'tables' %>
 
+<!-- DataTables
+================================================== -->
+<%= render 'guides/data_tables/datatables' %>
+
 <!-- Forms
 ================================================== -->
 <%= render section_path + 'forms' %>
 
+<!-- Datepicker
+================================================== -->
+<%= render 'guides/datepicker/datepicker' %>
+
 <!-- Buttons
 ================================================== -->
 <%= render section_path + 'buttons' %>
+
+<!-- Code
+================================================== -->
+<%= render section_path + 'code' %>
 
 <!-- Icons
 ================================================== -->

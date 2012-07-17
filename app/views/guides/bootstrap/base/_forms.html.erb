@@ -55,17 +55,16 @@
         <td>Extra-rounded text input for a typical search aesthetic</td>
       </tr>
       <tr>
-        <th>Horizontal</th>
+        <th>Horizontal*</th>
         <td><code>.form-horizontal</code></td>
         <td>Float left, right-aligned labels on same line as controls</td>
       </tr>
     </tbody>
   </table>
-  
+
   <div class="alert alert-info">
     <p>
-      <strong>Webstop Usage:</strong> 
-      Vertical forms are preferred over horizontal in almost all cases.
+      <strong>*</strong> Vertical forms are preferred over horizontal in almost all cases.
     </p>
   </div>
 
@@ -138,18 +137,18 @@
   <h2>Horizontal forms</h2>
   <div class="alert alert-info">
     <p>
-      <strong>Webstop Usage:</strong> 
+      <strong>Avoid Use:</strong>
       Vertical forms are preferred over horizontal in almost all cases. Thus we've hidden the examples by default.
     </p>
-    <p class="btn" id="toggle-horizontal-forms-examples">Show horizontal forms</p>
+    <p class="btn" id="toggle-horizontal-forms-examples">Toggle horizontal forms</p>
   </div>
   <script>
     $('#toggle-horizontal-forms-examples').click(function(){
-      $('#horizontal-forms-examples').show();
+      $('#horizontal-forms-examples').toggle();
     });
   </script>
   <div class="row" id="horizontal-forms-examples" style="display: none;">
-    
+
     <div class="span4">
       <h3>Example horizontal form</h3>
       <p>Shown on the right are all the default form controls we support. Here's the bulleted list:</p>
