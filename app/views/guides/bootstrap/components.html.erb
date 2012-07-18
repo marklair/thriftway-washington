@@ -32,7 +32,7 @@
   </div>
 </header>
 
-<!-- Page Settings 
+<!-- Page Settings
 ================================================== -->
 <% section_path = 'guides/bootstrap/components/' %>
 <!-- makes navbar section highlighted -->
@@ -50,9 +50,21 @@
 ================================================== -->
 <%= render section_path + 'nav_tabs_pills' %>
 
+<!-- Tabs
+================================================== -->
+<%= render 'guides/bootstrap/javascript/tab' %>
+
 <!-- Navbar
 ================================================== -->
 <%= render section_path + 'navbar' %>
+
+<!-- Dropdown
+================================================== -->
+<%= render 'guides/bootstrap/javascript/dropdown' %>
+
+<!-- ScrollSpy
+================================================== -->
+<%= render 'guides/bootstrap/javascript/scrollspy' %>
 
 <!-- Breadcrumbs
 ================================================== -->
@@ -81,6 +93,10 @@
 <!-- Alerts & Messages
 ================================================== -->
 <%= render section_path + 'alerts' %>
+
+<!-- Alert
+================================================== -->
+<%= render 'guides/bootstrap/javascript/alert' %>
 
 <!-- Progress bars
 ================================================== -->
