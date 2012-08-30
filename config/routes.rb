@@ -1,5 +1,13 @@
 Template::Application.routes.draw do
   
+  get "tests/edge_cases"
+
+  get "tests/main_tags"
+
+  get "tests/components"
+
+  get "tests/theme"
+
   # get "guides"
   # get "guides/index"
   # get "guides/bootstrap"
