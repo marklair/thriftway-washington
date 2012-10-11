@@ -20,7 +20,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.6'
 end
 
-# Authlogic User Authentication 
+# Authlogic User Authentication
 gem 'authlogic', '~> 3.0.3'
 gem 'cancan', '~> 1.6.7'
 
@@ -34,8 +34,8 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '~> 1.2.3'
-  
-  gem 'twitter-bootstrap-rails', '~> 2.0.1'
+
+  #gem 'twitter-bootstrap-rails', '~> 2.0.1'
 end
 
 gem 'jquery-rails', '~> 2.0.0'
