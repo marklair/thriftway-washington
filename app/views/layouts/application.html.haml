@@ -13,7 +13,7 @@
     / HTML5 shim adds support for HTML5 tags in IE6, IE7 & IE8
     /[if lt IE 9]
       %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
-  %body{'data-spy' => 'scroll', 'data-target' => 'bs-docs-sidebar'}
+  %body{'data-spy' => 'scroll', 'data-target' => '.bs-docs-sidebar'}
     = render :partial => "layouts/header"
     .container
       = render :partial => "layouts/messages"
