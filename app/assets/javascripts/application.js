@@ -28,3 +28,4 @@
 //= require bootstrap/bootstrap-tooltip
 //= require bootstrap/bootstrap-transition
 //= require bootstrap/bootstrap-typeahead
+//= require guides

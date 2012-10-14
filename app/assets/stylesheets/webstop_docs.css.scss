@@ -1,0 +1,48 @@
+body{
+  border-bottom: 20px solid #369;
+  padding-bottom: 200px;
+  padding-top: 40px;
+  background: #def;
+}
+.main-content{background: #fff; box-shadow: 0 0 120px 120px rgba(255,255,255,1.0);}
+h1, h2, h3, h4, h5, h6 {color: #369;}
+
+.bs-docs-example { h1, h2, h3, h4, h5, h6 {color: #333;} }
+
+/*.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background-color: #def;
+}*/
+
+.page-header, .page-header h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.main-content section {margin-bottom: 20px;}
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+/* Base class
+------------------------- */
+.jumbotron {
+  color: #369;
+  background: none;
+  box-shadow: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,.2), 0 0 30px rgba(0,0,0,.037);
+}
+.subhead {border-bottom: 0;}
+
+
+/* Navbar
+-------------------------------------------------- */
+body > .navbar .brand {
+  color: #9cd;
+  text-shadow: none;
+  text-shadow: -1px -1px 1px rgba(0,0,0,.4), 1px 1px 1px rgba(255,255,255,1.0);
+}
+
+/* footer */
+.footer {display: none;}
