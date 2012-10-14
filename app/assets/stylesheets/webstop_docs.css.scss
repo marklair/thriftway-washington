@@ -15,12 +15,21 @@ h1, h2, h3, h4, h5, h6 {color: #369;}
   background-color: #def;
 }*/
 
-.page-header, .page-header h1 {
-  font-size: 40px;
-  margin-top: 0;
+.page-header {
+  border-bottom: 6px double #def;
+  h1 {
+    font-size: 40px;
+  }
 }
 
-.main-content section {margin-bottom: 20px;}
+.main-content {
+  section {margin-bottom: 20px;}
+  section:first-child {
+    margin-top: 0;
+    .page-header, .page-header h1 {margin-top: 0;}
+  }
+}
+
 
 /* Jumbotrons
 -------------------------------------------------- */
