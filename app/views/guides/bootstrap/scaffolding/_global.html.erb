@@ -2,68 +2,29 @@
 ================================================== -->
 <section id="global">
   <div class="page-header">
-    <h1>Global styles <small>for CSS reset, typography, and links</small></h1>
+    <h1>Global settings</h1>
   </div>
-  <p>
-    We set all layouts to use the HTML5 doctype. We make use HTML elements and CSS properties that require the use of the HTML5 doctype. We then reset the styles of HTML elements using <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize</a>. Then we use the <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> base set of styles for the body tag, typography and links.
-  </p>
-  <p>
-    See our <a href="/guides/bootstrap/base#typography">typography section</a> for more details about base styles.
-  </p>
-  <!-- <div class="row">
-    <div class="span4">
-      <h2>Reset via Normalize</h2>
-      <ul>
-        <li><strong>Preserves useful defaults</strong>, unlike many CSS resets.</li>
-        <li><strong>Normalizes styles</strong> for a wide range of HTML elements.</li>
-        <li><strong>Corrects bugs</strong> and common browser inconsistencies.</li>
-        <li><strong>Improves usability</strong> with subtle improvements.</li>
-        <li><strong>Explains what code does</strong> using detailed comments.</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h2>HTML5 doctype</h2>
-      <p>We make use of HTML elements and CSS properties that require the use of the HTML5 doctype. All templates use <code>&lt;!DOCTYPE html&gt;</code>.</p>
-    </div>
-    <div class="span4">
-      <h2>Typography and links</h2>
-      <ul>
-        <li>Remove margin on the body</li>
-        <li>Set <code>background-color: white;</code> on the <code>body</code></li>
-        <li>Use the <code>@baseFontFamily</code>, <code>@baseFontSize</code>, and <code>@baseLineHeight</code> attributes as our typographyic base</li>
-        <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li>
-      </ul>
-    </div>
-  </div> -->
-<!--   <div class="row">
-    <div class="span4">
-      <h2>Requires HTML5 doctype</h2>
-      <p>Bootstrap makes use of HTML elements and CSS properties that require the use of the HTML5 doctype. Be sure to include it at the beginning of every Bootstrapped page in your project.</p>
+
+  <h3>Requires HTML5 doctype</h3>
+  <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
 <pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-  ...
+...
 &lt;/html&gt;
 </pre>
-    </div>
-    <div class="span4">
-      <h2>Typography and links</h2>
-      <p>Within the <strong>scaffolding.less</strong> file, we set basic global display, typography, and link styles. Specifically, we:</p>
-      <ul>
-        <li>Remove margin on the body</li>
-        <li>Set <code>background-color: white;</code> on the <code>body</code></li>
-        <li>Use the <code>@baseFontFamily</code>, <code>@baseFontSize</code>, and <code>@baseLineHeight</code> attributes as our typographyic base</li>
-        <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h2>Reset via Normalize</h2>
-      <p>As of Bootstrap 2, the traditional CSS reset has evolved to make use of elements from <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>.</p>
-      <p>The new reset can still be found in <strong>reset.less</strong>, but with many elements removed for brevity and accuracy.</p>
-    </div>
-  </div> -->
+
+  <h3>Typography and links</h3>
+  <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+  <ul>
+    <li>Remove <code>margin</code> on the body</li>
+    <li>Set <code>background-color: white;</code> on the <code>body</code></li>
+    <li>Use the <code>@baseFontFamily</code>, <code>@baseFontSize</code>, and <code>@baseLineHeight</code> attributes as our typographic base</li>
+    <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li>
+  </ul>
+  <p>These styles can be found within <strong>scaffolding.less</strong>.</p>
+
+  <h3>Reset via Normalize</h3>
+  <p>With Bootstrap 2, the old reset block has been dropped in favor of <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. While we use much of Normalize within our <strong>reset.less</strong>, we have removed some elements specifically for Bootstrap.</p>
+
 </section>
-
-
-
-

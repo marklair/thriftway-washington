@@ -1,50 +1,60 @@
-<!-- Masthead
+<!-- Subhead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
-  <h1>Scaffolding</h1>
-  <p class="lead">Bootstrap is built on a responsive 12-column grid. We've also included fixed- and fluid-width layouts based on that system.</p>
-  <div class="subnav">
-    <ul class="nav nav-pills">
-      <li><a href="#global">Global styles</a></li>
-      <!-- <li><a href="#gridSystem">Grid system</a></li> -->
-      <li><a href="#fluidGridSystem">Fluid grid system</a></li>
-      <!-- <li><a href="#gridCustomization">Customizing</a></li> -->
-      <li><a href="#layouts">Layouts</a></li>
-      <li><a href="#responsive">Responsive design</a></li>
-    </ul>
+  <div class="container">
+    <h1>Scaffolding</h1>
+    <p class="lead">Bootstrap is built on responsive 12-column grids, layouts, and components.</p>
   </div>
 </header>
 
-<!-- Page Settings
-================================================== -->
-<% section_path = 'guides/bootstrap/scaffolding/' %>
-<!-- makes navbar section highlighted -->
-<script>$('#scaffolding-nav').addClass('active');</script>
+<div class="container main-content">
 
-<!-- Global Bootstrap settings
-================================================== -->
-<%= render section_path + "global" %>
+  <!-- Docs nav
+  ================================================== -->
+  <div class="row">
+    <div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav">
+        <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
+        <!-- <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li> -->
+        <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
+        <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
+        <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
+      </ul>
+    </div>
+    <div class="span9">
 
-<!-- Grid system
-================================================== -->
-<!-- Going to try defaulting to the Fluid Grid -->
-<!-- = render section_path + "grid" -->
+      <!-- Page Settings
+      ================================================== -->
+      <% section_path = 'guides/bootstrap/scaffolding/' %>
+      <!-- makes navbar section highlighted -->
+      <script>$('#scaffolding-nav').addClass('active');</script>
 
-<!-- Fluid grid system
-================================================== -->
-<%= render section_path + "fluid-grid" %>
+      <!-- Global Bootstrap settings
+      ================================================== -->
+      <%= render section_path + "global" %>
 
-<!-- Customizaton
-================================================== -->
-<!-- seems like a bad idea to have customization -->
-<!-- = render section_path + "customizing" -->
+      <!-- Grid system
+      ================================================== -->
+      <!-- Going to try defaulting to the Fluid Grid -->
+      <!-- = render section_path + "grid" -->
 
-<!-- Layouts (Default and fluid)
-================================================== -->
-<%= render section_path + "layouts" %>
+      <!-- Fluid grid system
+      ================================================== -->
+      <%= render section_path + "fluid-grid" %>
 
-<!-- Responsive design
-================================================== -->
-<%= render section_path + "responsive" %>
+      <!-- Customizaton
+      ================================================== -->
+      <!-- seems like a bad idea to have customization -->
+      <!-- = render section_path + "customizing" -->
 
+      <!-- Layouts (Default and fluid)
+      ================================================== -->
+      <%= render section_path + "layouts" %>
+
+      <!-- Responsive design
+      ================================================== -->
+      <%= render section_path + "responsive" %>
+    </div><!-- .span9 -->
+  </div><!-- .row -->
+</div><!-- .container.main-content -->
 
