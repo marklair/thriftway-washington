@@ -1,236 +1,245 @@
-<!-- Masthead
+<!-- Subhead
 ================================================== -->
-<header class="jumbotron subhead" id="overview">
-  <h1>Javascript Plugins</h1>
-  <p class="lead">Bring components to life with these <a href="http://jquery.com/" target="_blank">jQuery</a> plugins.
-  <div class="subnav">
-    <ul class="nav nav-pills">
-      <li><a href="#javascript">Index</a></li>
-      <li><a href="#modals">Modal</a></li>
-      <li><a href="#dropdowns">Dropdown</a></li>
-      <li><a href="#scrollspy">Scrollspy</a></li>
-      <li><a href="#tabs">Tab</a></li>
-      <li><a href="#tooltips">Tooltip</a></li>
-      <li><a href="#popovers">Popover</a></li>
-      <li><a href="#alerts">Alert</a></li>
-      <li><a href="#buttons">Button</a></li>
-      <li><a href="#collapse">Collapse</a></li>
-      <li><a href="#carousel">Carousel</a></li>
-      <li><a href="#typeahead">Typeahead</a></li>
-      <li><a href="#cycle">Cycle</a></li>
-      <li><a href="#datatables">DataTables</a></li>
-      <li><a href="#datepicker">DatePicker</a></li>
-      <li><a href="#wymeditor">WYMeditor</a></li>
-    </ul>
+<header class="jumbotron subhead">
+  <div class="container">
+    <h1>JavaScript for Bootstrap</h1>
+    <p class="lead">Bring Bootstrap's components to life&mdash;now with 13 custom jQuery plugins.
   </div>
 </header>
 
-<div style="clear:both;" class="alert alert-error"><strong>To Dos:</strong> We have so many plugins the navigation wraps to two lines on all but
-  the widest break point. Sub-navigation with dropdowns is needed here. Considering the following organization (looking for feed back on this
-  organization):
-<pre>
-Pop-ups
-- Modal
-- Dropdown
-- Tooltip
-- Popover
+<div class="container">
 
-Scrollspy
-
-Containers
-- Tab
-- Alert
-- Collapse
-
-Slide Shows (only use cycle and remove the second layer?)
-- Carousel
-- Cycle
-
-DataTables
-
-Forms
-- Typeahead
-- Button
-- DatePicker
-- WYMeditor
-</pre>
-The order of these hasn't been thought out.
-</div>
-
-
-  <!-- Using Javascript w/ Bootstrap
+  <!-- Docs nav
   ================================================== -->
-  <section id="javascript">
-    <div class="page-header">
-      <h1>jQuery plugins <small>A dozen Bootstrap plugins to get you started</small></h1>
-    </div>
   <div class="row">
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#modals">Modals</a></h3>
-        <p>A streamlined, but flexible, take on the traditional javascript modal plugin with only the minimum required functionality and smart defaults.</p>
-      </label>
+    <div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav">
+        <li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+        <li><a href="#transitions"><i class="icon-chevron-right"></i> Transitions</a></li>
+        <li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
+        <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdown</a></li>
+        <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li>
+        <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
+        <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
+        <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
+        <li><a href="#alerts"><i class="icon-chevron-right"></i> Alert</a></li>
+        <li><a href="#buttons"><i class="icon-chevron-right"></i> Button</a></li>
+        <li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
+        <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
+        <li><a href="#typeahead"><i class="icon-chevron-right"></i> Typeahead</a></li>
+        <li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li>
+      </ul>
     </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#dropdowns">Dropdowns</a></h3>
-        <p>Add dropdown menus to nearly anything in Bootstrap with this simple plugin. Bootstrap features full dropdown menu support on in the navbar, tabs, and pills.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#scrollspy">Scrollspy</a></h3>
-        <p>Use scrollspy to automatically update the links in your navbar to show the current active link based on scroll position.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#tabs">Togglable tabs</a></h3>
-        <p>Use this plugin to make tabs and pills more useful by allowing them to toggle through tabbable panes of local content.</p>
-      </label>
-    </div>
-  </div> <!-- /row -->
-  <div class="row">
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#tooltips">Tooltips</a></h3>
-        <p>A new take on the jQuery Tipsy plugin, Tooltips don't rely on images&mdash;they use CSS3 for animations and data-attributes for local title storage.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#popovers">Popovers</a> <small class="muted">*</small></h3>
-        <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
-        <p class="muted"><strong>*</strong> Requires <a href="#tooltips">Tooltips</a> to be included</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#alerts">Alert messages</a></h3>
-        <p>The alert plugin is a tiny class for adding close functionality to alerts.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#buttons">Buttons</a></h3>
-        <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
-      </label>
-    </div>
-  </div> <!-- /row -->
-  <div class="row">
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#collapse">Collapse</a></h3>
-        <p>Get base styles and flexible support for collapsible components like <strong>accordions</strong> and navigation.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#carousel">Carousel</a></h3>
-        <p>Create a merry-go-round of any content you wish to provide an interactive slideshow of content.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#typeahead">Typeahead</a></h3>
-        <p>A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#datatables">DataTables</a></h3>
-        <p>Adds advanced interaction controls to HTML tables. Customized to play nice with Bootstrap.</p>
-      </label>
-    </div>
-  </div> <!-- /row -->
-  <div class="row">
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#cycle">Cycle</a></h3>
-        <p>The Cycle Plugin is a slideshow plugin that supports many different types of transition effects.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#datepicker">Date Picker</a></h3>
-        <p>Adds a stylish date picker to forms. Covers a hole missing from Bootstrap form controls.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3><a href="./javascript#wymeditor">WYMeditor</a></h3>
-        <p>A WYSIWYM (What You See Is What You Mean) XHTML editor (not WYSIWYG). It leaves the details of a document's visual layout, and to concentrate on its structure and meaning.</p>
-      </label>
-    </div>
-    <div class="span3">
-      <label>
-        <h3>Transitions <small class="muted">*</small></h3>
-        <p>For simple transition effects, include bootstrap-transition.js once to slide in modals or fade out alerts.</p>
-        <p class="muted"><strong>*</strong> Required for animation in plugins</p>
-      </label>
-    </div>
-  </div> <!-- /row -->
-  <div class="alert alert-error"><strong>To Dos:</strong> Documentation for DataTables, Date Picker &amp; WYMeditor. Consider adding markdown support. Consider finding a better text editor than WYMeditor or switching to markdown.</div>
-</section>
+    <div class="span9">
+
+      <div style="clear:both;" class="alert alert-error"><strong>To Dos:</strong> We have so many plugins the navigation wraps to two lines on all but
+        the widest break point. Sub-navigation with dropdowns is needed here. Considering the following organization (looking for feed back on this
+        organization):
+      <pre>
+      Pop-ups
+      - Modal
+      - Dropdown
+      - Tooltip
+      - Popover
+
+      Scrollspy
+
+      Containers
+      - Tab
+      - Alert
+      - Collapse
+
+      Slide Shows (only use cycle and remove the second layer?)
+      - Carousel
+      - Cycle
+
+      DataTables
+
+      Forms
+      - Typeahead
+      - Button
+      - DatePicker
+      - WYMeditor
+      </pre>
+      The order of these hasn't been thought out.
+      </div>
 
 
-<!-- Page Settings
-================================================== -->
-<% section_path = 'guides/bootstrap/javascript/' %>
-<!-- makes navbar section highlighted -->
-<script>$('#javascript-nav').addClass('active');</script>
+        <!-- Using Javascript w/ Bootstrap
+        ================================================== -->
+        <section id="javascript">
+          <div class="page-header">
+            <h1>jQuery plugins <small>A dozen Bootstrap plugins to get you started</small></h1>
+          </div>
+        <div class="row">
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#modals">Modals</a></h3>
+              <p>A streamlined, but flexible, take on the traditional javascript modal plugin with only the minimum required functionality and smart defaults.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#dropdowns">Dropdowns</a></h3>
+              <p>Add dropdown menus to nearly anything in Bootstrap with this simple plugin. Bootstrap features full dropdown menu support on in the navbar, tabs, and pills.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#scrollspy">Scrollspy</a></h3>
+              <p>Use scrollspy to automatically update the links in your navbar to show the current active link based on scroll position.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#tabs">Togglable tabs</a></h3>
+              <p>Use this plugin to make tabs and pills more useful by allowing them to toggle through tabbable panes of local content.</p>
+            </label>
+          </div>
+        </div> <!-- /row -->
+        <div class="row">
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#tooltips">Tooltips</a></h3>
+              <p>A new take on the jQuery Tipsy plugin, Tooltips don't rely on images&mdash;they use CSS3 for animations and data-attributes for local title storage.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#popovers">Popovers</a> <small class="muted">*</small></h3>
+              <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
+              <p class="muted"><strong>*</strong> Requires <a href="#tooltips">Tooltips</a> to be included</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#alerts">Alert messages</a></h3>
+              <p>The alert plugin is a tiny class for adding close functionality to alerts.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#buttons">Buttons</a></h3>
+              <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
+            </label>
+          </div>
+        </div> <!-- /row -->
+        <div class="row">
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#collapse">Collapse</a></h3>
+              <p>Get base styles and flexible support for collapsible components like <strong>accordions</strong> and navigation.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#carousel">Carousel</a></h3>
+              <p>Create a merry-go-round of any content you wish to provide an interactive slideshow of content.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#typeahead">Typeahead</a></h3>
+              <p>A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#datatables">DataTables</a></h3>
+              <p>Adds advanced interaction controls to HTML tables. Customized to play nice with Bootstrap.</p>
+            </label>
+          </div>
+        </div> <!-- /row -->
+        <div class="row">
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#cycle">Cycle</a></h3>
+              <p>The Cycle Plugin is a slideshow plugin that supports many different types of transition effects.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#datepicker">Date Picker</a></h3>
+              <p>Adds a stylish date picker to forms. Covers a hole missing from Bootstrap form controls.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3><a href="./javascript#wymeditor">WYMeditor</a></h3>
+              <p>A WYSIWYM (What You See Is What You Mean) XHTML editor (not WYSIWYG). It leaves the details of a document's visual layout, and to concentrate on its structure and meaning.</p>
+            </label>
+          </div>
+          <div class="span3">
+            <label>
+              <h3>Transitions <small class="muted">*</small></h3>
+              <p>For simple transition effects, include bootstrap-transition.js once to slide in modals or fade out alerts.</p>
+              <p class="muted"><strong>*</strong> Required for animation in plugins</p>
+            </label>
+          </div>
+        </div> <!-- /row -->
+        <div class="alert alert-error"><strong>To Dos:</strong> Documentation for DataTables, Date Picker &amp; WYMeditor. Consider adding markdown support. Consider finding a better text editor than WYMeditor or switching to markdown.</div>
+      </section>
 
-<!-- Modal
-================================================== -->
-<%= render section_path + 'modal' %>
 
-<!-- Dropdown
-================================================== -->
-<%= render section_path + 'dropdown' %>
+      <!-- Page Settings
+      ================================================== -->
+      <% section_path = 'guides/bootstrap/javascript/' %>
+      <!-- makes navbar section highlighted -->
+      <script>$('#javascript-nav').addClass('active');</script>
 
-<!-- ScrollSpy
-================================================== -->
-<%= render section_path + 'scrollspy' %>
+      <!-- Modal
+      ================================================== -->
+      <%= render section_path + 'modal' %>
 
-<!-- Tabs
-================================================== -->
-<%= render section_path + 'tab' %>
+      <!-- Dropdown
+      ================================================== -->
+      <%= render section_path + 'dropdown' %>
 
-<!-- Tooltips
-================================================== -->
-<%= render section_path + 'tooltip' %>
+      <!-- ScrollSpy
+      ================================================== -->
+      <%= render section_path + 'scrollspy' %>
 
-<!-- Popovers
-================================================== -->
-<%= render section_path + 'popover' %>
+      <!-- Tabs
+      ================================================== -->
+      <%= render section_path + 'tab' %>
 
-<!-- Alert
-================================================== -->
-<%= render section_path + 'alert' %>
+      <!-- Tooltips
+      ================================================== -->
+      <%= render section_path + 'tooltip' %>
 
-<!-- Buttons
-================================================== -->
-<%= render section_path + 'button' %>
+      <!-- Popovers
+      ================================================== -->
+      <%= render section_path + 'popover' %>
 
-<!-- Collapse
-================================================== -->
-<%= render section_path + 'collapse' %>
+      <!-- Alert
+      ================================================== -->
+      <%= render section_path + 'alert' %>
 
- <!-- Carousel
-================================================== -->
-<%= render section_path + 'carousel' %>
+      <!-- Buttons
+      ================================================== -->
+      <%= render section_path + 'button' %>
 
-<!-- Typeahead
-================================================== -->
-<%= render section_path + 'typeahead' %>
+      <!-- Collapse
+      ================================================== -->
+      <%= render section_path + 'collapse' %>
 
-<!-- DataTables
-================================================== -->
-<%= render 'guides/data_tables/datatables' %>
+       <!-- Carousel
+      ================================================== -->
+      <%= render section_path + 'carousel' %>
 
-<!-- Datepicker
-================================================== -->
-<%= render 'guides/datepicker/datepicker' %>
+      <!-- Typeahead
+      ================================================== -->
+      <%= render section_path + 'typeahead' %>
 
+      <!-- DataTables
+      ================================================== -->
+      <%= render 'guides/data_tables/datatables' %>
+
+      <!-- Datepicker
+      ================================================== -->
+      <%= render 'guides/datepicker/datepicker' %>
+    </div><!-- .span9 -->
+  </div><!-- .row -->
+</div><!-- .container.main-content -->
 
 
