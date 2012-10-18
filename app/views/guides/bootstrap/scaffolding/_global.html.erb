@@ -6,7 +6,7 @@
   </div>
 
   <h3>Requires HTML5 doctype</h3>
-  <p>We make use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+  <p>We make use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. The HTML5 doctype needs to be used in all Core layouts. If using Bootstrap in other projects include it at the beginning.</p>
 <pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -23,6 +23,11 @@
     <li>Set the global link color via <code>$linkColor</code> and apply link underlines only on <code>:hover</code></li>
   </ul>
   <p>These styles can be found within <strong>scaffolding.scss</strong>.</p>
+
+  <div class="alert alert-block alert-info">
+    <h4>Core App Note:</h4>
+    <p>We are still working on the best stratigy for setting Bootstrap variables on a per-retailer basis. Please don't change the default values in the variables.scss file.</p>
+  </div>
 
   <h3>Reset via Normalize</h3>
   <p>For a reset block we use <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. While we use much of Normalize within our <strong>reset.scss</strong>, some elements have been removed specifically for Bootstrap.</p>
