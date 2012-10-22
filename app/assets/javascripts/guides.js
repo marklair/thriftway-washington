@@ -9,7 +9,7 @@
 
   $(function(){
 
-    $('.datepicker').datepicker();
+    //$('.datepicker').datepicker();
 
     var $window = $(window)
 

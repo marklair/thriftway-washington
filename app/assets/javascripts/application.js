@@ -13,8 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require google/prettify
-//= require handlebars_helpers
-//= require date_picker/bootstrap-datepicker
+// Xrequire date_picker/bootstrap-datepicker
 //= require bootstrap/bootstrap-affix
 //= require bootstrap/bootstrap-alert
 //= require bootstrap/bootstrap-button
