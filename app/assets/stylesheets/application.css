@@ -10,6 +10,7 @@
  *
  *= require bootstrap/bootstrap
  *= require google/prettify
+ *= require data_tables/data_tables_for_bootstrap
  *= require bootstrap_docs
  *= require webstop_docs
 */
