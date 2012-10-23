@@ -1,3 +1,15 @@
+
+/*
+
+WEBSTOP NOTE:
+Added the TABLE DATA-API starting on line 168.
+
+*/
+
+
+
+
+
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
@@ -146,12 +158,40 @@ if ( $.fn.DataTable.TableTools ) {
 
 
 /* Table initialisation */
-$(document).ready(function() {
-	$('#example').dataTable( {
-		"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-		"sPaginationType": "bootstrap",
-		"oLanguage": {
-			"sLengthMenu": "_MENU_ records per page"
-		}
-	} );
+// $(document).ready(function() {
+// 	$('#example').dataTable( {
+// 		"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+// 		"sPaginationType": "bootstrap",
+// 		"oLanguage": {
+// 			"sLengthMenu": "_MENU_ records per page"
+// 		}
+// 	} );
+
+/* TABLE DATA-API
+  * ============ */
+$(function () {
+		$(window).on('load', function () {
+    $('[data-table]').each(function () {
+    	$(this).dataTable()
+    //   $(this).dataTable( {
+				// "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+				// "sPaginationType": "bootstrap",
+				// "oLanguage": {
+				// 	"sLengthMenu": "_MENU_ records per page"
+				// }
+	   //  })
+    })
+  })
+
+
+	// $('body').on('click.table.data-api', '[data-table="true"]', function (e) {
+	//   e.preventDefault()
+	//   $(this).dataTable( {
+	// 		"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+	// 		"sPaginationType": "bootstrap",
+	// 		"oLanguage": {
+	// 			"sLengthMenu": "_MENU_ records per page"
+	// 		}
+ //    })
+ //  })
 } );
