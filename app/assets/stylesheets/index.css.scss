@@ -16,11 +16,18 @@ $dark_gray: #333;
   float: right;
 }
 
+html {
+  background: -moz-linear-gradient(top, $light_blue , white 100%);
+  background: -webkit-linear-gradient(top, $light_blue 0%, white 100%);
+}
+
 body{
   border-bottom: 0;
   padding-bottom: 0;
-  background: -moz-linear-gradient(top, $light_blue , white 100%);
-  background: -webkit-linear-gradient(top, $light_blue 0%, white 100%);
+  background-image: url('index/stopbot.png');
+  background-repeat: no-repeat;
+  background-position: 95% 55px;
+  background-color: transparent;
 }
 
 header {
