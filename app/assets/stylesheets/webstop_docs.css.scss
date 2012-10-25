@@ -1,10 +1,15 @@
+$webstop_blue: #369;
+$light_blue: #d3e3f4;
+$dark_gray: #333;
+
 body{
   border-bottom: 20px solid #369;
   padding-bottom: 200px;
-  background: #def;
+  background: #fff;
 }
+
 .main-content{margin-top: 90px; background: #fff; box-shadow: 0 0 120px 120px rgba(255,255,255,1.0);}
-h1, h2, h3, h4, h5, h6 {color: #369;}
+h1, h2, h3, h4, h5, h6 {color: $dark_gray;}
 
 .bs-docs-example, .alert { h1, h2, h3, h4, h5, h6 {color: #333;} }
 .carousel-caption h4 {color: #fff;}
@@ -16,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {color: #369;}
 }*/
 
 .page-header {
-  border-bottom: 6px double #def;
+  border-bottom: 6px #def;
   h1 {
     font-size: 40px;
   }
@@ -31,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {color: #369;}
     .page-header, .page-header h1 {margin-top: 0;}
   }
 }
-
 
 /* Jumbotrons
 -------------------------------------------------- */
@@ -50,9 +54,10 @@ h1, h2, h3, h4, h5, h6 {color: #369;}
 /* Navbar
 -------------------------------------------------- */
 body > .navbar .brand {
-  color: #9cd;
+  color: #777;
   text-shadow: none;
-  text-shadow: -1px -1px 1px rgba(0,0,0,.4), 1px 1px 1px rgba(255,255,255,1.0);
+  text-shadow: 0 -1px 0px rgba(0,0,0,.8);
+  font-weight: normal;
 }
 
 /* footer */

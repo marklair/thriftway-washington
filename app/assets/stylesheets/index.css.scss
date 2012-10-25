@@ -1,0 +1,54 @@
+$webstop_blue: #369;
+$light_blue: #d3e3f4;
+$dark_gray: #333;
+
+@mixin border_container {
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
+  border-radius: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+html {
+  background: -moz-linear-gradient(top, $light_blue , white 100%);
+  background: -webkit-linear-gradient(top, $light_blue 0%, white 100%);
+}
+
+body{
+  border-bottom: 0;
+  padding-bottom: 0;
+  background-image: url('index/stopbot.png');
+  background-repeat: no-repeat;
+  background-position: 95% 55px;
+  background-color: transparent;
+}
+
+header {
+  @include border_container;
+  margin: 30px 0;
+  padding: 20px 40px;
+  clear: both;
+}
+
+[class*="span"] {
+  margin-left: 0;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.column {
+  margin-right: 21px;
+}
+
+.feature {
+  text-align: center;
+}
