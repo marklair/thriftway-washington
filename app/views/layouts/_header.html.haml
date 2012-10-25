@@ -18,29 +18,29 @@
             %a{:href => '/guides/grocery'} Grocery Components
           %li#javascript-nav
             %a{:href => '/guides/bootstrap/javascript'} Plugins
-          %li#less-nav
-            %a{:href => '/guides/bootstrap/less'} Themes
-          %li#testing-nav
-            %a{:href => '/guides/bootstrap/testing'} Testing
-        %ul.nav.pull-right
-          %li.divider-vertical
-          %li.dropdown
-            %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown"}
-              %span.icon-user.icon-white.icon
-              Account
-              %span.caret
-            %ul.dropdown-menu
+          / %li#less-nav
+          /   %a{:href => '/guides/bootstrap/less'} Themes
+          / %li#testing-nav
+          /   %a{:href => '/guides/bootstrap/testing'} Testing
+        / %ul.nav.pull-right
+        /   %li.divider-vertical
+        /   %li.dropdown
+        /     %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown"}
+        /       %span.icon-user.icon-white.icon
+        /       Account
+        /       %span.caret
+        /     %ul.dropdown-menu
 
-              - if current_user
-                %li= link_to "View Account", user_path(current_user.id)
-                %li= link_to "Edit Account", edit_user_path(current_user.id)
-                %li= link_to "Logout", :logout
-              - else
-                %li= link_to "Register", new_account_path
-                %li= link_to "Login", :login
-                %li.divider
-                %li=link_to "Forgot password", new_password_reset_path
-              -if can? :read, User
-                %li.divider
-                %li= link_to "Browse Accounts", users_path
+        /       - if current_user
+        /         %li= link_to "View Account", user_path(current_user.id)
+        /         %li= link_to "Edit Account", edit_user_path(current_user.id)
+        /         %li= link_to "Logout", :logout
+        /       - else
+        /         %li= link_to "Register", new_account_path
+        /         %li= link_to "Login", :login
+        /         %li.divider
+        /         %li=link_to "Forgot password", new_password_reset_path
+        /       -if can? :read, User
+        /         %li.divider
+        /         %li= link_to "Browse Accounts", users_path
 
