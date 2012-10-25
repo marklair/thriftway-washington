@@ -1,2 +1,39 @@
-%h1 Guides#index
-%p Find me in app/views/guides/index.html.haml
+= stylesheet_link_tag "index"
+
+.span12
+  %header.span9
+    %h1 Webstop Front-End Style Guide
+    %p.lead The definitive source of styling guidelines for grocery website features.
+    %p.lead Build using a simple and flexible collection of HTML5 & CSS3 frameworks for structure and style of user interface elements and components. Plus, Javascript plugins for compeling functionality and interactions.
+
+%h3 Why are we using this, you ask? Good question. Let's look.
+
+.span12.row
+  .span3.column.feature
+    = image_tag "index/ui_icon.png"
+    %p This means global base styles for elements such as buttons, forms and typography and standardized jQuery plugins.
+
+  .span3.column.feature
+    = image_tag "index/rapid_dev_icon.png"
+    %p Styles and design elements are written for you. Create a page element and it’s styled! We’re also speeding up CSS with SASS.
+
+  .span3.column.feature
+    = image_tag "index/responsive_icon.png"
+    %p Our framework is built on a fluid grid. As the viewport is resized the layout changes to fit it. This means support for all devices.
+
+  .span3.column.feature
+    = image_tag "index/customizable_icon.png"
+    %p Although we’ve defined global styles the framework is easily constomized to retailers based on their color palette.
+
+.span6.row.left.documentation
+  %h3 Documentation
+  %p Our framework is meticulously documented. Learn about the grid, base CSS and javascript plugins, what they do, how to implement them and how to test them.
+
+  %h4 What if I can’t find what I’m looking for?
+  %p If you need to implement functionality, have searched the framework and can’t find what you’re looking for please see Greg for further direction. Be ready to show where you’ve looked and have any alternatives you’ve found available.
+
+  .span6.row.right.quick-links
+    .alert.alert-info
+      %h3 Quick Links
+      %ul
+        %li.nav.nav-list test
