@@ -26,6 +26,10 @@ body{
   background-color: transparent;
 }
 
+img {
+    margin-bottom: 20px;
+  }
+
 header {
   @include border_container;
   margin: 30px 0;
@@ -38,17 +42,21 @@ header {
 }
 
 .row, .row-fluid {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .feature {
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .ad-block {
+  margin-bottom: 20px;
+  padding: 40px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  text-align: center;
 }
 
 .haml {
