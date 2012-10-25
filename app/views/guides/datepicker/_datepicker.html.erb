@@ -1,60 +1,39 @@
 
 
-
-<!-- <section id="datatables">
-  <div class="page-header">
-    <h1>DataTables <small>data-tables.js (wrong)</small></h1>
-  </div>
-  <div class="alert alert-error">
-    <strong>To Dos:</strong> add correct path to JS file and CSS files. Plus source information. Consider putting css into a commonly included file.
-  </div>
-</section> -->
-
-
 <section id="datepicker">
   <div class="page-header">
-    <h1>Datepicker Plugin <small>bootstrap-datepicker.js</small></h1>
+    <h1>Date Picker</h1>
   </div>
-  <div class="row">
-    <div class="span3 columns">
-      <h3>About</h3>
-      <p>Add datepicker picker to field or to any other element.</p>
-  <ul>
-	<li>can be used as a component</li>
-	<li>formats: dd, d, mm, m, yyyy, yy</li>
-	<li>separators: -, /, .</li>
-  </ul>
-      <p><a href="datepicker.zip" target="_blank" class="btn">Download</a></p>
-    </div>
-    <div class="span9 columns">
-      <h2>Example</h2>
-      <p>Attached to a field with the format specified via options.</p>
-      <div class="well">
-        <input type="text" class="span2 datepicker" value="02-16-2012" id="dp1" >
-      </div>
-      <p>Attachet to a field with the format specified via data tag.</p>
-      <div class="well">
-        <input type="text" class="span2 datepicker" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" >
-      </div>
-      <p>As component.</p>
-      <div class="well">
-	  <div class="input-append date datepicker" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-		<input class="span2" size="16" type="text" value="12-02-2012" readonly>
-		<span class="add-on"><i class="icon-th"></i></span>
-	  </div>
-      </div>
-      <p>Attached to other elment then field and using events to work with the date values.</p>
-      <div class="well">
+  <h2>Examples</h2>
+  <p>Attached to a field with the format specified via options.</p>
+  <div class="bs-docs-example">
+    <input type="text" class="span2 datepicker" value="02-16-2012" id="dp1" >
+  </div>
+  <p>Attachet to a field with the format specified via data tag.</p>
+  <div class="bs-docs-example">
+    <input type="text" class="span2 datepicker" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" >
+  </div>
+  <p>As component.</p>
+  <div class="bs-docs-example">
+<div class="input-append date datepicker" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+<input class="span2" size="16" type="text" value="12-02-2012" readonly>
+<span class="add-on"><i class="icon-th"></i></span>
+</div>
+  </div>
+  <p>Attached to other elment then field and using events to work with the date values.</p>
+  <div class="alert alert-error alert-block">
+    <h4>To Do:</h4>
+    <p>Get this example functing and list code right below it</p>
+  </div>
+
+  <div class="bs-docs-example">
 
 
-	<div class="alert alert-error" id="alert">
-		<strong>Oh snap!</strong>
-	  </div>
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Start date<a href="#" class="btn small datepicker" id="dp4" data-date-format="yyyy-mm-dd" data-date="2012-02-20">Change</a></th>
-				<th>End date<a href="#" class="btn small datepicker" id="dp5" data-date-format="yyyy-mm-dd" data-date="2012-02-25">Change</a></th>
+				<th>Start date <a href="#" class="btn btn-mini datepicker" id="dp4" data-date-format="yyyy-mm-dd" data-date="2012-02-20">Change</a></th>
+				<th>End date <a href="#" class="btn btn-mini datepicker" id="dp5" data-date-format="yyyy-mm-dd" data-date="2012-02-25">Change</a></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -66,8 +45,14 @@
 	</table>
       </div>
       <hr>
-      <h2>Using bootstrap-datepicker.js</h2>
-      <p>Call the datepicker via javascript:</p>
+      <h2>Usage</h2>
+      <h3>Via data attributes</h3>
+      <div class="alert alert-error alert-block">
+        <h4>To Do:</h4>
+        <p>Create data-api for HTML5 date input type <code>input="date"</code>
+          to automatically apply the plugin.</p>
+      </div>
+      <h3>Via JavaScript</h3>
       <pre class="prettyprint linenums">$('.datepicker').datepicker()</pre>
       <h3>Options</h3>
       <table class="table table-bordered table-striped">

@@ -2,7 +2,7 @@
 ================================================== -->
 <section id="collapse">
   <div class="page-header">
-    <h1>Collapse <small>bootstrap-collapse.js</small></h1>
+    <h1>Collapse</h1>
   </div>
 
   <h3>About</h3>
@@ -81,13 +81,20 @@ Anim pariatur cliche...
 &lt;/div&gt;
 ...
 </pre>
-  <p>You can also use the plugin without the accordion markup. Make a button toggle the expanding and collapsing of another element.</p>
+  <h3>Alternate uses</h3>
+  <p>You can also use the plugin without the accordion markup. Like making a button toggle the expanding and collapsing of another element.</p>
+  <div class="bs-docs-example">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#alt-collapse-demo">simple collapsible</button>
+    <div id="alt-collapse-demo" class="collapse in">
+      <h5 class="well">Something to slide toggle.</h5>
+    </div>
+  </div>
 <pre class="prettyprint linenums">
-&lt;button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#alt-collapse-demo"&gt;
 simple collapsible
 &lt;/button&gt;
 
-&lt;div id="demo" class="collapse in"&gt; … &lt;/div&gt;
+&lt;div id="alt-collapse-demo" class="collapse"&gt; … &lt;/div&gt;
 </pre>
 
 

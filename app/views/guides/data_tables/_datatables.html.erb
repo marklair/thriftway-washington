@@ -4,19 +4,17 @@
 
 <section id="datatables">
   <div class="page-header">
-    <h1>Table Plugin <small>(dataTable)</small></h1>
+    <h1>Table <small>(seperate include)</small></h1>
   </div>
-  <!-- <p>
-    Customizations based on
-    <a href="http://www.datatables.net/blog/Bootstrap_2">this article</a>.
-  </p>
-  <hr /> -->
-  <div class="alert alert-error alert-block">
-    <h4>To Do:</h4>
-    <p>Upgrade the data-api to customize the displayed number of rows. Perhaps using <code>data-table-rows</code></p>
-  </div>
+  <p>The <a href="http://www.datatables.net/">dataTable plugin</a> customized to match Bootstrap styling and components.</p>
+  <h2>Adding the Table plugin</h2>
+  <p>Use the following Rails code at the top of your view file to enable this plugin.</p>
+<pre class="prettyprint linenums">
+= javascript_include_tag "data-table"
+</pre>
+
+
   <h2>Example</h2>
-  <p>Customized to match Bootstrap.</p>
   <table cellpadding="0" cellspacing="0" border="0" data-table class="table table-striped table-bordered">
   <thead>
     <tr>
