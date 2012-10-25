@@ -1,5 +1,5 @@
 Template::Application.routes.draw do
-  
+
   get "tests/edge_cases"
 
   get "tests/main_tags"
@@ -19,8 +19,8 @@ Template::Application.routes.draw do
   # get "guides/bootstrap/less"
   # get "guides/bootstrap/scaffolding"
   # get "guides/bootstrap/upgrading"
-  
-  
+
+
 
   resources :users, :user_sessions, :password_resets
   resources :account, :controller => "users"
@@ -84,6 +84,6 @@ Template::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   match ':action' => 'guides#:action'
-  root :to => "users#index", :as => :home
+  root :to => "guides#index", :as => :home
   # extras: http://d.pr/Vt7w
 end
