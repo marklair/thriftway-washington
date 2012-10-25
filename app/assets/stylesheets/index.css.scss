@@ -1,24 +1,20 @@
-$webstop_blue: #369;
-$light_blue: #d3e3f4;
-$dark_gray: #333;
+$webstop-blue: #369;
+$light-blue: #d3e3f4;
+$dark-gray: #333;
+$haml: #63878b;
+$sass: #cc6699;
 
 @mixin border_container {
   background-color: #F7F7F9;
   border: 1px solid #E1E1E8;
   border-radius: 5px;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 html {
-  background: -moz-linear-gradient(top, $light_blue , white 100%);
-  background: -webkit-linear-gradient(top, $light_blue 0%, white 100%);
+  background: -moz-linear-gradient(top, $light-blue , white 100%);
+  background: -webkit-linear-gradient(top, $light-blue 0%, white 100%);
 }
 
 body{
@@ -41,14 +37,24 @@ header {
   margin-left: 0;
 }
 
-.row {
-  margin-bottom: 30px;
-}
-
-.column {
-  margin-right: 21px;
+.row, .row-fluid {
+  margin-bottom: 40px;
 }
 
 .feature {
   text-align: center;
+}
+
+.ad-block {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.haml {
+  background-color: $haml;
+}
+
+.sass {
+  background-color: $sass;
 }
