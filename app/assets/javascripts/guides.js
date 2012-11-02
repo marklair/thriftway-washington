@@ -13,11 +13,6 @@
 
     $('.datepicker').datepicker();
 
-    // $('.example-types')..click(function (e) {
-    //   e.preventDefault();
-    //   $(this).tab('show');
-    // })
-
 
     // Bootstrap stuff here
 

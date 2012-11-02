@@ -15,13 +15,26 @@
   <div class="mini-layout">
     <div class="mini-layout-body"></div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="fixed-layout-haml">
+%body
+  .container
+    \...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="fixed-layout-html">
 &lt;body&gt;
-&lt;div class="container"&gt;
-...
-&lt;/div&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
 &lt;/body&gt;
 </pre>
+</div>
+  <div class="tabbable tabs-below">
+    <ul class="nav nav-tabs example-types">
+      <li class="active"><a href="#fixed-layout-haml" data-toggle="tab">HAML</a></li>
+      <li><a href="#fixed-layout-html" data-toggle="tab">HTML</a></li>
+    </ul>
+  </div>
 
   <h2>Fluid layout</h2>
   <p>Create a fluid, two-column page with <code>&lt;div class="container-fluid"&gt;</code>&mdash;great for applications and docs.</p>
@@ -29,16 +42,32 @@
     <div class="mini-layout-sidebar"></div>
     <div class="mini-layout-body"></div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="fluid-layout-haml">
+.container-fluid
+  .row-fluid
+    .span2
+      / Sidebar content
+    .span10
+      / Body content
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="fluid-layout-html">
 &lt;div class="container-fluid"&gt;
-&lt;div class="row-fluid"&gt;
-&lt;div class="span2"&gt;
-&lt;!--Sidebar content--&gt;
-&lt;/div&gt;
-&lt;div class="span10"&gt;
-&lt;!--Body content--&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+  &lt;div class="row-fluid"&gt;
+    &lt;div class="span2"&gt;
+      &lt;!--Sidebar content--&gt;
+    &lt;/div&gt;
+    &lt;div class="span10"&gt;
+      &lt;!--Body content--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+  <div class="tabbable tabs-below">
+    <ul class="nav nav-tabs example-types">
+      <li class="active"><a href="#fluid-layout-haml" data-toggle="tab">HAML</a></li>
+      <li><a href="#fluid-layout-html" data-toggle="tab">HTML</a></li>
+    </ul>
+  </div>
 </section>
