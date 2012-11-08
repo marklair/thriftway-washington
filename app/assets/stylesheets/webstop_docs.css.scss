@@ -1,11 +1,18 @@
-$webstop_blue: #369;
-$light_blue: #d3e3f4;
-$dark_gray: #333;
+$webstop-blue: #369;
+$light-blue: #d3e3f4;
+$dark-gray: #333;
+$haml: #63878b;
+$sass: #cc6699;
+
+html {
+  background: -moz-linear-gradient(top, $light-blue , white 100%);
+  background: -webkit-linear-gradient(top, $light-blue 0%, white 100%);
+}
 
 body{
   border-bottom: 20px solid #369;
   padding-bottom: 200px;
-  background: #fff;
+  background-color: transparent;
 }
 
 .main-content{margin-top: 90px; background: #fff; box-shadow: 0 0 120px 120px rgba(255,255,255,1.0);}
