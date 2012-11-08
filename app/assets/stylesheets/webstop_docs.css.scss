@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, h6 {color: $dark-gray;}
   }
 }
 
+.example-types > .active > a {background-color: #b4b4b4;}
+
 .bs-docs-example .page-header { border-bottom: 1px solid #eee;}
 
 .main-content {
