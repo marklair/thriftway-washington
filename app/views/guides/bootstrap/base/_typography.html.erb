@@ -82,14 +82,35 @@
   <div class="bs-docs-example">
     <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
   </div>
-  <pre class="prettyprint">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-strong-haml">
+%strong rendered as bold text
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-strong-html">
+&lt;strong&gt;rendered as bold text&lt;/strong&gt;
+</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-strong-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-strong-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Italics</h3>
   <p>For emphasizing a snippet of text with <em>stress</em></p>
   <div class="bs-docs-example">
     <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
   </div>
-  <pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-em-haml">
+%em rendered as italicized text
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-em-html">
+&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-em-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-em-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <p><span class="label label-info">Heads up!</span> Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
 
@@ -102,13 +123,26 @@
     <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
     <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-emphasis-classes-haml">
+%p.muted Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+%p.text-warning Etiam porta sem malesuada magna mollis euismod.
+%p.text-error Donec ullamcorper nulla non metus auctor fringilla.
+%p.text-info Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.
+%p.text-success Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-emphasis-classes-html">
 &lt;p class="muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
 &lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
 &lt;p class="text-error"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
 &lt;p class="text-info"&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.&lt;/p&gt;
 &lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-emphasis-classes-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-emphasis-classes-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -122,14 +156,36 @@
   <div class="bs-docs-example">
     <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
   </div>
-  <pre class="prettyprint">&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-abbr-haml">
+%abbr{:title => "attribute"} attr
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-abbr-html">
+&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;
+</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-abbr-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-abbr-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3><code>&lt;abbr class="initialism"&gt;</code></h3>
   <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
   <div class="bs-docs-example">
     <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
   </div>
-  <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-abbr-initialism-haml">
+%abbr.initialism{:title => "HyperText Markup Language"} HTML
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-abbr-initialism-html">
+&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;
+</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-abbr-initialism-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-abbr-initialism-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -152,7 +208,23 @@
       <a href="mailto:#">first.last@gmail.com</a>
     </address>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-address-haml">
+%address
+  %strong Twitter, Inc.
+  %br
+    795 Folsom Ave, Suite 600
+    %br
+      San Francisco, CA 94107
+      %br
+        %abbr{:title => "Phone"} P:
+        (123) 456-7890
+
+%address
+  %strong Full Name
+  %br
+    %a{:href => "mailto:#"} first.last@gmail.com</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-address-html">
 &lt;address&gt;
 &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br&gt;
 795 Folsom Ave, Suite 600&lt;br&gt;
@@ -163,8 +235,12 @@ San Francisco, CA 94107&lt;br&gt;
 &lt;address&gt;
 &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br&gt;
 &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
-&lt;/address&gt;
-</pre>
+&lt;/address&gt;</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-address-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-address-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -180,11 +256,21 @@ San Francisco, CA 94107&lt;br&gt;
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-blockquote-haml">
+%blockquote
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-blockquote-html">
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
 &lt;/blockquote&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-blockquote-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-blockquote-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Blockquote options</h3>
   <p>Style and content changes for simple variations on a standard blockquote.</p>
@@ -197,12 +283,25 @@ San Francisco, CA 94107&lt;br&gt;
       <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
     </blockquote>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-blockquote-options-haml">
+%blockquote
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+  %small
+    Someone famous
+    %cite{:title => "Source Title"} Source Title
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-blockquote-options-html">
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
 &lt;small&gt;Someone famous &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;
 &lt;/blockquote&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-blockquote-options-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-blockquote-options-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h4>Alternate displays</h4>
   <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
@@ -212,11 +311,20 @@ San Francisco, CA 94107&lt;br&gt;
       <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
     </blockquote>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-blockquote-alt-haml">
+%blockquote.pull-right Lorem ipsum dolor sit amet
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-blockquote-alt-html">
 &lt;blockquote class="pull-right"&gt;
-...
+  Lorem ipsum dolor sit amet
 &lt;/blockquote&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-blockquote-alt-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-blockquote-alt-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -251,11 +359,21 @@ San Francisco, CA 94107&lt;br&gt;
       <li>Eget porttitor lorem</li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-ul-haml">
+%ul
+  %li Lorem ipsum dolor sit amet
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-ul-html">
 &lt;ul&gt;
-&lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-ul-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-ul-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Ordered</h3>
   <p>A list of items in which the order <em>does</em> explicitly matter.</p>
@@ -271,11 +389,21 @@ San Francisco, CA 94107&lt;br&gt;
       <li>Eget porttitor lorem</li>
     </ol>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-ol-haml">
+%ol
+  %li Lorem ipsum dolor sit amet
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-ol-html">
 &lt;ol&gt;
-&lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
 &lt;/ol&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-ol-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-ol-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 <h3>Unstyled</h3>
 <p>A list of items with no <code>list-style</code> or additional left padding.</p>
@@ -319,8 +447,8 @@ San Francisco, CA 94107&lt;br&gt;
 </div>
 <pre class="prettyprint linenums">
 &lt;dl&gt;
-&lt;dt&gt;...&lt;/dt&gt;
-&lt;dd&gt;...&lt;/dd&gt;
+  &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+  &lt;dd&gt;Lorem ipsum dolor sit amet&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
 
