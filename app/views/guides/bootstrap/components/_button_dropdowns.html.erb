@@ -82,7 +82,17 @@
       </div><!-- /btn-group -->
     </div><!-- /btn-toolbar -->
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="button-dropdown-haml">
+.btn-group
+  %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+    Action
+    %span.caret
+  %ul.dropdown-menu
+    / dropdown menu links
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="button-dropdown-html">
 &lt;div class="btn-group"&gt;
 &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
 Action
@@ -93,6 +103,11 @@ Action
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#button-dropdown-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#button-dropdown-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Works with all button sizes</h3>
   <p>Button dropdowns work at any size:  <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code>.</p>
@@ -222,7 +237,17 @@ Action
       </div><!-- /btn-group -->
     </div><!-- /btn-toolbar -->
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="split-button-dropdown-haml">
+.btn-group
+  %button.btn Action
+  %button.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+    %span.caret
+  %ul.dropdown-menu
+    / dropdown menu links
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="split-button-dropdown-html">
 &lt;div class="btn-group"&gt;
 &lt;button class="btn"&gt;Action&lt;/button&gt;
 &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
@@ -233,6 +258,11 @@ Action
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#split-button-dropdown-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#split-button-dropdown-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Sizes</h3>
   <p>Utilize the extra button classes <code>.btn-mini</code>, <code>.btn-small</code>, or <code>.btn-large</code> for sizing.</p>
@@ -277,7 +307,17 @@ Action
       </div><!-- /btn-group -->
     </div><!-- /btn-toolbar -->
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="split-button-sizes-haml">
+.btn-group
+  %button.btn.btn-mini Action
+  %button.btn.btn-mini.dropdown-toggle{"data-toggle" => "dropdown"}
+    %span.caret
+  %ul.dropdown-menu
+    / dropdown menu links
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="split-button-sizes-html">
 &lt;div class="btn-group"&gt;
 &lt;button class="btn btn-mini"&gt;Action&lt;/button&gt;
 &lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
@@ -288,6 +328,11 @@ Action
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#split-button-sizes-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#split-button-sizes-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Dropup menus</h3>
   <p>Dropdown menus can also be toggled from the bottom up by adding a single class to the immediate parent of <code>.dropdown-menu</code>. It will flip the direction of the <code>.caret</code> and reposition the menu itself to move from the bottom up instead of top down.</p>
@@ -317,7 +362,17 @@ Action
       </div><!-- /btn-group -->
     </div>
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="dropup-menus-haml">
+.btn-group.dropup
+  %button.btn Dropup
+  %button.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+    %span.caret
+  %ul.dropdown-menu
+    / dropdown menu links
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="dropup-menus-html">
 &lt;div class="btn-group dropup"&gt;
 &lt;button class="btn"&gt;Dropup&lt;/button&gt;
 &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
@@ -328,5 +383,10 @@ Action
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#dropup-menus-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#dropup-menus-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 </section>

@@ -17,15 +17,31 @@
       <li><a href="#">Messages</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="basic-tabs-haml">
+%ul.nav.nav-tabs
+  %li.active
+    %a{:href => "#"} Home
+  %li
+    %a{:href => "#"} Lorem
+  %li
+    %a{:href => "#"} Ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="basic-tabs-html">
 &lt;ul class="nav nav-tabs"&gt;
 &lt;li class="active"&gt;
 &lt;a href="#"&gt;Home&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Ipsum&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#basic-tabs-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#basic-tabs-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Basic pills</h3>
   <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
@@ -36,15 +52,31 @@
       <li><a href="#">Messages</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="basic-pills-haml">
+%ul.nav.nav-pills
+  %li.active
+    %a{:href => "#"} Home
+  %li
+    %a{:href => "#"} Lorem
+  %li
+    %a{:href => "#"} Ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="basic-pills-html">
 &lt;ul class="nav nav-pills"&gt;
 &lt;li class="active"&gt;
 &lt;a href="#"&gt;Home&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Ipsum&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#basic-pills-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#basic-pills-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Disabled state</h3>
   <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>. Links will remain clickable, however, unless custom javascript is implemented to prevent those clicks.</p>
@@ -55,13 +87,27 @@
       <li class="disabled"><a href="#">Disabled link</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="disabled-state-haml">
+%ul.nav.nav-pills
+  Lorem ipsum
+  %li.disabled
+    %a{:href => "#"} Home
+  Lorem ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="disabled-state-html">
 &lt;ul class="nav nav-pills"&gt;
-...
+Lorem ipsum
 &lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-...
+Lorem ipsum
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#disabled-state-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#disabled-state-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Component alignment</h3>
   <p>To align nav links, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
@@ -81,11 +127,22 @@
       <li><a href="#">Messages</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="stacked-tabs-haml">
+%ul.nav.nav-tabs.nav-stacked
+  Lorem ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="stacked-tabs-html">
 &lt;ul class="nav nav-tabs nav-stacked"&gt;
-...
+Lorem ipsum
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#stacked-tabs-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#stacked-tabs-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Stacked pills</h3>
   <div class="bs-docs-example">
@@ -95,12 +152,22 @@
       <li><a href="#">Messages</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="stacked-pills-haml">
+%ul.nav.nav-pills.nav-stacked
+  Louem Ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="stacked-pills-html">
 &lt;ul class="nav nav-pills nav-stacked"&gt;
-...
+Louem Ipsum
 &lt;/ul&gt;
 </pre>
-
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#stacked-pills-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#stacked-pills-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <hr class="bs-docs-separator">
 
