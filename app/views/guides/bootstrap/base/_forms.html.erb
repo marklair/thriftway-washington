@@ -17,18 +17,35 @@
     </label>
     <button type="submit" class="btn">Submit</button>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-default-styles-haml">
+%form
+  %legend Legend
+  %label Label name
+  %input{:placeholder => "Type something…", :type => "text"}
+    %span.help-block Example block-level help text here.
+    %label.checkbox
+      %input{:type => "checkbox"}
+        Check me out
+    %button.btn{:type => "submit"} Submit
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-default-styles-html">
 &lt;form&gt;
-&lt;legend&gt;Legend&lt;/legend&gt;
-&lt;label&gt;Label name&lt;/label&gt;
-&lt;input type="text" placeholder="Type something…"&gt;
-&lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
-&lt;label class="checkbox"&gt;
-&lt;input type="checkbox"&gt; Check me out
-&lt;/label&gt;
-&lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+  &lt;legend&gt;Legend&lt;/legend&gt;
+  &lt;label&gt;Label name&lt;/label&gt;
+  &lt;input type="text" placeholder="Type something…"&gt;
+  &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; Check me out
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-default-styles-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-default-styles-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -43,12 +60,23 @@
     <input type="text" class="input-medium search-query">
     <button type="submit" class="btn">Search</button>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-search-forms-haml">
+%form.form-search
+  %input.input-medium.search-query{:type => "text"}
+  %button.btn{:type => "submit"} Search
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-search-forms-html">
 &lt;form class="form-search"&gt;
-&lt;input type="text" class="input-medium search-query"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+  &lt;input type="text" class="input-medium search-query"&gt;
+  &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
 &lt;/form&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-search-forms-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-search-forms-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Inline form</h3>
   <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
@@ -60,16 +88,31 @@
     </label>
     <button type="submit" class="btn">Sign in</button>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-inline-forms-haml">
+%form.form-inline
+  %input.input-small{:placeholder => "Email", :type => "text"}
+  %input.input-small{:placeholder => "Password", :type => "password"}
+  %label.checkbox
+    %input{:type => "checkbox"}
+    Remember me
+  %button.btn{:type => "submit"} Sign in
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-inline-forms-html">
 &lt;form class="form-inline"&gt;
-&lt;input type="text" class="input-small" placeholder="Email"&gt;
-&lt;input type="password" class="input-small" placeholder="Password"&gt;
-&lt;label class="checkbox"&gt;
-&lt;input type="checkbox"&gt; Remember me
-&lt;/label&gt;
-&lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+  &lt;input type="text" class="input-small" placeholder="Email"&gt;
+  &lt;input type="password" class="input-small" placeholder="Password"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; Remember me
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-inline-forms-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-inline-forms-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Horizontal form</h3>
   <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
@@ -102,30 +145,53 @@
       </div>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-horizontal-forms-haml">
+%form.form-horizontal
+  .control-group
+    %label.control-label{:for => "inputEmail"} Email
+    .controls
+      %input#inputEmail{:placeholder => "Email", :type => "text"}
+  .control-group
+    %label.control-label{:for => "inputPassword"} Password
+    .controls
+      %input#inputPassword{:placeholder => "Password", :type => "password"}
+  .control-group
+    .controls
+      %label.checkbox
+        %input{:type => "checkbox"}
+          Remember me
+      %button.btn{:type => "submit"} Sign in
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-horizontal-forms-html">
 &lt;form class="form-horizontal"&gt;
-&lt;div class="control-group"&gt;
-&lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
-&lt;div class="controls"&gt;
-&lt;input type="text" id="inputEmail" placeholder="Email"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="control-group"&gt;
-&lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
-&lt;div class="controls"&gt;
-&lt;input type="password" id="inputPassword" placeholder="Password"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="control-group"&gt;
-&lt;div class="controls"&gt;
-&lt;label class="checkbox"&gt;
-&lt;input type="checkbox"&gt; Remember me
-&lt;/label&gt;
-&lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+      &lt;input type="checkbox"&gt; Remember me
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-horizontal-forms-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-horizontal-forms-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -140,18 +206,36 @@
   <form class="bs-docs-example form-inline">
     <input type="text" placeholder="Text input">
   </form>
-<pre class="prettyprint linenums">
-&lt;input type="text" placeholder="Text input"&gt;
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-inputs-haml">
+%input{:placeholder => "Text input", :type => "text"}
 </pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-inputs-html">
+&lt;input placeholder="Text input" type="text"&gt;
+</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-inputs-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-inputs-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Textarea</h3>
   <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
   <form class="bs-docs-example form-inline">
     <textarea rows="3"></textarea>
   </form>
-<pre class="prettyprint linenums">
-&lt;textarea rows="3"&gt;&lt;/textarea&gt;
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-textareas-haml">
+%textarea{:rows => "3"} …
 </pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-textareas-html">
+&lt;textarea rows="3"&gt;…&lt;/textarea&gt;
+</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-textareas-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-textareas-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Checkboxes and radios</h3>
   <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
@@ -171,21 +255,38 @@
       Option two can be something else and selecting it will deselect option one
     </label>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-default-stacked-haml">
+%label.checkbox
+  %input{:type => "checkbox", :value => ""}
+  Option one is this and that—be sure to include why it is great
+%label.radio
+  %input#optionsRadios1{:checked => "", :name => "optionsRadios", :type => "radio", :value => "option1"}
+  Option one is this and that—be sure to include why it is great
+%label.radio
+  %input#optionsRadios2{:name => "optionsRadios", :type => "radio", :value => "option2"}
+  Option two can be something else and selecting it will deselect option one
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-default-stacked-html">
 &lt;label class="checkbox"&gt;
-&lt;input type="checkbox" value=""&gt;
-Option one is this and that&mdash;be sure to include why it's great
+  &lt;input type="checkbox" value=""&gt;
+  Option one is this and that&mdash;be sure to include why it is great
 &lt;/label&gt;
 
 &lt;label class="radio"&gt;
-&lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
-Option one is this and that&mdash;be sure to include why it's great
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+  Option one is this and that&mdash;be sure to include why it is great
 &lt;/label&gt;
 &lt;label class="radio"&gt;
-&lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
-Option two can be something else and selecting it will deselect option one
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+  Option two can be something else and selecting it will deselect option one
 &lt;/label&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-default-stacked-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-default-stacked-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h4>Inline checkboxes</h4>
   <p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
@@ -200,17 +301,34 @@ Option two can be something else and selecting it will deselect option one
       <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
     </label>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-inline-checkboxes-haml">
+%label.checkbox.inline
+  %input#inlineCheckbox1{:type => "checkbox", :value => "option1"}
+  1
+%label.checkbox.inline
+  %input#inlineCheckbox2{:type => "checkbox", :value => "option2"}
+  2
+%label.checkbox.inline
+  %input#inlineCheckbox3{:type => "checkbox", :value => "option3"}
+  3
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-inline-checkboxes-html">
 &lt;label class="checkbox inline"&gt;
-&lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
 &lt;/label&gt;
 &lt;label class="checkbox inline"&gt;
-&lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
 &lt;/label&gt;
 &lt;label class="checkbox inline"&gt;
-&lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
+  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
 &lt;/label&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-inline-checkboxes-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-inline-checkboxes-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Selects</h3>
   <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
@@ -231,23 +349,44 @@ Option two can be something else and selecting it will deselect option one
       <option>5</option>
     </select>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-selects-haml">
+%select
+  %option 1
+  %option 2
+  %option 3
+  %option 4
+  %option 5
+
+%select{:multiple => "multiple"}
+  %option 1
+  %option 2
+  %option 3
+  %option 4
+  %option 5
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-selects-html">
 &lt;select&gt;
-&lt;option&gt;1&lt;/option&gt;
-&lt;option&gt;2&lt;/option&gt;
-&lt;option&gt;3&lt;/option&gt;
-&lt;option&gt;4&lt;/option&gt;
-&lt;option&gt;5&lt;/option&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
 &lt;/select&gt;
 
 &lt;select multiple="multiple"&gt;
-&lt;option&gt;1&lt;/option&gt;
-&lt;option&gt;2&lt;/option&gt;
-&lt;option&gt;3&lt;/option&gt;
-&lt;option&gt;4&lt;/option&gt;
-&lt;option&gt;5&lt;/option&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
 &lt;/select&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-selects-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-selects-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -272,14 +411,28 @@ Option two can be something else and selecting it will deselect option one
       <span class="add-on">.00</span>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-add-on-options-haml">
+.input-prepend
+  %span.add-on @
+  %input#prependedInput.span2{:placeholder => "Username", :size => "16", :type => "text"}
+.input-append
+  %input#appendedInput.span2{:size => "16", :type => "text"}
+  %span.add-on .00
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-add-on-options-html">
 &lt;div class="input-prepend"&gt;
-&lt;span class="add-on"&gt;@&lt;/span&gt;&lt;input class="span2" id="prependedInput" size="16" type="text" placeholder="Username"&gt;
+  &lt;span class="add-on"&gt;@&lt;/span&gt;&lt;input class="span2" id="prependedInput" size="16" type="text" placeholder="Username"&gt;
 &lt;/div&gt;
 &lt;div class="input-append"&gt;
-&lt;input class="span2" id="appendedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;.00&lt;/span&gt;
+  &lt;input class="span2" id="appendedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;.00&lt;/span&gt;
 &lt;/div&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-add-on-options-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-add-on-options-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h4>Combined</h4>
   <p>Use both classes and two instances of <code>.add-on</code> to prepend and append an input.</p>
@@ -290,11 +443,25 @@ Option two can be something else and selecting it will deselect option one
       <span class="add-on">.00</span>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-add-on-combo-haml">
+.input-prepend.input-append
+  %span.add-on $
+  %input#appendedPrependedInput.span2{:size => "16", :type => "text"}
+    %span.add-on .00
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-add-on-combo-html">
 &lt;div class="input-prepend input-append"&gt;
-&lt;span class="add-on"&gt;$&lt;/span&gt;&lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;.00&lt;/span&gt;
+  &lt;span class="add-on"&gt;$&lt;/span&gt;
+  &lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;
+  &lt;span class="add-on"&gt;.00&lt;/span&gt;
 &lt;/div&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-add-on-combo-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-add-on-combo-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h4>Buttons instead of text</h4>
   <p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
@@ -312,11 +479,11 @@ Option two can be something else and selecting it will deselect option one
   </form>
 <pre class="prettyprint linenums">
 &lt;div class="input-append"&gt;
-&lt;input class="span2" id="appendedInputButton" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
+  &lt;input class="span2" id="appendedInputButton" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;div class="input-append"&gt;
-&lt;input class="span2" id="appendedInputButtons" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;Search&lt;/button&gt;&lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
+  &lt;input class="span2" id="appendedInputButtons" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;Search&lt;/button&gt;&lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
