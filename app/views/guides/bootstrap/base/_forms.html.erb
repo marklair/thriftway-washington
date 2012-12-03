@@ -448,7 +448,7 @@
 .input-prepend.input-append
   %span.add-on $
   %input#appendedPrependedInput.span2{:size => "16", :type => "text"}
-    %span.add-on .00
+  %span.add-on .00
 </pre>
 <pre class="prettyprint linenums tab-pane fade" id="forms-add-on-combo-html">
 &lt;div class="input-prepend input-append"&gt;
@@ -477,7 +477,17 @@
       <button class="btn" type="button">Options</button>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-add-on-btn-haml">
+.input-append
+  %input#appendedInputButton.span2{:size => "16", :type => "text"}
+  %button.btn{:type => "button"} Go!
+.input-append
+  %input#appendedInputButtons.span2{:size => "16", :type => "text"}
+  %button.btn{:type => "button"} Search
+  %button.btn{:type => "button"} Options
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-add-on-btn-html">
 &lt;div class="input-append"&gt;
   &lt;input class="span2" id="appendedInputButton" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
 &lt;/div&gt;
@@ -486,6 +496,11 @@
   &lt;input class="span2" id="appendedInputButtons" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;Search&lt;/button&gt;&lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
 &lt;/div&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-add-on-btn-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-add-on-btn-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h4>Search form</h4>
   <form class="bs-docs-example form-search">
@@ -498,18 +513,33 @@
       <input type="text" class="span2 search-query">
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-search-form-btn-haml">
+%form.form-search
+  .input-append
+    %input.span2.search-query{:type => "text"}
+    %button.btn{:type => "submit"} Search
+  .input-prepend
+    %button.btn{:type => "submit"} Search
+    %input.span2.search-query{:type => "text"}
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-search-form-btn-html">
 &lt;form class="form-search"&gt;
-&lt;div class="input-append"&gt;
-&lt;input type="text" class="span2 search-query"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="input-prepend"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-&lt;input type="text" class="span2 search-query"&gt;
-&lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-search-form-btn-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-search-form-btn-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Control sizing</h3>
   <p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
@@ -525,7 +555,16 @@
       <input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-relative-sizing-haml">
+%input.input-mini{:placeholder => ".input-mini", :type => "text"}
+%input.input-small{:placeholder => ".input-small", :type => "text"}
+%input.input-medium{:placeholder => ".input-medium", :type => "text"}
+%input.input-large{:placeholder => ".input-large", :type => "text"}
+%input.input-xlarge{:placeholder => ".input-xlarge", :type => "text"}
+%input.input-xxlarge{:placeholder => ".input-xxlarge", :type => "text"}
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-relative-sizing-html">
 &lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
 &lt;input class="input-small" type="text" placeholder=".input-small"&gt;
 &lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
@@ -533,6 +572,11 @@
 &lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;
 &lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-relative-sizing-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-relative-sizing-html" data-toggle="tab">HTML</a></li>
+  </ul>
   <p>
     <span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
   </p>
@@ -567,20 +611,37 @@
       </select>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-grid-sizing-haml">
+%input.span1{:placeholder => ".span1", :type => "text"}
+%input.span2{:placeholder => ".span2", :type => "text"}
+%input.span3{:placeholder => ".span3", :type => "text"}
+%select.span1
+  …
+%select.span2
+  …
+%select.span3
+  …
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-grid-sizing-html">
 &lt;input class="span1" type="text" placeholder=".span1"&gt;
 &lt;input class="span2" type="text" placeholder=".span2"&gt;
 &lt;input class="span3" type="text" placeholder=".span3"&gt;
 &lt;select class="span1"&gt;
-...
+  …
 &lt;/select&gt;
 &lt;select class="span2"&gt;
-...
+  …
 &lt;/select&gt;
 &lt;select class="span3"&gt;
-...
+  …
 &lt;/select&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-grid-sizing-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-grid-sizing-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and the clears the float.</p>
   <form class="bs-docs-example" style="padding-bottom: 15px;">
@@ -604,25 +665,48 @@
       <input class="span4" type="text" placeholder=".span4">
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-controls-row-haml">
+.controls
+  %input.span5{:placeholder => ".span5", :type => "text"}
+.controls.controls-row
+  %input.span4{:placeholder => ".span4", :type => "text"}
+  %input.span1{:placeholder => ".span1", :type => "text"}
+…
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-controls-row-html">
 &lt;div class="controls"&gt;
-&lt;input class="span5" type="text" placeholder=".span5"&gt;
+  &lt;input class="span5" type="text" placeholder=".span5"&gt;
 &lt;/div&gt;
 &lt;div class="controls controls-row"&gt;
-&lt;input class="span4" type="text" placeholder=".span4"&gt;
-&lt;input class="span1" type="text" placeholder=".span1"&gt;
+  &lt;input class="span4" type="text" placeholder=".span4"&gt;
+  &lt;input class="span1" type="text" placeholder=".span1"&gt;
 &lt;/div&gt;
-...
+…
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-controls-row-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-controls-row-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Uneditable inputs</h3>
   <p>Present data in a form that's not editable without using actual form markup.</p>
   <form class="bs-docs-example">
     <span class="input-xlarge uneditable-input">Some value here</span>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-uneditable-input-haml">
+%span.input-xlarge.uneditable-input Some value here
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-uneditable-input-html">
 &lt;span class="input-xlarge uneditable-input"&gt;Some value here&lt;/span&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-uneditable-input-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-uneditable-input-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Form actions</h3>
   <p>End a form with a group of actions (buttons). When placed within a <code>.form-horizontal</code>, the buttons will automatically indent to line up with the form controls.</p>
@@ -632,12 +716,23 @@
       <button type="button" class="btn">Cancel</button>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-actions-haml">
+.form-actions
+  %button.btn.btn-primary{:type => "submit"} Save changes
+  %button.btn{:type => "button"} Cancel
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-actions-html">
 &lt;div class="form-actions"&gt;
-&lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-&lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
 &lt;/div&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-actions-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-actions-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Help text</h3>
   <p>Inline and block level support for help text that appears around form controls.</p>
@@ -645,18 +740,38 @@
   <form class="bs-docs-example form-inline">
     <input type="text"> <span class="help-inline">Inline help text</span>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-inline-help-haml">
+%input{:type => "text"}
+%span.help-inline Inline help text
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-inline-help-html">
 &lt;input type="text"&gt;&lt;span class="help-inline"&gt;Inline help text&lt;/span&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-inline-help-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-inline-help-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h4>Block help</h4>
   <form class="bs-docs-example form-inline">
     <input type="text">
     <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-block-help-haml">
+%input{:type => "text"}
+%span.help-block A longer block of help text that breaks onto a new line and may extend beyond one line.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-block-help-html">
 &lt;input type="text"&gt;&lt;span class="help-block"&gt;A longer block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-block-help-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-block-help-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <hr class="bs-docs-separator">
@@ -668,20 +783,37 @@
   <h3>Input focus</h3>
   <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
   <form class="bs-docs-example form-inline">
-    <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
+    <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused..."&gt;
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-input-focus-haml">
+%input#focusedInput.input-xlarge{:type => "text", :value => "This is focused…"}
 </pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-input-focus-html">
+&lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused…"&gt;
+</pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-input-focus-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-input-focus-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Disabled inputs</h3>
   <p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
   <form class="bs-docs-example form-inline">
     <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-input-disabled-haml">
+%input#disabledInput.input-xlarge{:disabled => "", :placeholder => "Disabled input here…", :type => "text"}</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-input-disabled-html">
+&lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-input-disabled-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-input-disabled-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
   <h3>Validation states</h3>
   <p>Bootstrap includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
@@ -716,28 +848,51 @@
       </div>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="forms-validation-states-haml">
+.control-group.warning
+  %label.control-label{:for => "inputWarning"} Input with warning
+  .controls
+    %input#inputWarning{:type => "text"}
+      %span.help-inline Something may have gone wrong
+.control-group.error
+  %label.control-label{:for => "inputError"} Input with error
+  .controls
+    %input#inputError{:type => "text"}
+      %span.help-inline Please correct the error
+.control-group.success
+  %label.control-label{:for => "inputSuccess"} Input with success
+  .controls
+    %input#inputSuccess{:type => "text"}
+      %span.help-inline Woohoo!
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="forms-validation-states-html">
 &lt;div class="control-group warning"&gt;
-&lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
-&lt;div class="controls"&gt;
-&lt;input type="text" id="inputWarning"&gt;
-&lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
-&lt;/div&gt;
+  &lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputWarning"&gt;
+    &lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="control-group error"&gt;
-&lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
-&lt;div class="controls"&gt;
-&lt;input type="text" id="inputError"&gt;
-&lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
-&lt;/div&gt;
+  &lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputError"&gt;
+    &lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="control-group success"&gt;
-&lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
-&lt;div class="controls"&gt;
-&lt;input type="text" id="inputSuccess"&gt;
-&lt;span class="help-inline"&gt;Woohoo!&lt;/span&gt;
-&lt;/div&gt;
+  &lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputSuccess"&gt;
+    &lt;span class="help-inline"&gt;Woohoo!&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#forms-validation-states-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#forms-validation-states-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 </section>
