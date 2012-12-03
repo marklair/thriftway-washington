@@ -1,12 +1,12 @@
 <div class="tab-content">
-<pre class="prettyprint linenums tab-pane fade in active" id="split-button-sizes-haml">
+<pre class="prettyprint linenums tab-pane fade in active" id="tabs-dropdowns-haml">
 
 </pre>
-<pre class="prettyprint linenums tab-pane fade" id="split-button-sizes-html">
+<pre class="prettyprint linenums tab-pane fade" id="tabs-dropdowns-html">
 
 </pre>
 </div>
 <ul class="nav nav-pills example-types">
-	<li class="active"><a href="#split-button-sizes-haml" data-toggle="tab">HAML</a></li>
-	<li><a href="#split-button-sizes-html" data-toggle="tab">HTML</a></li>
+	<li class="active"><a href="#tabs-dropdowns-haml" data-toggle="tab">HAML</a></li>
+	<li><a href="#tabs-dropdowns-html" data-toggle="tab">HTML</a></li>
 </ul>
