@@ -297,14 +297,29 @@ Dropdown
       </ul>
     </div> <!-- /well -->
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="nav-lists-haml">
+%ul.nav.nav-list
+  %li.nav-header List header
+  %li.active
+    %a{:href => "#"} Home
+  %li
+    %a{:href => "#"} Library
+  Lorem
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="nav-lists-html">
 &lt;ul class="nav nav-list"&gt;
 &lt;li class="nav-header"&gt;List header&lt;/li&gt;
 &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
-...
+Lorem
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#nav-lists-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#nav-lists-html" data-toggle="tab">HTML</a></li>
+</ul>
   <p>
     <span class="label label-info">Note</span>
     For nesting within a nav list, include <code>class="nav nav-list"</code> on any nested <code>&lt;ul&gt;</code>.
@@ -312,14 +327,25 @@ Dropdown
 
   <h3>Horizontal dividers</h3>
   <p>Add a horizontal divider by creating an empty list item with the class <code>.divider</code>, like so:</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="horizontal-dividers-haml">
+%ul.nav.nav-list
+  Lorem ipsum dolor sit amet.
+  %li.divider
+  Lorem ipsum dolor sit amet.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="horizontal-dividers-html">
 &lt;ul class="nav nav-list"&gt;
-...
+Lorem ipsum dolor sit amet.
 &lt;li class="divider"&gt;&lt;/li&gt;
-...
+Lorem ipsum dolor sit amet.
 &lt;/ul&gt;
 </pre>
-
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#horizontal-dividers-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#horizontal-dividers-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <hr class="bs-docs-separator">
 
@@ -349,7 +375,22 @@ Dropdown
       </div>
     </div> <!-- /tabbable -->
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="tabbable-nav-haml">
+.tabbable
+  / Only required for left/right tabs
+  %ul.nav.nav-tabs
+    %li.active
+      %a{"data-toggle" => "tab", :href => "#tab1"} Section 1
+    %li
+      %a{"data-toggle" => "tab", :href => "#tab2"} Section 2
+  .tab-content
+    #tab1.tab-pane.active
+      %p I'm in Section 1.
+    #tab2.tab-pane
+      %p Howdy, I'm in Section 2.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="tabbable-nav-html">
 &lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
 &lt;ul class="nav nav-tabs"&gt;
 &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
@@ -365,6 +406,11 @@ Dropdown
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#tabbable-nav-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#tabbable-nav-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h4>Fade in tabs</h4>
   <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>.</p>
@@ -396,16 +442,29 @@ Dropdown
       </ul>
     </div> <!-- /tabbable -->
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="tabs-bottom-haml">
+.tabbable.tabs-below
+  .tab-content
+    Lorem
+  %ul.nav.nav-tabs
+    Ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="tabs-bottom-html">
 &lt;div class="tabbable tabs-below"&gt;
 &lt;div class="tab-content"&gt;
-...
+Lorem
 &lt;/div&gt;
 &lt;ul class="nav nav-tabs"&gt;
-...
+Ipsum
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#tabs-bottom-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#tabs-bottom-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h4>Tabs on the left</h4>
   <p>Swap the class to put tabs on the left.</p>
@@ -429,16 +488,29 @@ Dropdown
       </div>
     </div> <!-- /tabbable -->
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="tabs-left-haml">
+.tabbable.tabs-left
+  %ul.nav.nav-tabs
+    Lorem
+  .tab-content
+    Ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="tabs-left-html">
 &lt;div class="tabbable tabs-left"&gt;
 &lt;ul class="nav nav-tabs"&gt;
-...
+Lorem
 &lt;/ul&gt;
 &lt;div class="tab-content"&gt;
-...
+Ipsum
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#tabs-left-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#tabs-left-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h4>Tabs on the right</h4>
   <p>Swap the class to put tabs on the right.</p>
@@ -462,15 +534,28 @@ Dropdown
       </div>
     </div> <!-- /tabbable -->
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="tabs-right-haml">
+.tabbable.tabs-right
+  %ul.nav.nav-tabs
+    Lorem
+  .tab-content
+    Ipsum
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="tabs-right-html">
 &lt;div class="tabbable tabs-right"&gt;
 &lt;ul class="nav nav-tabs"&gt;
-...
+Lorem
 &lt;/ul&gt;
 &lt;div class="tab-content"&gt;
-...
+Ipsum
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#tabs-right-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#tabs-right-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 </section>

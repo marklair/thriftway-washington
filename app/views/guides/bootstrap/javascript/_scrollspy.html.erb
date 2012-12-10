@@ -53,7 +53,18 @@
 
   <h3>Via data attributes</h3>
   <p>To easily add scrollspy behavior to your topbar navigation, just add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the body) and <code>data-target=".navbar"</code> to select which nav to use. You'll want to use scrollspy with a <code>.nav</code> component.</p>
-  <pre class="prettyprint linenums">&lt;body data-spy="scroll" data-target=".navbar"&gt;...&lt;/body&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="scrollspy-haml">
+%body{"data-spy" => "scroll", "data-target" => ".navbar"} ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="scrollspy-html">
+&lt;body data-spy="scroll" data-target=".navbar"&gt;...&lt;/body&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#scrollspy-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#scrollspy-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Via JavaScript</h3>
   <p>Call the scrollspy via JavaScript:</p>

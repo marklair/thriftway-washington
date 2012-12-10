@@ -99,26 +99,53 @@
 
   <h3>Via data attributes</h3>
   <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="dropdowns-data-attributes-haml">
+.dropdown
+  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"} Dropdown trigger
+  %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+    Lorem
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="dropdowns-data-attributes-html">
 &lt;div class="dropdown"&gt;
 &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;Dropdown trigger&lt;/a&gt;
 &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-...
+Lorem
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#dropdowns-data-attributes-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#dropdowns-data-attributes-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="dropdowns-data-target-haml">
+.dropdown
+  %a#dLabel.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "/page.html", :role => "button"}
+    Dropdown
+    %b.caret
+  %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+    Lorem
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="dropdowns-data-target-html">
 &lt;div class="dropdown"&gt;
 &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html"&gt;
 Dropdown
 &lt;b class="caret"&gt;&lt;/b&gt;
 &lt;/a&gt;
 &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-...
+Lorem
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#dropdowns-data-target-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#dropdowns-data-target-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Via JavaScript</h3>
   <p>Call the dropdowns via JavaScript:</p>

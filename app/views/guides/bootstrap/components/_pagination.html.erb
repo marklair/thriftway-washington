@@ -20,7 +20,24 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="standard-pagination-haml">
+.pagination
+  %ul
+    %li
+      %a{:href => "#"} Prev
+    %li
+      %a{:href => "#"} 1
+    %li
+      %a{:href => "#"} 2
+    %li
+      %a{:href => "#"} 3
+    %li
+      %a{:href => "#"} 4
+    %li
+      %a{:href => "#"} Next
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="standard-pagination-html">
 &lt;div class="pagination"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
@@ -32,6 +49,11 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#standard-pagination-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#standard-pagination-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 
   <hr class="bs-docs-separator">
@@ -54,25 +76,56 @@
      </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pagination-disabled-active-haml">
+.pagination
+  %ul
+    %li.disabled
+      %a{:href => "#"} Prev
+    %li.active
+      %a{:href => "#"} 1
+    Lorem
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pagination-disabled-active-html">
 &lt;div class="pagination"&gt;
 &lt;ul&gt;
 &lt;li class="disabled"&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
 &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
-...
+Lorem
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pagination-disabled-active-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pagination-disabled-active-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <p>You can optionally swap out active or disabled anchors for spans to remove click functionality while retaining intended styles.</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pagination-span-swap-haml">
+.pagination
+  %ul
+    %li.disabled
+      %span Prev
+    %li.active
+      %span 1
+    Lorem
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pagination-span-swap-html">
 &lt;div class="pagination"&gt;
 &lt;ul&gt;
 &lt;li class="disabled"&gt;&lt;span&gt;Prev&lt;/span&gt;&lt;/li&gt;
 &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
-...
+Lorem
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pagination-span-swap-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pagination-span-swap-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Alignment</h3>
   <p>Add one of two optional classes to change the alignment of pagination links: <code>.pagination-centered</code> and <code>.pagination-right</code>.</p>
@@ -89,11 +142,22 @@
      </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pagination-centered-haml">
+.pagination.pagination-centered
+  ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pagination-centered-html">
 &lt;div class="pagination pagination-centered"&gt;
 ...
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pagination-centered-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pagination-centered-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <div class="bs-docs-example">
     <div class="pagination pagination-right">
       <ul>
@@ -107,11 +171,21 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pagination-right-haml">
+.pagination.pagination-right
+  ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pagination-right-html">
 &lt;div class="pagination pagination-right"&gt;
 ...
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pagination-right-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pagination-right-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 
   <hr class="bs-docs-separator">
@@ -128,12 +202,25 @@
       <li><a href="#">Next</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pager-haml">
+%ul.pager
+  %li
+    %a{:href => "#"} Previous
+  %li
+    %a{:href => "#"} Next
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pager-html">
 &lt;ul class="pager"&gt;
 &lt;li&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pager-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pager-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Aligned links</h3>
   <p>Alternatively, you can align each link to the sides:</p>
@@ -143,7 +230,15 @@
       <li class="next"><a href="#">Newer &rarr;</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pager-aligned-haml">
+%ul.pager
+  %li.previous
+    %a{:href => "#"} &larr; Older
+  %li.next
+    %a{:href => "#"} Newer &rarr;
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pager-aligned-html">
 &lt;ul class="pager"&gt;
 &lt;li class="previous"&gt;
 &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
@@ -153,6 +248,11 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pager-aligned-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pager-aligned-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Optional disabled state</h3>
   <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
@@ -162,7 +262,14 @@
       <li class="next"><a href="#">Newer &rarr;</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="pager-disabled-haml">
+%ul.pager
+  %li.previous.disabled
+    %a{:href => "#"} &larr; Older
+  ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="pager-disabled-html">
 &lt;ul class="pager"&gt;
 &lt;li class="previous disabled"&gt;
 &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
@@ -170,5 +277,10 @@
 ...
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#pager-disabled-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#pager-disabled-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 </section>
