@@ -57,20 +57,59 @@ $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
 
   <h3>Markup</h3>
   <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="example-tabs-haml">
+%ul.nav.nav-tabs
+  %li
+    %a{"data-toggle" => "tab", :href => "#home"} Home
+  %li
+    %a{"data-toggle" => "tab", :href => "#profile"} Profile
+  %li
+    %a{"data-toggle" => "tab", :href => "#messages"} Messages
+  %li
+    %a{"data-toggle" => "tab", :href => "#settings"} Settings
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="example-tabs-html">
 &lt;ul class="nav nav-tabs"&gt;
 &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+&lt;/ul&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#example-tabs-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#example-tabs-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Methods</h3>
   <h4>$().tab</h4>
   <p>
     Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
   </p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="example-tabs-methods-haml">
+%ul#myTab.nav.nav-tabs
+  %li.active
+    %a{:href => "#home"} Home
+  %li
+    %a{:href => "#profile"} Profile
+  %li
+    %a{:href => "#messages"} Messages
+  %li
+    %a{:href => "#settings"} Settings
+.tab-content
+  #home.tab-pane.active ...
+  #profile.tab-pane ...
+  #messages.tab-pane ...
+  #settings.tab-pane ...
+:javascript
+  $(function () {
+  $('#myTab a:last').tab('show');
+  })
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="example-tabs-methods-html">
 &lt;ul class="nav nav-tabs" id="myTab"&gt;
 &lt;li class="active"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#profile"&gt;Profile&lt;/a&gt;&lt;/li&gt;
@@ -91,6 +130,11 @@ $('#myTab a:last').tab('show');
 })
 &lt;/script&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#example-tabs-methods-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#example-tabs-methods-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Events</h3>
   <table class="table table-bordered table-striped">

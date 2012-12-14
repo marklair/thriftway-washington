@@ -36,7 +36,18 @@
 
   <h3>Markup</h3>
   <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.</p>
-  <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="example-alerts-haml">
+%a.close{"data-dismiss" => "alert", :href => "#"} &times;
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="example-alerts-html">
+&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#example-alerts-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#example-alerts-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Methods</h3>
   <h4>$().alert()</h4>

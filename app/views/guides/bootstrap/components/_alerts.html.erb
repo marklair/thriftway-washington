@@ -13,18 +13,53 @@
       <strong>Warning!</strong> Best check yo self, you're not looking too good.
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="default-alerts-haml">
+.alert
+  %button.close{"data-dismiss" => "alert", :type => "button"} ×
+  %strong Warning!
+  Best check yo self, you're not looking too good.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="default-alerts-html">
 &lt;div class="alert"&gt;
 &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
 &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#default-alerts-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#default-alerts-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Dismiss buttons</h3>
   <p>Mobile Safari and Mobile Opera browsers, in addition to the <code>data-dismiss="alert"</code> attribute, require an <code>href="#"</code> for the dismissal of alerts when using an <code>&lt;a&gt;</code> tag.</p>
-  <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;</pre>
+  <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="dismiss-buttons-haml">
+%a.close{"data-dismiss" => "alert", :href => "#"} ×
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="dismiss-buttons-html">
+&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#dismiss-buttons-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#dismiss-buttons-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <p>Alternatively, you may use a <code>&lt;button&gt;</code> element with the data attribute, which we have opted to do for our docs. When using <code>&lt;button&gt;</code>, you must include <code>type="button"</code> or your forms may not submit.</p>
-  <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="dismiss-button-type-haml">
+%button.close{"data-dismiss" => "alert", :type => "button"} ×
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="dismiss-button-type-html">
+&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#dismiss-button-type-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#dismiss-button-type-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Dismiss alerts via javascript</h3>
   <p>Use the <a href="./javascript.html#alerts">alerts jQuery plugin</a> for quick and easy dismissal of alerts.</p>
@@ -42,13 +77,25 @@
       <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="options-haml">
+.alert.alert-block
+  %button.close{"data-dismiss" => "alert", :type => "button"} ×
+  %h4 Warning!
+  Best check yo self, you're not...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="options-html">
 &lt;div class="alert alert-block"&gt;
 &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
 &lt;h4&gt;Warning!&lt;/h4&gt;
 Best check yo self, you're not...
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#options-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#options-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 
   <hr class="bs-docs-separator">
@@ -64,11 +111,21 @@ Best check yo self, you're not...
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="error-danger-haml">
+.alert.alert-error
+  Lorem ipsum dolor sit amet.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="error-danger-html">
 &lt;div class="alert alert-error"&gt;
-...
+Lorem ipsum dolor sit amet.
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#error-danger-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#error-danger-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Success</h3>
   <div class="bs-docs-example">
@@ -77,11 +134,21 @@ Best check yo self, you're not...
       <strong>Well done!</strong> You successfully read this important alert message.
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="success-haml">
+.alert.alert-success
+  Lorem ipsum dolor sit amet.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="success-html">
 &lt;div class="alert alert-success"&gt;
-...
+Lorem ipsum dolor sit amet.
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#success-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#success-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Information</h3>
   <div class="bs-docs-example">
@@ -90,11 +157,22 @@ Best check yo self, you're not...
       <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="information-haml">
+.alert.alert-info
+  Lorem ipsum dolor sit amet.
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="information-html">
 &lt;div class="alert alert-info"&gt;
-...
+Lorem ipsum dolor sit amet.
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#information-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#information-html" data-toggle="tab">HTML</a></li>
+</ul>
+
 <p>
   <span class="label label-info">Heads Up!</span>
   If you'd like to simply color text in

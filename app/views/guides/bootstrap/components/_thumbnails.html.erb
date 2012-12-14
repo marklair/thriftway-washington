@@ -80,7 +80,15 @@
 
   <h2>Markup</h2>
   <p>As mentioned previously, the required markup for thumbnails is light and straightforward. Here's a look at the default setup <strong>for linked images</strong>:</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="thumbnails-haml">
+%ul.thumbnails
+  %li.span4
+    %a.thumbnail{:href => "#"}
+      %img{:alt => "", :src => "http://placehold.it/300x200"}
+  ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="thumbnails-html">
 &lt;ul class="thumbnails"&gt;
 &lt;li class="span4"&gt;
 &lt;a href="#" class="thumbnail"&gt;
@@ -90,8 +98,24 @@
 ...
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#thumbnails-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#thumbnails-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <p>For custom HTML content in thumbnails, the markup changes slightly. To allow block level content anywhere, we swap the <code>&lt;a&gt;</code> for a <code>&lt;div&gt;</code> like so:</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="custom-thumbnails-haml">
+%ul.thumbnails
+  %li.span4
+    .thumbnail
+      %img{:alt => "", :src => "http://placehold.it/300x200"}
+        %h3 Thumbnail label
+        %p Thumbnail caption...
+  ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="custom-thumbnails-html">
 &lt;ul class="thumbnails"&gt;
 &lt;li class="span4"&gt;
 &lt;div class="thumbnail"&gt;
@@ -103,6 +127,11 @@
 ...
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#custom-thumbnails-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#custom-thumbnails-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h2>More examples</h2>
   <p>Explore all your options with the various grid classes available to you. You can also mix and match different sizes.</p>
