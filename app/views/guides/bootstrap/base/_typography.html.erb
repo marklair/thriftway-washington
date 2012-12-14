@@ -426,11 +426,21 @@ San Francisco, CA 94107&lt;br&gt;
     <li>Eget porttitor lorem</li>
   </ul>
 </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-unstyled-list-haml">
+%ul.unstyled
+  %li Lorem ipsum dolor sit amet
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-unstyled-list-html">
 &lt;ul class="unstyled"&gt;
-&lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-unstyled-list-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-unstyled-list-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 <h3>Description</h3>
 <p>A list of terms with their associated descriptions.</p>
@@ -445,12 +455,23 @@ San Francisco, CA 94107&lt;br&gt;
     <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
   </dl>
 </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-description-list-haml">
+%dl
+  %dt Lorem ipsum dolor sit amet
+  %dd Lorem ipsum dolor sit amet
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-description-list-html">
 &lt;dl&gt;
   &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
   &lt;dd&gt;Lorem ipsum dolor sit amet&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-description-list-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-description-list-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 <h4>Horizontal description</h4>
 <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
@@ -467,12 +488,23 @@ San Francisco, CA 94107&lt;br&gt;
     <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
   </dl>
 </div>
-<pre class="prettyprint linenums">
-&lt;dl class="dl-horizontal"&gt;
-&lt;dt&gt;...&lt;/dt&gt;
-&lt;dd&gt;...&lt;/dd&gt;
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="typography-dl-horizontal-haml">
+%dl.dl-horizontal
+  %dt Lorem ipsum dolor sit amet
+  %dd Lorem ipsum dolor sit amet
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="typography-dl-horizontal-html">
+&lt;dl&gt;
+  &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+  &lt;dd&gt;Lorem ipsum dolor sit amet&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#typography-dl-horizontal-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#typography-dl-horizontal-html" data-toggle="tab">HTML</a></li>
+  </ul>
 <p>
   <span class="label label-info">Heads up!</span>
   Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
