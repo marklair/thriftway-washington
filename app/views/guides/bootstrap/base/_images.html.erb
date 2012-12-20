@@ -11,11 +11,22 @@
     <img src="http://placehold.it/140x140" class="img-circle">
     <img src="http://placehold.it/140x140" class="img-polaroid">
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="images-haml">
+%img.img-rounded{:src => "..."}
+  %img.img-circle{:src => "..."}
+    %img.img-polaroid{:src => "..."}
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="images-html">
 &lt;img src="..." class="img-rounded"&gt;
 &lt;img src="..." class="img-circle"&gt;
 &lt;img src="..." class="img-polaroid"&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#images-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#images-html" data-toggle="tab">HTML</a></li>
+</ul>
   <p><span class="label label-info">Heads up!</span> <code>.img-rounded</code> and <code>.img-circle</code> do not work in IE7-8 due to lack of <code>border-radius</code> support.</p>
   <p><span class="label label-info">Heads up!</span> There are additional image classes in the <a href="components#thumbnails">Thumbnails</a> section of the <a href="components#thumbnails">Base Components</a> page.
   </p>

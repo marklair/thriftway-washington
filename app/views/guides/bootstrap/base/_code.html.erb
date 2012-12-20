@@ -19,11 +19,23 @@ For example, &lt;code&gt;&lt;section&gt;&lt;/code&gt; should be wrapped as inlin
 <div class="bs-docs-example">
 <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
 </div>
-<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="code-basic-block-haml">
+%pre
+  :preserve
+    
+    Sample text here...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="code-basic-block-html">
 &lt;pre&gt;
-&amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+<p>Sample text here...</p>
 &lt;/pre&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#code-basic-block-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#code-basic-block-html" data-toggle="tab">HTML</a></li>
+</ul>
   <p><span class="label label-info">Heads up!</span> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
   <p>You may optionally add the <code>.pre-scrollable</code> class which will set a max-height of 350px and provide a y-axis scrollbar.</p>
 </section>
