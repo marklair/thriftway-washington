@@ -83,24 +83,45 @@
       <button type="button" class="btn btn-mini">Mini button</button>
     </p>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="button-sizes-haml">
+%p
+  %button.btn.btn-large.btn-primary{:type => "button"} Large button
+  %button.btn.btn-large{:type => "button"} Large button
+%p
+  %button.btn.btn-primary{:type => "button"} Default button
+  %button.btn{:type => "button"} Default button
+%p
+  %button.btn.btn-small.btn-primary{:type => "button"} Small button
+  %button.btn.btn-small{:type => "button"} Small button
+%p
+  %button.btn.btn-mini.btn-primary{:type => "button"} Mini button
+  %button.btn.btn-mini{:type => "button"} Mini button
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="button-sizes-html">
 &lt;p&gt;
-&lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
-&lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+  &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
+  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
-&lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
-&lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+  &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
+  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
-&lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
 &lt;/p&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#button-sizes-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#button-sizes-html" data-toggle="tab">HTML</a></li>
+  </ul>
+
   <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
   <div class="bs-docs-example">
     <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
@@ -108,10 +129,20 @@
       <button type="button" class="btn btn-large btn-block">Block level button</button>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="button-block-level-haml">
+%button.btn.btn-large.btn-block.btn-primary{:type => "button"} Block level button
+%button.btn.btn-large.btn-block{:type => "button"} Block level button
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="button-block-level-html">
 &lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
 &lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#button-block-level-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#button-block-level-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <h2>Disabled state</h2>
@@ -123,10 +154,21 @@
     <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
     <a href="#" class="btn btn-large disabled">Link</a>
   </p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="button-disabled-haml">
+%a.btn.btn-large.btn-primary.disabled{:href => "#"} Primary link
+%a.btn.btn-large.disabled{:href => "#"} Link
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="button-disabled-html">
 &lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
 &lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#button-disabled-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#button-disabled-html" data-toggle="tab">HTML</a></li>
+  </ul>
+
   <p>
     <span class="label label-info">Heads up!</span>
     We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
@@ -138,10 +180,20 @@
     <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
     <button type="button" class="btn btn-large" disabled>Button</button>
   </p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="button-element-disabled-haml">
+%button.btn.btn-large.btn-primary.disabled{:disabled => "disabled", :type => "button"} Primary button
+%button.btn.btn-large{:disabled => "", :type => "button"} Button
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="button-element-disabled-html">
 &lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
 &lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#button-element-disabled-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#button-element-disabled-html" data-toggle="tab">HTML</a></li>
+  </ul>
 
 
   <h2>One class, multiple tags</h2>
@@ -152,12 +204,25 @@
     <input class="btn" type="button" value="Input">
     <input class="btn" type="submit" value="Submit">
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="button-multiple-tags-haml">
+%a.btn{:href => ""} Link
+%button.btn{:type => "submit"} Button
+%input.btn{:type => "button", :value => "Input"}
+%input.btn{:type => "submit", :value => "Submit"}
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="button-multiple-tags-html">
 &lt;a class="btn" href=""&gt;Link&lt;/a&gt;
 &lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
 &lt;input class="btn" type="button" value="Input"&gt;
 &lt;input class="btn" type="submit" value="Submit"&gt;
 </pre>
+</div>
+  <ul class="nav nav-pills example-types">
+    <li class="active"><a href="#button-multiple-tags-haml" data-toggle="tab">HAML</a></li>
+    <li><a href="#button-multiple-tags-html" data-toggle="tab">HTML</a></li>
+  </ul>
+
   <p>As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
 
 </section>
