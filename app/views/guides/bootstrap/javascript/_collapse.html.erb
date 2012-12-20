@@ -52,7 +52,26 @@
       </div>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="collapse-haml">
+#accordion2.accordion
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+        Collapsible Group Item #1
+    #collapseOne.accordion-body.collapse.in
+      .accordion-inner
+        Anim pariatur cliche...
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+        Collapsible Group Item #2
+    #collapseTwo.accordion-body.collapse
+      .accordion-inner
+        Anim pariatur cliche...
+...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="collapse-html">
 &lt;div class="accordion" id="accordion2"&gt;
 &lt;div class="accordion-group"&gt;
 &lt;div class="accordion-heading"&gt;
@@ -81,6 +100,12 @@ Anim pariatur cliche...
 &lt;/div&gt;
 ...
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#collapse-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#collapse-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <h3>Alternate uses</h3>
   <p>You can also use the plugin without the accordion markup. Like making a button toggle the expanding and collapsing of another element.</p>
   <div class="bs-docs-example">
@@ -89,13 +114,24 @@ Anim pariatur cliche...
       <h5 class="well">Something to slide toggle.</h5>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="collapse-alternate-uses-haml">
+%button.btn.btn-primary{"data-target" => "#alt-collapse-demo", "data-toggle" => "collapse", :type => "button"}
+  simple collapsible
+#alt-collapse-demo.collapse …
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="collapse-alternate-uses-html">
 &lt;button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#alt-collapse-demo"&gt;
 simple collapsible
 &lt;/button&gt;
 
 &lt;div id="alt-collapse-demo" class="collapse"&gt; … &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#collapse-alternate-uses-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#collapse-alternate-uses-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 
   <hr class="bs-docs-separator">

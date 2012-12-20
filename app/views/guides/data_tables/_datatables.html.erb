@@ -437,8 +437,18 @@
 
     <h3>Via data attributes</h3>
     <p>To easily add rich behavior to any table, just add <code>data-table</code> to the table you want the plugin applied to.</p>
-
-    <pre class="prettyprint linenums">&lt;table data-table class="table ..." &gt;...&lt;/table&gt;</pre>
+    <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="table-haml">
+%table.table{:class => "...", "data-table" => ""} ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="table-html">
+&lt;table data-table class="table ..." &gt;...&lt;/table&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#table-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#table-html" data-toggle="tab">HTML</a></li>
+</ul>
 
     <h3>Via JavaScript</h3>
     <p>Call the affix plugin via JavaScript:</p>

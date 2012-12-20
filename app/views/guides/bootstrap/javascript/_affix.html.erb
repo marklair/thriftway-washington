@@ -14,8 +14,18 @@
 
     <h3>Via data attributes</h3>
     <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.</p>
-
-    <pre class="prettyprint linenums">&lt;div data-spy="affix" data-offset-top="200"&gt;...&lt;/div&gt;</pre>
+    <div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="affix-usage-haml">
+%div{"data-offset-top" => "200", "data-spy" => "affix"} ...
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="affix-usage-html">
+&lt;div data-spy="affix" data-offset-top="200"&gt;...&lt;/div&gt;
+</pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#affix-usage-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#affix-usage-html" data-toggle="tab">HTML</a></li>
+</ul>
 
     <div class="alert alert-info">
       <strong>Heads up!</strong>

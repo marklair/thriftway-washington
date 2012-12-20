@@ -170,13 +170,33 @@
 
   <h2>How to use</h2>
   <p>All icons require an <code>&lt;i&gt;</code> tag with a unique class, prefixed with <code>icon-</code>. To use, place the following code just about anywhere:</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-haml">
+%i.icon-search
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-html">
 &lt;i class="icon-search"&gt;&lt;/i&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <p>There are also styles available for inverted (white) icons, made ready with one extra class. We will specifically enforce this class on hover and active states for nav and dropdown links.</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-white-haml">
+%i.icon-search.icon-white
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-white-html">
 &lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-white-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-white-html" data-toggle="tab">HTML</a></li>
+</ul>
+
   <p>
     <span class="label label-info">Heads up!</span>
     When using beside strings of text, as in buttons or nav links, be sure to leave a space after the <code>&lt;i&gt;</code> tag for proper spacing.
@@ -202,7 +222,20 @@
       </div>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-button-group-haml">
+.btn-toolbar
+  .btn-group
+    %a.btn{:href => "#"}
+      %i.icon-align-left
+    %a.btn{:href => "#"}
+      %i.icon-align-center
+    %a.btn{:href => "#"}
+      %i.icon-align-right
+    %a.btn{:href => "#"}
+      %i.icon-align-justify
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-button-group-html">
 &lt;div class="btn-toolbar"&gt;
 &lt;div class="btn-group"&gt;
 
@@ -213,6 +246,11 @@
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-button-group-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-button-group-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h5>Dropdown in a button group</h5>
   <div class="bs-docs-example">
@@ -228,7 +266,34 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-button-dropdown-haml">
+.btn-group
+  %a.btn.btn-primary{:href => "#"}
+    %i.icon-user.icon-white
+    User
+  %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+    %span.caret
+  %ul.dropdown-menu
+    %li
+      %a{:href => "#"}
+        %i.icon-pencil
+        Edit
+    %li
+      %a{:href => "#"}
+        %i.icon-trash
+        Delete
+    %li
+      %a{:href => "#"}
+        %i.icon-ban-circle
+        Ban
+    %li.divider
+    %li
+      %a{:href => "#"}
+        %i.i
+        Make admin
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-button-dropdown-html">
 &lt;div class="btn-group"&gt;
 &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="icon-user icon-white"&gt;&lt;/i&gt; User&lt;/a&gt;
 &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
@@ -241,14 +306,29 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-button-dropdown-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-button-dropdown-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h5>Small button</h5>
   <div class="bs-docs-example">
     <a class="btn btn-small" href="#"><i class="icon-star"></i></a>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-small-button-haml">
+%a.btn.btn-small{:href => "#"}
+  %i.icon-star
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-small-button-html">
 &lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt;&lt;/a&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-small-button-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-small-button-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 
   <h4>Navigation</h4>
@@ -262,7 +342,27 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-nav-haml">
+%ul.nav.nav-list
+  %li.active
+    %a{:href => "#"}
+      %i.icon-home.icon-white
+      Home
+  %li
+    %a{:href => "#"}
+      %i.icon-book
+      Library
+  %li
+    %a{:href => "#"}
+      %i.icon-pencil
+      Applications
+  %li
+    %a{:href => "#"}
+      %i.i
+      Misc
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-nav-html">
 &lt;ul class="nav nav-list"&gt;
 &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;i class="icon-home icon-white"&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-book"&gt;&lt;/i&gt; Library&lt;/a&gt;&lt;/li&gt;
@@ -270,6 +370,11 @@
 &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Misc&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-nav-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-nav-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h4>Form fields</h4>
   <form class="bs-docs-example form-horizontal">
@@ -282,7 +387,17 @@
       </div>
     </div>
   </form>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="icons-form-fields-haml">
+.control-group
+  %label.control-label{:for => "inputIcon"} Email address
+  .controls
+    .input-prepend
+      %span.add-on
+        %i.icon-envelope
+      %input#inputIcon.span2{:type => "text"}
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="icons-form-fields-html">
 &lt;div class="control-group"&gt;
 &lt;label class="control-label" for="inputIcon"&gt;Email address&lt;/label&gt;
 &lt;div class="controls"&gt;
@@ -293,6 +408,11 @@
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#icons-form-fields-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#icons-form-fields-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 </section>
 
