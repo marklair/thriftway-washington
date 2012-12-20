@@ -31,7 +31,19 @@
       </div>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="modal-static-haml">
+.modal.hide.fade
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+    %h3 Modal header
+  .modal-body
+    %p One fine body…
+  .modal-footer
+    %a.btn{:href => "#"} Close
+    %a.btn.btn-primary{:href => "#"} Save changes
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="modal-static-html">
 &lt;div class="modal hide fade"&gt;
 &lt;div class="modal-header"&gt;
 &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
@@ -46,6 +58,11 @@
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#modal-static-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#modal-static-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <h3>Live demo</h3>
   <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
@@ -84,7 +101,22 @@
   <div class="bs-docs-example" style="padding-bottom: 24px;">
     <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="modal-live-demo-haml">
+<-- Button to trigger modal -->
+%a.btn{"data-toggle" => "modal", :href => "#myModal", :role => "button"} Launch demo modal
+<-- Modal -->
+#myModal.modal{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#myModalLabel Modal header
+  .modal-body
+    %p One fine body…
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
+    %button.btn.btn-primary Save changes
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="modal-live-demo-html">
 &lt;-- Button to trigger modal --&gt;
 &lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;Launch demo modal&lt;/a&gt;
 
@@ -103,6 +135,11 @@
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#modal-live-demo-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#modal-live-demo-html" data-toggle="tab">HTML</a></li>
+</ul>
 
 
   <hr class="bs-docs-separator">
