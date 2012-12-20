@@ -80,12 +80,24 @@
 
       <h3>Markup</h3>
       <p>Format a component.</p>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="datepicker-haml">
+#dp3.input-append.date{"data-date" => "12-02-2012", "data-date-format" => "dd-mm-yyyy"}
+  %input.span2{:size => "16", :type => "text", :value => "12-02-2012"}
+    %span.add-on
+      %i.icon-th
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="datepicker-html">
 &lt;div class=&quot;input-append date&quot; id=&quot;dp3&quot; data-date=&quot;12-02-2012&quot; data-date-format=&quot;dd-mm-yyyy&quot;&gt;
 &lt;input class=&quot;span2&quot; size=&quot;16&quot; type=&quot;text&quot; value=&quot;12-02-2012&quot;&gt;
 &lt;span class=&quot;add-on&quot;&gt;&lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#datepicker-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#datepicker-html" data-toggle="tab">HTML</a></li>
+</ul>
       <h3>Methods</h3>
       <h4>.datepicker(options)</h4>
       <p>Initializes an datepicker.</p>

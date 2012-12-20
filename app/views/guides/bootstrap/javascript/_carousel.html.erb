@@ -36,7 +36,19 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
   </div>
-<pre class="prettyprint linenums">
+<div class="tab-content">
+<pre class="prettyprint linenums tab-pane fade in active" id="carousel-haml">
+#myCarousel.carousel.slide
+  / Carousel items
+  .carousel-inner
+    .active.item …
+    .item …
+    .item …
+  / Carousel nav
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} &lsaquo;
+  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} &rsaquo;
+</pre>
+<pre class="prettyprint linenums tab-pane fade" id="carousel-html">
 &lt;div id="myCarousel" class="carousel slide"&gt;
 &lt;!-- Carousel items --&gt;
 &lt;div class="carousel-inner"&gt;
@@ -49,6 +61,11 @@
 &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
 &lt;/div&gt;
 </pre>
+</div>
+<ul class="nav nav-pills example-types">
+  <li class="active"><a href="#carousel-haml" data-toggle="tab">HAML</a></li>
+  <li><a href="#carousel-html" data-toggle="tab">HTML</a></li>
+</ul>
 
   <div class="alert alert-warning">
     <strong>Heads up!</strong>
