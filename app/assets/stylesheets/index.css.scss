@@ -73,7 +73,7 @@ html, body{background:#333; font-size: 86%}
   width: 47.916666666667%;
 }*/
 
-.main_boards .unit:last-child .board {
+.main_boards [class*="span"]:last-child .board {
   -moz-column-count: 3;
   -moz-column-gap: 20px;
   -webkit-column-count: 3;

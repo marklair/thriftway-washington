@@ -17,4 +17,4 @@
 //= require data_tables/jquery.dataTables.min
 //= require data_tables/data_tables_for_bootstrap
 //= require date_picker/bootstrap-datepicker
-//= require guides
+//= require_tree .

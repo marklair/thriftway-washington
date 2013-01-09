@@ -6,90 +6,90 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      .brand= link_to 'Project Boards', boards_path 
+      = link_to 'Project Boards', boards_path, class: 'brand'
       .nav-collapse
         %ul.nav
           -if current_navigation_tab == 'home'
             %li.active= link_to 'Home', boards_path
           -else
             %li= link_to 'Home', boards_path
-        
+
           -if current_navigation_tab == 'boards'
-            %li.active.dropdown{'data-dropdown' => 'dropdown'}
-              = link_to 'Boards', '#', :class => 'dropdown-toggle'
+            %li.active.dropdown
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Boards
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'View Boards', boards_path
                 %li= link_to 'List & Edit Boards', list_boards_path
                 %li= link_to 'New Board', new_board_path
           -else
-            %li.dropdown{'data-dropdown' => 'dropdown'}
-              = link_to 'Boards', '#', :class => 'dropdown-toggle'
+            %li.dropdown
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Boards
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'View Boards', boards_path
                 %li= link_to 'List & Edit Boards', list_boards_path
                 %li= link_to 'New Board', new_board_path
-              
+
           -if current_navigation_tab == 'projects'
-            %li.active.dropdown{'data-dropdown' => 'dropdown'}
-              = link_to 'Projects', '#', :class => 'dropdown-toggle'
+            %li.active.dropdown
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Projects
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'List All projects', projects_path
                 %li= link_to 'New project', new_project_path
           -else
-            %li.dropdown{'data-dropdown' => 'dropdown'}
-              = link_to 'Projects', '#', :class => 'dropdown-toggle'
+            %li.dropdown
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Projects
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'List All projects', projects_path
                 %li= link_to 'New project', new_project_path
 
           -if current_navigation_tab == 'departments'
-            %li.active.dropdown{'data-dropdown' => 'dropdown'}
-              = link_to 'Departments', '#', :class => 'dropdown-toggle'
+            %li.active.dropdown
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Departments
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'List departments', departments_path
                 %li= link_to 'New department', new_department_path
           -else
-            %li.dropdown{'data-dropdown' => 'dropdown'}
-              = link_to 'Department', '#', :class => 'dropdown-toggle'
+            %li.dropdown
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Departments
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'List departments', departments_path
                 %li= link_to 'New department', new_department_path
-      
-        %ul.nav.secondary-nav
-          %li.dropdown{'data-dropdown' => 'dropdown'}
+
+        %ul.nav.pull-right
+          %li.dropdown{'data-toggle' => 'dropdown'}
             -if current_user
-              =link_to current_user.real_name, '#', :class => 'dropdown-toggle'
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                = current_user.real_name
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'Profile', user_path(current_user.id)
                 %li= link_to 'Logout', logout_path
                 %li.divider
-                %li=link_to 'New Account', new_user_path
-                %li=link_to 'List Accounts', users_path
+                %li= link_to 'New Account', new_user_path
+                %li= link_to 'List Accounts', users_path
             -else
-              =link_to 'People', '#', :class => 'dropdown-toggle'
+
+              = link_to '#', :class => 'dropdown-toggle', :data => { :toggle => 'dropdown'} do
+                Account
+                %b.caret
               %ul.dropdown-menu
                 %li= link_to 'Sign-Up', new_user_path
                 %li= link_to 'Login', login_path
                 %li.divider
-                %li=link_to 'New Account', new_user_path
+                %li= link_to 'New Account', new_user_path
                 %li=link_to 'List Accounts', users_path
-      
-      / %ul.nav.secondary-nav
-      /   %li.dropdown{'data-dropdown' => 'dropdown'}
-      /     =link_to 'People', '#', :class => 'dropdown-toggle'
-      /     %ul.dropdown-menu
-      /       %li=link_to 'New Account', new_user_path
-      /       %li=link_to 'List Accounts', users_path
-      /       %li.divider
-      /       -if current_user
-      /         %li= link_to 'Logout', logout_path
-      /       -else
-      /         %li= link_to 'Login', login_path
-      /   -if current_user
-      /     %li= link_to 'Profile', user_path(current_user.id)
-      /     %li= link_to 'Logout', logout_path
-      /   -else
-      /     %li= link_to 'Sign-Up', new_user_path
-      /     %li= link_to 'Login', login_path
-        
-            
+
+
+
