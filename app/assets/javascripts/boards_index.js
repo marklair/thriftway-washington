@@ -4,7 +4,7 @@ $(function() {
    function heightSizer(){
      windowHeight = $(window).height();
 
-     availableHeight = windowHeight - 205;
+     availableHeight = windowHeight - 225;
 
      mainHeight = (availableHeight / 4) * 3;
      mainHeightCSS = mainHeight + 'px';
@@ -22,5 +22,6 @@ $(function() {
      $('.board:eq(' + index + ") li:first").css("margin-top", "0");
     });
 
+   $('.priority .badge').popover('toggle');
 
  });

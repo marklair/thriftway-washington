@@ -1,9 +1,9 @@
-#error_explanation.alert.alert-block.alert-error
+#error_explanation.alert.alert-block.alert-error.clearfix
   %a.close{'data-dismiss' => 'alert', :href => '#'} x
   %h2.alert-heading Oops! Something went wrong...
   %p
     %strong
-      Please correct the following 
+      Please correct the following
       = pluralize(@errors.count, "error")
   %ol
     - @errors.full_messages.each do |msg|

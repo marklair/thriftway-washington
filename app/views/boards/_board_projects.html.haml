@@ -4,12 +4,21 @@
   - @board.projects.each do |project, index|
     -if prev_user_id != project.user_id && project.user_id != 1
       - dri = User.find(project.user_id)
-      %li.project_user= dri.real_name
-      
+      %li.project_user.label.label-info= dri.real_name
+
     %li.project
-      %span.priority= project.priority
+      %span.priority
+        -if project.priority == 1
+          %span.badge.badge-info{:title => project.name, :'data-content' => project.description}
+            = project.priority
+        -elsif project.priority == 2
+          %span.badge.badge-inverse{:title => project.name, :'data-content' => project.description}
+            = project.priority
+        -else
+          %span.badge{:title => project.name, :'data-content' => project.description}
+            = project.priority
       %span.name= link_to project.name, project_path(project)
       %div.clear
     - prev_user_id = project.user_id
-    
-    
+
+

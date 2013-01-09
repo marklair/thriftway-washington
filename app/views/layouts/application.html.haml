@@ -15,7 +15,7 @@
       %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
   %body{'data-spy' => 'scroll', 'data-target' => '.bs-docs-sidebar'}
     = render :partial => "layouts/header"
-    .container
+    .container.main_body_content
       = render :partial => "layouts/messages"
       = yield
     .footer

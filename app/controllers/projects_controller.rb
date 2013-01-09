@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
     @boards = Board.all
     @users = User.all
     @departments = Department.all
-    
+
     if @project.hours_estimate == ''
       @project.hours_estimate = 0
     end
@@ -76,7 +76,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.update_attributes(params[:project])
         flash[:success] = 'Project was successfully updated.'
-        format.html { redirect_to @project }
+        format.html { redirect_to boards_url }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
@@ -92,7 +92,8 @@ class ProjectsController < ApplicationController
     @project.destroy
 
     respond_to do |format|
-      format.html { redirect_to projects_url }
+      flash[:success] = 'Project was successfully DESTROYED!'
+      format.html { redirect_to boards_url }
       format.json { head :ok }
     end
   end
