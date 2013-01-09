@@ -1,8 +1,6 @@
 $webstop-blue: #369;
 $light-blue: #d3e3f4;
 $dark-gray: #333;
-$haml: #63878b;
-$sass: #cc6699;
 
 @mixin border_container {
   background-color: #F7F7F9;
@@ -26,51 +24,6 @@ body{
   background-color: transparent;
 }
 
-img {
-    margin-bottom: 20px;
-  }
-
-header {
-  @include border_container;
-  margin: 30px 0;
-  padding: 20px 40px;
-  clear: both;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-[class*="span"] {
-  margin-left: 0;
-}
-
-.row, .row-fluid {
-  margin-bottom: 20px;
-}
-
-.feature {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.ad-block {
-  margin-bottom: 20px;
-  padding: 40px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  text-align: center;
-}
-
-.haml {
-  background-color: $haml;
-}
-
-.sass {
-  background-color: $sass;
-}
-
-h3 {
-  line-height: 30px;
-}
 
 /* Responsive Layout */
 
@@ -78,25 +31,106 @@ h3 {
 @media (min-width: 1200px) {
 
 }
- 
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
   header {
     margin: 10px 0 0 0;
   }
 }
- 
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   header {
     margin: 100px 0 0 0;
   }
 }
- 
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
   header {
     margin: 100px 0 0 0;
   }
 }
+
+
+/* original project boards stuff */
+
+html, body{background:#333; font-size: 86%}
+
+.container{width:95.918367346939%; margin-left: 2.040816326531%} /* width: 940/980 margin: 20/980 */
+
+.clear {clear: both; padding-bottom: 5px;}
+
+.board {
+  padding: 5px;
+  background:#4A525A;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+/*.main_boards .size1of4:last-child {
+  width: 47.916666666667%;
+}*/
+
+.main_boards .unit:last-child .board {
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
+  /*padding: 1.4%;*/
+}
+
+.secondary_boards .board {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+  /*padding: 1.4%;*/
+}
+
+
+.board_name{color:#999;}
+
+.project{
+  color: #eee;
+  font-size: 1.23076923076923em;
+  margin:5px 0;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  border-bottom: 1px solid #3c4043;
+}
+.priority{
+  color: #999;
+  display: inline-block;
+  float: left;
+  width: 0;
+  /*overflow: visible;*/
+  /*margin-left: -1.23076923076923em;*/
+}
+.name {
+  /*left: 7%;*/
+  display: inline-block;
+  /*position: relative;*/
+  float: left;
+  width: 95%;
+  margin-left: 1.23076923076923em;
+}
+
+.name a{
+  color: #fff;
+}
+.project_user{margin-top: 10px; font-weight: bold; font-size: 18px; color: #ffc; letter-spacing: 0.1em; word-spacing: 0.2em;}
+
+
+.secondary_boards {font-size:12px;}
+
+
+
+
+
 

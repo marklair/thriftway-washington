@@ -1,0 +1,41 @@
+-content_for :styles do
+  =stylesheet_link_tag 'index', :media => 'screen'
+  =stylesheet_link_tag 'index_print_only', :media => 'print'
+  =javascript_include_tag 'boards_index'
+
+%div.line.boards.main_boards
+  - @boards.each_with_index do |board, index|
+    - @board = board
+    -if index <= 1
+      %span.unit.size1of5
+        = render :partial => "board_projects"
+    -if index == 2
+      %span.unit.size3of5
+        = render :partial => "board_projects"
+
+%div.line.boards.secondary_boards
+  - @boards.each_with_index do |board, index|
+    - @board = board
+    -if  index >= 3
+      %span.unit.size1of2
+        = render :partial => "board_projects"
+    
+
+
+/ %div.row
+/   %span.span16
+/     %table
+/       %tr
+/         %th Name
+/         %th{:colspan => '3'}
+/ 
+/       - @boards.each do |board|
+/         %tr
+/           %td= board.name
+/           %td= link_to 'Show', board
+/           %td= link_to 'Edit', edit_board_path(board)
+/           %td= link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete
+/ 
+/     %br
+/ 
+/     = link_to 'New Board', new_board_path

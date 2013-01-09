@@ -1,31 +1,28 @@
 Template::Application.routes.draw do
 
   get "tests/edge_cases"
-
   get "tests/main_tags"
-
   get "tests/components"
-
   get "tests/theme"
 
-  # get "guides"
-  # get "guides/index"
-  # get "guides/bootstrap"
-  # get "guides/bootstrap/base"
-  # get "guides/bootstrap/components"
-  # get "guides/bootstrap/download"
-  # get "guides/bootstrap/examples"
-  # get "guides/bootstrap/javascript"
-  # get "guides/bootstrap/less"
-  # get "guides/bootstrap/scaffolding"
-  # get "guides/bootstrap/upgrading"
-
-
-
+  
   resources :users, :user_sessions, :password_resets
   resources :account, :controller => "users"
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+  
+  
+  resources :projects
+  resources :departments
+  
+  # boards
+  resources :boards do
+    collection do
+      get 'list'
+      get 'projects'
+      post 'add_project'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -84,6 +81,6 @@ Template::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   match ':action' => 'guides#:action'
-  root :to => "guides#index", :as => :home
+  root :to => 'boards#index', :as => :home
   # extras: http://d.pr/Vt7w
 end

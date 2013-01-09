@@ -11,7 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326023136) do
+ActiveRecord::Schema.define(:version => 20120208022012) do
+
+  create_table "boards", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "position"
+    t.integer  "department_id"
+  end
+
+  create_table "boards_projects", :id => false, :force => true do |t|
+    t.integer  "board_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "departments", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "priority"
+    t.string   "hours_estimate"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "department_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -19,8 +51,9 @@ ActiveRecord::Schema.define(:version => 20120326023136) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "real_name"
     t.string   "single_access_token",                :null => false
     t.string   "perishable_token",                   :null => false
     t.integer  "login_count",         :default => 0, :null => false
@@ -30,7 +63,6 @@ ActiveRecord::Schema.define(:version => 20120326023136) do
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
-    t.integer  "roles_mask"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

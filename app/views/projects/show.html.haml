@@ -1,0 +1,29 @@
+-content_for :styles do
+  =stylesheet_link_tag 'projects'
+
+%p#notice= notice
+.stand-out
+  %p.name_label Project
+  %h1= @project.name
+  %p.description
+    %b Description:
+    = @project.description
+  .assignment
+    %p.person_label Directly responsible individual:
+    %h4.dri
+      - dri = User.find(@project.user_id)
+      = dri.real_name
+    %p.priority
+      %b Priority:
+      = @project.priority
+    %p.hours
+      %b Hours estimate:
+      = @project.hours_estimate
+    
+    
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Delete', @project, :confirm => 'Are you sure?', :method => :delete
+\|
+= link_to 'Project List', projects_path

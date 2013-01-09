@@ -1,0 +1,15 @@
+%h2.board_name= @board.name
+%ul.unstyled.board
+  - prev_user_id = 0
+  - @board.projects.each do |project, index|
+    -if prev_user_id != project.user_id && project.user_id != 1
+      - dri = User.find(project.user_id)
+      %li.project_user= dri.real_name
+      
+    %li.project
+      %span.priority= project.priority
+      %span.name= link_to project.name, project_path(project)
+      %div.clear
+    - prev_user_id = project.user_id
+    
+    

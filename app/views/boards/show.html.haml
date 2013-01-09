@@ -1,0 +1,18 @@
+%section.stand-out
+  %h1 
+    = @board.name 
+    project board
+  %p
+    %strong Id:
+    = @board.id
+  %p
+    %strong Name:
+    = @board.name
+  %p
+    %strong Position:
+    = @board.position
+
+%p
+  = link_to 'Edit', edit_board_path(@board)
+  \|
+  = link_to 'Back', list_boards_path

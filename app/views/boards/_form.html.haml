@@ -1,0 +1,16 @@
+= form_for @board, :html => { :class => "form-stacked inner-stand-out-bottom inner-stand-out-full-width"} do |form|
+  -if @board.errors.any?
+    #error_explanation.alert-message.block-message.error.fade.in{'data-alert' => 'alert'}
+      %a.close{:href => '#'} x
+      %h2= "#{pluralize(@board.errors.count, "error")} prohibited this board from being saved:"
+      %ul
+        - @board.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :position
+    = form.text_field :position, :class => 'span1'
+  .actions.inner-stand-out-bottom.inner-stand-out-full-width
+    = form.submit 'Save', :class => 'btn primary'

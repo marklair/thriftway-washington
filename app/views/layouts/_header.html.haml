@@ -1,3 +1,4 @@
+-current_navigation_tab = ApplicationController.helpers.current_navigation_tab(request.env['PATH_INFO'])
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
@@ -5,42 +6,90 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand{:href => "/guides/index"} Style Guide
+      .brand= link_to 'Project Boards', boards_path 
       .nav-collapse
         %ul.nav
-          %li#scaffolding-nav
-            %a{:href => '/guides/bootstrap/scaffolding'} Scaffolding
-          %li#base-nav
-            %a{:href => '/guides/bootstrap/base'} Base Styles
-          %li#components-nav
-            %a{:href => '/guides/bootstrap/components'} Base Components
-          %li#grocery-nav
-            %a{:href => '/guides/grocery'} Grocery Components
-          %li#javascript-nav
-            %a{:href => '/guides/bootstrap/javascript'} Plugins
-          / %li#less-nav
-          /   %a{:href => '/guides/bootstrap/less'} Themes
-          / %li#testing-nav
-          /   %a{:href => '/guides/bootstrap/testing'} Testing
-        / %ul.nav.pull-right
-        /   %li.divider-vertical
-        /   %li.dropdown
-        /     %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown"}
-        /       %span.icon-user.icon-white.icon
-        /       Account
-        /       %span.caret
-        /     %ul.dropdown-menu
+          -if current_navigation_tab == 'home'
+            %li.active= link_to 'Home', boards_path
+          -else
+            %li= link_to 'Home', boards_path
+        
+          -if current_navigation_tab == 'boards'
+            %li.active.dropdown{'data-dropdown' => 'dropdown'}
+              = link_to 'Boards', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'View Boards', boards_path
+                %li= link_to 'List & Edit Boards', list_boards_path
+                %li= link_to 'New Board', new_board_path
+          -else
+            %li.dropdown{'data-dropdown' => 'dropdown'}
+              = link_to 'Boards', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'View Boards', boards_path
+                %li= link_to 'List & Edit Boards', list_boards_path
+                %li= link_to 'New Board', new_board_path
+              
+          -if current_navigation_tab == 'projects'
+            %li.active.dropdown{'data-dropdown' => 'dropdown'}
+              = link_to 'Projects', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'List All projects', projects_path
+                %li= link_to 'New project', new_project_path
+          -else
+            %li.dropdown{'data-dropdown' => 'dropdown'}
+              = link_to 'Projects', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'List All projects', projects_path
+                %li= link_to 'New project', new_project_path
 
-        /       - if current_user
-        /         %li= link_to "View Account", user_path(current_user.id)
-        /         %li= link_to "Edit Account", edit_user_path(current_user.id)
-        /         %li= link_to "Logout", :logout
-        /       - else
-        /         %li= link_to "Register", new_account_path
-        /         %li= link_to "Login", :login
-        /         %li.divider
-        /         %li=link_to "Forgot password", new_password_reset_path
-        /       -if can? :read, User
-        /         %li.divider
-        /         %li= link_to "Browse Accounts", users_path
-
+          -if current_navigation_tab == 'departments'
+            %li.active.dropdown{'data-dropdown' => 'dropdown'}
+              = link_to 'Departments', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'List departments', departments_path
+                %li= link_to 'New department', new_department_path
+          -else
+            %li.dropdown{'data-dropdown' => 'dropdown'}
+              = link_to 'Department', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'List departments', departments_path
+                %li= link_to 'New department', new_department_path
+      
+        %ul.nav.secondary-nav
+          %li.dropdown{'data-dropdown' => 'dropdown'}
+            -if current_user
+              =link_to current_user.real_name, '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'Profile', user_path(current_user.id)
+                %li= link_to 'Logout', logout_path
+                %li.divider
+                %li=link_to 'New Account', new_user_path
+                %li=link_to 'List Accounts', users_path
+            -else
+              =link_to 'People', '#', :class => 'dropdown-toggle'
+              %ul.dropdown-menu
+                %li= link_to 'Sign-Up', new_user_path
+                %li= link_to 'Login', login_path
+                %li.divider
+                %li=link_to 'New Account', new_user_path
+                %li=link_to 'List Accounts', users_path
+      
+      / %ul.nav.secondary-nav
+      /   %li.dropdown{'data-dropdown' => 'dropdown'}
+      /     =link_to 'People', '#', :class => 'dropdown-toggle'
+      /     %ul.dropdown-menu
+      /       %li=link_to 'New Account', new_user_path
+      /       %li=link_to 'List Accounts', users_path
+      /       %li.divider
+      /       -if current_user
+      /         %li= link_to 'Logout', logout_path
+      /       -else
+      /         %li= link_to 'Login', login_path
+      /   -if current_user
+      /     %li= link_to 'Profile', user_path(current_user.id)
+      /     %li= link_to 'Logout', logout_path
+      /   -else
+      /     %li= link_to 'Sign-Up', new_user_path
+      /     %li= link_to 'Login', login_path
+        
+            
