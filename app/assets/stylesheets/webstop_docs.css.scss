@@ -4,6 +4,10 @@ $dark-gray: #333;
 $haml: #63878b;
 $sass: #cc6699;
 
+html {
+  background: -moz-linear-gradient(top, $light-blue , white 100%);
+  background: -webkit-linear-gradient(top, $light-blue 0%, white 100%);
+}
 
 body{
   border-bottom: 20px solid #369;
@@ -58,6 +62,12 @@ h1, h2, h3, h4, h5, h6 {color: $dark-gray;}
 
 /* Navbar
 -------------------------------------------------- */
+body > .navbar .brand {
+  color: #777;
+  text-shadow: none;
+  text-shadow: 0 -1px 0px rgba(0,0,0,.8);
+  font-weight: normal;
+}
 
 /* footer */
 .footer {display: none;}
