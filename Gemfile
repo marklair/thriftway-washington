@@ -40,9 +40,6 @@ end
 
 gem 'jquery-rails', '~> 2.0.0'
 
-# For serving static html files
-gem 'high_voltage', '~> 1.1.1'
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
