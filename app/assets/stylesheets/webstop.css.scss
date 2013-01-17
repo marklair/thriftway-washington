@@ -72,7 +72,7 @@ section {
   -o-transition: all .5s ease-in-out;
   -ms-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-   
+
 }
 
 .carousel {
@@ -121,19 +121,19 @@ ul.right {
   box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
 }
 
-.price-table li:nth-child(even) {  
+.price-table li:nth-child(even) {
     -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
   -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
   box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
 }
 
-.price-table li:nth-child(even):hover {  
+.price-table li:nth-child(even):hover {
     -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
   -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
   box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
 }
 
-.price-table li:nth-child(odd) {  
+.price-table li:nth-child(odd) {
     margin-top: 20px;
 }
 
@@ -187,21 +187,22 @@ body {
 
 @font-face {
     font-family: 'LeagueGothicRegular';
-    src: url('fonts/league_gothic/league_gothic-webfont.eot');
-    src: url('fonts/league_gothic/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/league_gothic/league_gothic-webfont.woff') format('woff'),
-         url('fonts/league_gothic-webfont.ttf') format('truetype');
+    src: url('league_gothic/league_gothic-webfont.eot');
+    src: url('league_gothic/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('league_gothic/league_gothic-webfont.woff') format('woff'),
+         url('league_gothic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+
 @font-face {
   font-family: 'Iconstop';
-  src:url('fonts/iconstop/iconstop.eot');
-  src:url('fonts/iconstop/iconstop.eot?#iefix') format('embedded-opentype'),
-    url('fonts/iconstop/iconstop.svg#Iconstop') format('svg'),
-    url('fonts/iconstop/iconstop.woff') format('woff'),
-    url('fonts/iconstop/iconstop.ttf') format('truetype');
+  src:url('Iconstop/iconstop.eot');
+  src:url('Iconstop/Iconstop.eot?#iefix') format('embedded-opentype'),
+    url('Iconstop/Iconstop.svg#Iconstop') format('svg'),
+    url('Iconstop/Iconstop.woff') format('woff'),
+    url('Iconstop/Iconstop.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
