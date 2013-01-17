@@ -1,34 +1,62 @@
-= stylesheet_link_tag "webstop"
-
-%section.row-fluid.span12
+%section#glider
   %h1
     Digital Marketing Solutions for Grocers
   #myCarousel.carousel.slide
-  /Carousel items
-  .carousel-inner
-    .active.item
-      %a{:href => "#"}
-      = image_tag "index/circular.png"
-    .item
-      %a{:href => "#"}
-      = image_tag "index/recipes.png"
-    .item
-      %a{:href => "#"}
-      = image_tag "index/coupons.png"
-    .item
-      %a{:href => "#"}
-      = image_tag "index/shopping-list.png"
+    /Carousel items
+    .carousel-inner
+      .active.item
+        .glider-left
+          = image_tag "index/shopping-list.png"
+        .glider-right
+          %h2
+            Shopping List
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+      .item
+        .glider-left
+          = image_tag "index/shopping-list.png"
+        .glider-right
+          %h2
+            Test
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+      .item
+        .glider-left
+          = image_tag "index/shopping-list.png"
+        .glider-right
+          %h2
+            Test 2
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+      .item
+        .glider-left
+          = image_tag "index/shopping-list.png"
+        .glider-right
+          %h2
+            Test 3
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+
 
   /Carousel nav
   %a.carousel-control.left{:href => "#"}
   %a.carousel-control.right{:href => "#"}
 
-%section.what-we-do.row-fluid.span12
+%section#what-we-do
   %h2
     What We Do
   %p
     Webstop is a leader in digital marketing solutions for the grocery industry. We have the most comprehensive offerings for progressive retail chains, independents, and wholesalers.
 
+  %div.fluid-row
     %ul.left.span6
       %li
         %h3
@@ -57,3 +85,69 @@
           %span.icon-social.icon{:escape_attrs => true} Social Networks
         %p
           Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+    .clear
+
+%section#what-weve-done
+  %h2
+    What We've Done
+
+%section#digital-grocery
+  %h2
+    Digital Grocery - Made Easy!
+  %p
+    Enticing, appealing consumer features with extensive food content and great savings are provided in the most comprehensive digital marketing solution for independents and chains. These powerful features are quick and easy for consumers, and have the best content and capabilities from any source.
+  
+  = image_tag "index/digital-grocery.jpg"
+
+  %center
+    %h3
+      Optional Weekly Low Cost Ads
+    %p
+      Supplement your Digital Grocery site with our Weekly Ad. Webstop has Weekly Ad options for all budgets.
+
+
+    %div
+      %ul.price-table
+        %li.price-col
+          %h4
+            Standard
+          %div.priceDetail
+            %p
+              Upload unlimited PDF ads through our upload tool.
+            %div.price-container
+              %span.price
+                $10
+              %span.month
+                month
+          
+        %li.price-col
+          %h4
+            Premium
+          %div.price-detail
+            %p
+              Fully interactive html digital ad with shopping list and recipe integration. <span style="font-size:10px;">Prices starting at:</span></p>
+            %div.price-container
+              %span.price
+                $25
+              %span.month
+                month
+
+        %li.price-col
+          %h4
+            Plus
+          %div.price-detail
+            %p
+              Send your ad images to us for a static digital ad.</p>
+            %div.price-container
+              %span.price
+                $18
+              %span.month
+        %div.clear
+
+%section#who-we-are
+  %h2
+    Who We Are
+
+  %section#contact-us
+  %h2
+    Contact Us

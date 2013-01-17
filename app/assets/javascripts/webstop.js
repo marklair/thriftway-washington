@@ -6,5 +6,3 @@
 
     $('.carousel').carousel();
 })
-
-}(window.jQuery)
