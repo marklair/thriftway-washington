@@ -39,10 +39,10 @@ section {
   background-color: inherit;
 }
 
-.nav {
+.navbar .nav {
+  margin: 7px 0 0 0;
   float: right;
-  padding: 15px;
-  margin-top: 10px;
+  padding: 15px 20px;
   background-color: $dark-blue;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -53,8 +53,13 @@ section {
   margin: 0 20px 0 0;
 }
 
+.navbar .nav > li:nth-child(5) {
+  margin-right: 0;
+}
+
 .navbar .nav > li > a {
-  padding: 0;
+  padding: 5px 0;
+  font-size: 24px;
   color: #fff;
   font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
   border-bottom: 2px solid transparent;
@@ -79,6 +84,10 @@ section {
   margin: 40px 0 0 0;
 }
 
+a.carousel-control {
+  font-size: 32px;
+}
+
 .glider-left {
   float: left;
   margin-right: 30px;
@@ -95,6 +104,7 @@ ul.left, ul.right {
 
 ul.left li, ul.right li {
   list-style: none;
+  margin: 0 0 20px 0;
 }
 
 ul.left {
@@ -105,10 +115,38 @@ ul.right {
   float: right;
 }
 
+img.digital-grocery {
+  margin: 30px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+#digital-grocery h3 {
+  margin-bottom: 10px;
+  line-height: 18px;
+}
+
+.left-col, .right-col {
+    margin: 20px 0 0 0;
+    border-top: 2px solid #cbcbcb;
+  }
+  
+  .left-col {
+    float: left;
+  }
+  
+  .right-col {
+    float: right;
+  }
+
 /* Price Table */
 
 .price-table {
-  margin: 30px 0 0 162px;
+  width: 636px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .price-table li {
@@ -245,6 +283,7 @@ body {
 .icon {
   margin-top: 5px;
   font-size: 38px;
+  float: left;
 }
 
 p {
@@ -275,8 +314,14 @@ h1 {
 
 h3 {
   color: #333;
-  font-size: 18px !important;
+  font-size: 18px;
   margin-top: 10px;
+}
+
+#what-we-do h3 {
+  margin: 0 0 0 45px;
+  line-height: 45px;
+
 }
 
 /* Buttons & Links */
@@ -302,6 +347,7 @@ h3 {
   background: -webkit-gradient( linear, left top, left bottom,
         from(#236d0f), to(#206010) ) ;
   text-decoration: none;
+  color: #fff;
 }
 
 .button:active, button:active {

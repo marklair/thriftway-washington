@@ -47,8 +47,10 @@
 
 
   /Carousel nav
-  %a.carousel-control.left{:href => "#"}
-  %a.carousel-control.right{:href => "#"}
+  %a.carousel-control.left{:href => "#", :data-slide => "prev"}
+    &lsaquo;
+  %a.carousel-control.right{:href => "#", :data-slide => "next"}
+    &rsaquo;
 
 %section#what-we-do
   %h2
@@ -59,30 +61,35 @@
   %div.fluid-row
     %ul.left.span6
       %li
+        %span.icon-web.icon{:escape_attrs => true}
         %h3
-          %span.icon-web.icon{:escape_attrs => true} Web
+          Web
         %p
           Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
       %li
+        %span.icon-mobile.icon{:escape_attrs => true}
         %h3
-          %span.icon-mobile.icon{:escape_attrs => true} Mobile
+          Mobile
         %p
           Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
       %li
+        %span.icon-coupons.icon{:escape_attrs => true}
         %h3
-          %span.icon-coupons.icon{:escape_attrs => true} Digital Coupons
+          Digital Coupons
         %p
           Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
     
     %ul.right.span6
       %li
+        %span.icon-newsletter.icon{:escape_attrs => true}
         %h3
-          %span.icon-newsletter.icon{:escape_attrs => true} Email Campaigns
+          Email Campaigns
         %p
           Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
       %li
+        %span.icon-social.icon{:escape_attrs => true}
         %h3
-          %span.icon-social.icon{:escape_attrs => true} Social Networks
+          Social Networks
         %p
           Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
     .clear
@@ -97,7 +104,7 @@
   %p
     Enticing, appealing consumer features with extensive food content and great savings are provided in the most comprehensive digital marketing solution for independents and chains. These powerful features are quick and easy for consumers, and have the best content and capabilities from any source.
   
-  = image_tag "index/digital-grocery.jpg"
+  = image_tag "index/digital-grocery.jpg", :class => "digital-grocery"
 
   %center
     %h3
@@ -105,49 +112,67 @@
     %p
       Supplement your Digital Grocery site with our Weekly Ad. Webstop has Weekly Ad options for all budgets.
 
+  %div
+    %ul.price-table
+      %li.price-col
+        %h4
+          Standard
+        %div.price-detail
+          %p
+            Upload unlimited PDF ads through our upload tool.
+          %div.price-container
+            %span.price
+              $10
+            %span.month
+              \/month
+        
+      %li.price-col
+        %h4
+          Premium
+        %div.price-detail
+          %p
+            Fully interactive html digital ad with shopping list and recipe integration. <span style="font-size:10px;">Prices starting at:</span></p>
+          %div.price-container
+            %span.price
+              $25
+            %span.month
+              \/month
 
-    %div
-      %ul.price-table
-        %li.price-col
-          %h4
-            Standard
-          %div.price-detail
-            %p
-              Upload unlimited PDF ads through our upload tool.
-            %div.price-container
-              %span.price
-                $10
-              %span.month
-                \/month
-          
-        %li.price-col
-          %h4
-            Premium
-          %div.price-detail
-            %p
-              Fully interactive html digital ad with shopping list and recipe integration. <span style="font-size:10px;">Prices starting at:</span></p>
-            %div.price-container
-              %span.price
-                $25
-              %span.month
-                \/month
+      %li.price-col
+        %h4
+          Plus
+        %div.price-detail
+          %p
+            Send your ad images to us for a static digital ad.</p>
+          %div.price-container
+            %span.price
+              $18
+            %span.month
+              \/month
+      %div.clear
 
-        %li.price-col
-          %h4
-            Plus
-          %div.price-detail
-            %p
-              Send your ad images to us for a static digital ad.</p>
-            %div.price-container
-              %span.price
-                $18
-              %span.month
-                \/month
-        %div.clear
+    %center
+      %a.button{:href => '#contact-us'} Contact Us to Sign Up Now
 
 %section#who-we-are
   %h2
     Who We Are
+  %p
+    Webstop, located in the Tampa Bay area of Florida, has been developing and maintaining advanced grocery websites since 1996. Our expertise in the grocery industry, along with our commitment to high quality integration of technology into custom marketing initatives, uniquely places us in the marketplace.
+
+  %div.left-col.span6
+    %h3
+      Custom Design & Development
+    %p
+      Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+  %div.right-col.span6
+    %h3
+      Dedicated Client Services Team
+    %p
+      Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+  .clear
 
   %section#contact-us
   %h2
