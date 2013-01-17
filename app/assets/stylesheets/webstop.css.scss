@@ -27,7 +27,7 @@ body {
 }
 
 section {
-  margin: 120px 0 -80px 0;
+  margin: 80px 0 0 0;
 }
 
 .navbar {
@@ -62,10 +62,11 @@ section {
   text-transform: uppercase;
 }
 
-.navbar .nav > li > a:hover {
+.navbar .nav > li > a:hover, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
   color: #fff;
   border-bottom: 2px solid #fff;
   text-shaddow: none;
+  background-color: transparent;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
@@ -102,6 +103,79 @@ ul.left {
 
 ul.right {
   float: right;
+}
+
+/* Price Table */
+
+.price-table {
+  margin: 30px 0 0 162px;
+}
+
+.price-table li {
+  -webkit-border-radius: 5px;
+}
+
+.price-table li:hover {
+  -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+  -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+  box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+}
+
+.price-table li:nth-child(even) {  
+    -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
+  -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
+  box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
+}
+
+.price-table li:nth-child(even):hover {  
+    -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+  -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+  box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+}
+
+.price-table li:nth-child(odd) {  
+    margin-top: 20px;
+}
+
+.price-col {
+  float: left;
+  margin: 0 5px;
+}
+
+.price-detail {
+  width: 200px;
+  background-color: #f0f8ff;
+  border: 1px solid #b2daff;
+  border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+}
+
+.month {
+  font-size: 12px;
+}
+
+.price-container {
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: #dedede;
+  color: #316596;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.priceCol h4 {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #316596;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  text-align: center;
+  text-shadow: 1px 1px 1px #24384e;
 }
 
 /* Typography */
@@ -169,7 +243,7 @@ p {
 }
 
 h1 {
-  margin: 60px 0 0 0;
+  margin: 120px 0 0 0;
   font-size: 36px;
   font-weight: 800;
   color: #fff;

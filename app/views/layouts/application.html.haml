@@ -15,7 +15,7 @@
       %link{ :src => "http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600"}
       %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
 
-  %body{'data-spy' => 'scroll', 'data-target' => '.navbar'}
+  %body#top{'data-spy' => 'scroll', 'data-target' => '.navbar'}
     = render :partial => "layouts/header"
     .container
       = render :partial => "layouts/messages"
