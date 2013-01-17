@@ -5,42 +5,17 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand{:href => "/guides/index"} Style Guide
+      %a.brand{:href => "/grocery_digital_marketing/index"}
+        = image_tag "index/logo.png"
       .nav-collapse
         %ul.nav
           %li#scaffolding-nav
-            %a{:href => '/guides/bootstrap/scaffolding'} Scaffolding
+            %a{:href => '#'} What We Do
           %li#base-nav
-            %a{:href => '/guides/bootstrap/base'} Base Styles
+            %a{:href => '#'} What We've Done
           %li#components-nav
-            %a{:href => '/guides/bootstrap/components'} Base Components
+            %a{:href => '#'} Digital Grocery
           %li#grocery-nav
-            %a{:href => '/guides/grocery'} Grocery Components
+            %a{:href => '#'} Who We Are
           %li#javascript-nav
-            %a{:href => '/guides/bootstrap/javascript'} Plugins
-          / %li#less-nav
-          /   %a{:href => '/guides/bootstrap/less'} Themes
-          / %li#testing-nav
-          /   %a{:href => '/guides/bootstrap/testing'} Testing
-        / %ul.nav.pull-right
-        /   %li.divider-vertical
-        /   %li.dropdown
-        /     %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown"}
-        /       %span.icon-user.icon-white.icon
-        /       Account
-        /       %span.caret
-        /     %ul.dropdown-menu
-
-        /       - if current_user
-        /         %li= link_to "View Account", user_path(current_user.id)
-        /         %li= link_to "Edit Account", edit_user_path(current_user.id)
-        /         %li= link_to "Logout", :logout
-        /       - else
-        /         %li= link_to "Register", new_account_path
-        /         %li= link_to "Login", :login
-        /         %li.divider
-        /         %li=link_to "Forgot password", new_password_reset_path
-        /       -if can? :read, User
-        /         %li.divider
-        /         %li= link_to "Browse Accounts", users_path
-
+            %a{:href => '#'} Contact Us

@@ -1,0 +1,139 @@
+$webstop-blue: #369;
+$dark-blue: #214367;
+$light-blue: #d3e3f4;
+
+::selection {
+  background: #FD860F;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #FD860F;
+  color: #fff;
+}
+
+html {
+  background: #fff;
+  background-image: url('images/index/blueBG.jpg');
+  background-repeat: repeat-x;
+}
+
+body {
+  background-color: transparent !important;
+}
+
+.navbar {
+  background-color: $webstop-blue;
+}
+
+.nav {
+  float: right;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: $dark-blue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.navbar .nav > li > a {
+  padding: 0;
+  margin: 0;
+}
+
+ul.left, ul.right {
+  margin: 0;
+}
+
+ul.left li, ul.right li {
+  list-style: none;
+}
+
+ul.left {
+  float: left;
+}
+
+ul.right {
+  float: right;
+}
+
+/* Typography */
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('fonts/league_gothic/league_gothic-webfont.eot');
+    src: url('fonts/league_gothic/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/league_gothic/league_gothic-webfont.woff') format('woff'),
+         url('fonts/league_gothic/league_gothic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Iconstop';
+  src:url('fonts/iconstop/iconstop.eot');
+  src:url('fonts/iconstop/iconstop.eot?#iefix') format('embedded-opentype'),
+    url('fonts/iconstop/iconstop.svg#Iconstop') format('svg'),
+    url('fonts/iconstop/iconstop.woff') format('woff'),
+    url('fonts/iconstop/iconstop.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-social:before, .icon-mobile:before, .icon-web:before, .icon-newsletter:before, .icon-coupons:before {
+  font-family: 'Iconstop';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-social:before {
+  content: "\21";
+}
+.icon-mobile:before {
+  content: "\22";
+}
+.icon-web:before {
+  content: "\23";
+}
+.icon-newsletter:before {
+  content: "\24";
+}
+.icon-coupons:before {
+  content: "\25";
+}
+
+.icon {
+  margin-top: 5px;
+  font-size: 38px;
+}
+
+/* Responsive Layout */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  header {
+    margin: 10px 0 0 0;
+  }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  header {
+    margin: 100px 0 0 0;
+  }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  header {
+    margin: 100px 0 0 0;
+  }
+}
+
