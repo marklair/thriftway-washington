@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .navbar {
@@ -113,6 +113,13 @@ ul.right {
   margin-top: 5px;
   font-size: 38px;
 }
+
+h3 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 
 /* Responsive Layout */
 
