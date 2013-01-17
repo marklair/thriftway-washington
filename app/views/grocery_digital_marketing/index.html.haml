@@ -6,6 +6,36 @@
     .carousel-inner
       .active.item
         .glider-left
+          = image_tag "index/circular.png"
+        .glider-right
+          %h2
+            Circulars
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+      .item
+        .glider-left
+          = image_tag "index/recipes.png"
+        .glider-right
+          %h2
+            Recipes
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+      .item
+        .glider-left
+          = image_tag "index/coupons.png"
+        .glider-right
+          %h2
+            Coupons
+          %p
+            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+          %a.button{:href => '#'} Learn More
+        .clear
+      .item
+        .glider-left
           = image_tag "index/shopping-list.png"
         .glider-right
           %h2
@@ -14,43 +44,11 @@
             Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
           %a.button{:href => '#'} Learn More
         .clear
-      .item
-        .glider-left
-          = image_tag "index/shopping-list.png"
-        .glider-right
-          %h2
-            Test
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
-      .item
-        .glider-left
-          = image_tag "index/shopping-list.png"
-        .glider-right
-          %h2
-            Test 2
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
-      .item
-        .glider-left
-          = image_tag "index/shopping-list.png"
-        .glider-right
-          %h2
-            Test 3
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
 
 
   /Carousel nav
-  %a.carousel-control.left{:href => "#", :data-slide => "prev"}
-    &lsaquo;
-  %a.carousel-control.right{:href => "#", :data-slide => "next"}
-    &rsaquo;
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
 
 %section#what-we-do
   %h2
@@ -97,6 +95,9 @@
 %section#what-weve-done
   %h2
     What We've Done
+
+  %p
+    We've done a whole bunch of shit, let me tell you. You can't even begin to understand how much awesome shit we've done. You should buy some of our awesome shit pronto.
 
 %section#digital-grocery
   %h2

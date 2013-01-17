@@ -81,11 +81,15 @@ section {
 }
 
 .carousel {
-  margin: 40px 0 0 0;
+  margin: 50px 0 0 0;
 }
 
 a.carousel-control {
   font-size: 32px;
+}
+
+.slide {
+  padding: 0 0 0 40px;
 }
 
 .glider-left {
@@ -294,7 +298,7 @@ p {
 }
 
 h1 {
-  margin: 120px 0 0 0;
+  margin: 120px 0 0 50px;
   font-size: 36px;
   font-weight: 800;
   color: #fff;
