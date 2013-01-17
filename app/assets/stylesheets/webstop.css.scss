@@ -12,6 +12,10 @@ $light-blue: #d3e3f4;
   color: #fff;
 }
 
+.clear {
+  clear: both;
+}
+
 html {
   background: #fff;
   background-image: url('index/blueBG.jpg');
@@ -20,6 +24,10 @@ html {
 
 body {
   background-color: transparent;
+}
+
+section {
+  margin: 120px 0 -80px 0;
 }
 
 .navbar {
@@ -41,9 +49,43 @@ body {
   -moz-border-radius: 5px;
 }
 
+.navbar .nav > li {
+  margin: 0 20px 0 0;
+}
+
 .navbar .nav > li > a {
   padding: 0;
-  margin: 0;
+  color: #fff;
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
+  border-bottom: 2px solid transparent;
+  text-shaddow: none;
+  text-transform: uppercase;
+}
+
+.navbar .nav > li > a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-shaddow: none;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+   
+}
+
+.carousel {
+  margin: 40px 0 0 0;
+}
+
+.glider-left {
+  float: left;
+  margin-right: 30px;
+}
+
+.glider-right {
+  float: left;
+  width: 420px;
 }
 
 ul.left, ul.right {
@@ -64,12 +106,17 @@ ul.right {
 
 /* Typography */
 
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
 @font-face {
     font-family: 'LeagueGothicRegular';
     src: url('fonts/league_gothic/league_gothic-webfont.eot');
     src: url('fonts/league_gothic/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/league_gothic/league_gothic-webfont.woff') format('woff'),
-         url('fonts/league_gothic/league_gothic-webfont.ttf') format('truetype');
+         url('fonts/league_gothic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -114,12 +161,68 @@ ul.right {
   font-size: 38px;
 }
 
+p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+
+h1 {
+  margin: 60px 0 0 0;
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 1px 1px 1px #24384e;
+}
+
+.glider-right h2 {
+  padding-top: 0px;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #24384e;
+}
+
+.glider-right p {
+  color: #fff;
+}
+
 h3 {
   color: #333;
-  font-size: 18px;
+  font-size: 18px !important;
   margin-top: 10px;
 }
 
+/* Buttons & Links */
+
+.button, .button:visited, button, button:visited {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #1e590f;
+  border-radius: 5px;
+  background: -webkit-gradient( linear, left top, left bottom,
+        from(#287d12), to(#266f13) ) ;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2),
+        0 1px 0px rgba(0,0,0,.08);
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  cursor: pointer;
+}
+
+.button:hover, .button:active, button:hover, button:active {
+  background: -webkit-gradient( linear, left top, left bottom,
+        from(#236d0f), to(#206010) ) ;
+  text-decoration: none;
+}
+
+.button:active, button:active {
+  background: -webkit-gradient( linear, left top, left bottom,
+        from(#206010), to(#236d0f) ) ;
+  text-decoration: none;
+}
 
 /* Responsive Layout */
 
