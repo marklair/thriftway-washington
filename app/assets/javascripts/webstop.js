@@ -4,5 +4,5 @@
 
     $('.datepicker').datepicker();
 
-    $('.carousel').carousel();
+    $.localScroll();
 })

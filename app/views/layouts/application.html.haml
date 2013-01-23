@@ -7,12 +7,14 @@
 
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
+    = javascript_include_tag "local-scroll"
+    = javascript_include_tag "scroll-to"
     /= csrf_meta_tags
 
     = yield :styles
     / HTML5 shim adds support for HTML5 tags in IE6, IE7 & IE8
     /[if lt IE 9]
-      %link{ :src => "http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600"}
+      %link{ :src => "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,300,600,700,800)"}
       %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
 
   %body#top{'data-spy' => 'scroll', 'data-target' => '.navbar'}

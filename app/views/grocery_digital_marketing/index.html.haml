@@ -1,54 +1,18 @@
-%section#glider
-  %h1
-    Digital Marketing Solutions for Grocers
-  #myCarousel.carousel.slide
-    /Carousel items
-    .carousel-inner
-      .active.item
-        .glider-left
-          = image_tag "index/circular.png"
-        .glider-right
-          %h2
-            Circulars
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
-      .item
-        .glider-left
-          = image_tag "index/recipes.png"
-        .glider-right
-          %h2
-            Recipes
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
-      .item
-        .glider-left
-          = image_tag "index/coupons.png"
-        .glider-right
-          %h2
-            Coupons
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
-      .item
-        .glider-left
-          = image_tag "index/shopping-list.png"
-        .glider-right
-          %h2
-            Shopping List
-          %p
-            Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-          %a.button{:href => '#'} Learn More
-        .clear
+%section#feature
+  .feature-left
+    = image_tag "index/what-we-do.png"
+  .feature-right.span6
+    %h1
+      Digital Marketing Solutions for Grocers
+    %p
+      Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+    %a.button{:href => '#'} Learn More
 
+    %a.next{:href=> '#what-we-do'}
+      = image_tag "index/next-arrow.png"
+      Next
 
-  /Carousel nav
-  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
-  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+  .clear
 
 %section#what-we-do
   %h2
@@ -57,39 +21,46 @@
     Webstop is a leader in digital marketing solutions for the grocery industry. We have the most comprehensive offerings for progressive retail chains, independents, and wholesalers.
 
   %div.fluid-row
-    %ul.left.span6
-      %li
-        %span.icon-web.icon{:escape_attrs => true}
-        %h3
-          Web
-        %p
-          Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-      %li
-        %span.icon-mobile.icon{:escape_attrs => true}
-        %h3
-          Mobile
-        %p
-          Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-      %li
-        %span.icon-coupons.icon{:escape_attrs => true}
-        %h3
-          Digital Coupons
-        %p
-          Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-    
-    %ul.right.span6
-      %li
-        %span.icon-newsletter.icon{:escape_attrs => true}
-        %h3
-          Email Campaigns
-        %p
-          Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-      %li
-        %span.icon-social.icon{:escape_attrs => true}
-        %h3
-          Social Networks
-        %p
-          Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+    .left-col.span6
+      %ul
+        %li
+          %span.icon-web.icon{:escape_attrs => true}
+          %h3
+            Web
+          %p
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        %li
+          %span.icon-mobile.icon{:escape_attrs => true}
+          %h3
+            Mobile
+          %p
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        %li
+          %span.icon-coupons.icon{:escape_attrs => true}
+          %h3
+            Digital Coupons
+          %p
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+    .right-col.span6
+      %ul
+        %li
+          %span.icon-newsletter.icon{:escape_attrs => true}
+          %h3
+            Email Campaigns
+          %p
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        %li
+          %span.icon-social.icon{:escape_attrs => true}
+          %h3
+            Social Networks
+          %p
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        %li
+          %span.icon-modules.icon{:escape_attrs => true}
+          %h3
+            Integrated Grocery Modules
+          %p
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
     .clear
 
 %section#what-weve-done
@@ -97,7 +68,7 @@
     What We've Done
 
   %p
-    We've done a whole bunch of shit, let me tell you. You can't even begin to understand how much awesome shit we've done. You should buy some of our awesome shit pronto.
+    Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
 
 %section#digital-grocery
   %h2
