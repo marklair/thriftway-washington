@@ -105,13 +105,14 @@ body {
 }
 
 section {
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
   padding-bottom: 40px;
   border-bottom: 2px solid $gray;
 }
 
 section#feature {
-  margin-top: 100px;
+  margin: 90px 0 0 0;
+  padding: 0;
   border: none;
 }
 
@@ -122,7 +123,7 @@ section#feature .left-col, section#feature .right-col {
 .next, .next:visited {
   display: inline-block;
   float: right;
-  margin-top: 65px;
+  margin-top: 75px;
   padding: 5px 10px;
   background-color: #214367;
   text-decoration: none;
@@ -130,14 +131,40 @@ section#feature .left-col, section#feature .right-col {
 }
 
 .next:hover, .next:active {
-  background-color: #1b3754
+  background-color: #1b3754;
+  text-decoration: none;
 }
 
-img.digital-grocery {
+.digital-grocery-ad {
   margin: 30px 0;
+  padding: 30px 65px 40px 65px;
+  background-color: $webstop-blue;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+}
+
+#digital-grocery .left-col, #digital-grocery .right-col {
+  border: none;
+}
+
+#digital-grocery .left-col {
+  text-align: center;
+}
+
+.digital-grocery-ad ul {
+  color: white;
+  margin: 20px 0 0 20px;
+}
+
+.digital-grocery-ad li {
+  margin: 0 0 5px 0;
+}
+
+#digital-grocery h1 {
+  margin-top: 0;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 #digital-grocery h3 {
@@ -147,7 +174,6 @@ img.digital-grocery {
 
 .left-col, .right-col {
   margin: 20px 0 0 0;
-  border-top: 2px solid $gray;
 }
 
 .left-col {
@@ -164,11 +190,11 @@ img.digital-grocery {
   border: none;
 }
 
-.left-col ul, .right-col ul {
+#what-we-do ul, #what-we-do ul {
   margin: 20px 0 0 0;
 }
 
-.left-col li, .right-col li {
+#what-we-do li, #what-we-do li {
   list-style: none;
   margin: 0 0 20px 0;
 }
@@ -195,8 +221,8 @@ img.digital-grocery {
   box-shadow: 0px 0px 5px hsla(0,0%,0%,0.2);
 }
 
-.price-table li:nth-child(odd) {
-    margin-top: 20px;
+.price-col:nth-child(odd) {
+    margin-top: 10px;
 }
 
 .price-col {
