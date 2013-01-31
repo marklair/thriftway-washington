@@ -1,66 +1,75 @@
 %section#feature
-  .feature-left
-    = image_tag "index/what-we-do.png"
-  .feature-right.span6
-    %h1
-      Digital Marketing Solutions for Grocers
-    %p
-      Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-    %a.button{:href => '#'} Learn More
+  %div.fluid-row
+    .left-col.span6
+      = image_tag "index/what-we-do.png"
+    .right-col.span6
+      %h1
+        Digital Marketing Solutions for Grocers
+      %p
+        Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
+    
+      %div.center-button
+        %a.button{:href => '#'} Learn More
 
-    %a.next{:href=> '#what-we-do'}
-      = image_tag "index/next-arrow.png"
-      Next
+      %a.next{:href=> '#what-we-do'}
+        = image_tag "index/next-arrow.png"
+        Next
 
-  .clear
+    .clear
 
 %section#what-we-do
   %h2
     What We Do
-  %p
-    Webstop is a leader in digital marketing solutions for the grocery industry. We have the most comprehensive offerings for progressive retail chains, independents, and wholesalers.
+  %div.fluid-row  
+    .left-col.span6.intro 
+      %p
+        Webstop provides digital marketing tools that increase shopper engagment and build additional visits to your stores. Webstop's 15 years of experience with grocery digital marketing provides them the knowledge to help you.
+
+    .right-col.span6.intro
+      %p
+        We offer web, mobile, digital coupons, email campains, social networking and awart-winning integrated grocery modules. No matter your positioning and size in the grocery industry, Webstop has the solution for you. 
 
   %div.fluid-row
     .left-col.span6
       %ul
         %li
-          %span.icon-web.icon{:escape_attrs => true}
           %h3
+            %span.icon-web.icon{:escape_attrs => true}
             Web
           %p
             Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
         %li
-          %span.icon-mobile.icon{:escape_attrs => true}
           %h3
+            %span.icon-mobile.icon{:escape_attrs => true}
             Mobile
           %p
-            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            As a retailer you want your information to be available as easily as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the movile technology your shoppers want.
         %li
-          %span.icon-coupons.icon{:escape_attrs => true}
           %h3
+            %span.icon-coupons.icon{:escape_attrs => true}
             Digital Coupons
           %p
-            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Retailer and manufacturer sponsored digital coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great calue and convenience.
     .right-col.span6
       %ul
         %li
-          %span.icon-newsletter.icon{:escape_attrs => true}
           %h3
+            %span.icon-newsletter.icon{:escape_attrs => true}
             Email Campaigns
           %p
-            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Webstop's industry-leading Grocery Newsletters includes advanced features that strongly support your digital marketing goals as a retailer. Website traffic will increase, providing more exposure to your brand, quality and value offerings.
         %li
-          %span.icon-social.icon{:escape_attrs => true}
           %h3
+            %span.icon-social.icon{:escape_attrs => true}
             Social Networks
           %p
-            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.
         %li
-          %span.icon-modules.icon{:escape_attrs => true}
           %h3
+            %span.icon-modules.icon{:escape_attrs => true}
             Integrated Grocery Modules
           %p
-            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.
     .clear
 
 %section#what-weve-done
@@ -92,23 +101,13 @@
         %div.price-detail
           %p
             Upload unlimited PDF ads through our upload tool.
-          %div.price-container
-            %span.price
-              $10
-            %span.month
-              \/month
-        
+
       %li.price-col
         %h4
           Premium
         %div.price-detail
           %p
-            Fully interactive html digital ad with shopping list and recipe integration. <span style="font-size:10px;">Prices starting at:</span></p>
-          %div.price-container
-            %span.price
-              $25
-            %span.month
-              \/month
+            Fully interactive html digital ad with shopping list and recipe integration.
 
       %li.price-col
         %h4
@@ -116,11 +115,7 @@
         %div.price-detail
           %p
             Send your ad images to us for a static digital ad.</p>
-          %div.price-container
-            %span.price
-              $18
-            %span.month
-              \/month
+         
       %div.clear
 
     %center

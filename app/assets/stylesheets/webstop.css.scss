@@ -1,14 +1,16 @@
 $webstop-blue: #369;
 $dark-blue: #214367;
 $light-blue: #d3e3f4;
+$orange: #ffad5b;
+$gray: #cbcbcb;
 
 ::selection {
-  background: #FD860F;
+  background: $webstop-blue;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #FD860F;
+  background: $webstop-blue;
   color: #fff;
 }
 
@@ -18,12 +20,12 @@ $light-blue: #d3e3f4;
 
 html {
   background: $webstop-blue; /* Old browsers */
-  background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 470px, #ffffff 470px, #ffffff 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(470px,$webstop-blue), color-stop(470px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 470px,#ffffff 470px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 470px,#ffffff 470px,#ffffff 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 470px,#ffffff 470px,#ffffff 100%); /* IE10+ */
-  background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 470px,#ffffff 470px,#ffffff 100%); /* W3C */
+  background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 450px, #ffffff 450px, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(450px,$webstop-blue), color-stop(450px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
@@ -80,7 +82,7 @@ body {
   padding: 5px 0 2px 0;
   font-size: 24px;
   font-weight: normal;
-  text-shadow: 2px 2px 2px $dark-blue;
+  text-shadow: 0px 2px 1px $dark-blue;
   color: #fff;
   font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
   border-bottom: 3px solid transparent;
@@ -104,16 +106,23 @@ body {
 
 section {
   margin: 0 0 30px 0;
+  padding-bottom: 40px;
+  border-bottom: 2px solid $gray;
 }
 
 section#feature {
-  margin-top: 120px;
+  margin-top: 100px;
+  border: none;
+}
+
+section#feature .left-col, section#feature .right-col {
+  border: none;
 }
 
 .next, .next:visited {
   display: inline-block;
   float: right;
-  margin-top: 149px;
+  margin-top: 65px;
   padding: 5px 10px;
   background-color: #214367;
   text-decoration: none;
@@ -122,31 +131,6 @@ section#feature {
 
 .next:hover, .next:active {
   background-color: #1b3754
-}
-
-.feature-left {
-  float: left;
-}
-
-.feature-right {
-  float: right;
-}
-
-.left-col ul, .right-col ul {
-  margin: 10px 0 0 0;
-}
-
-.left-col li, .right-col li {
-  list-style: none;
-  margin: 0 0 20px 0;
-}
-
-.left-col {
-  float: left;
-}
-
-.right-col {
-  float: right;
 }
 
 img.digital-grocery {
@@ -162,17 +146,32 @@ img.digital-grocery {
 }
 
 .left-col, .right-col {
-    margin: 20px 0 0 0;
-    border-top: 2px solid #cbcbcb;
-  }
-  
-  .left-col {
-    float: left;
-  }
-  
-  .right-col {
-    float: right;
-  }
+  margin: 20px 0 0 0;
+  border-top: 2px solid $gray;
+}
+
+.left-col {
+  float: left;
+}
+
+.right-col {
+  float: right;
+}
+
+.intro {
+  margin: 0;
+  min-height: 80px;
+  border: none;
+}
+
+.left-col ul, .right-col ul {
+  margin: 20px 0 0 0;
+}
+
+.left-col li, .right-col li {
+  list-style: none;
+  margin: 0 0 20px 0;
+}
 
 /* Price Table */
 
@@ -191,21 +190,9 @@ img.digital-grocery {
 }
 
 .price-table li:hover {
-  -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
-  -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
-  box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
-}
-
-.price-table li:nth-child(even) {
-    -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
-  -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
-  box-shadow: 0px 0px 10px hsla(0,0%,0%,0.3);
-}
-
-.price-table li:nth-child(even):hover {
-    -moz-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
-  -webkit-box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
-  box-shadow: 0px 0px 10px hsla(0,0%,0%,0.4);
+  -moz-box-shadow: 0px 0px 5px hsla(0,0%,0%,0.2);
+  -webkit-box-shadow: 0px 0px 5px hsla(0,0%,0%,0.2);
+  box-shadow: 0px 0px 5px hsla(0,0%,0%,0.2);
 }
 
 .price-table li:nth-child(odd) {
@@ -310,10 +297,10 @@ img.digital-grocery {
 .icon-modules:before {
   content: "\26";
 }
+
 .icon {
-  margin-top: 5px;
-  font-size: 38px;
-  float: left;
+  margin: -5px 25px 0 0;
+  font-size: 32px;
 }
 
 body {
@@ -325,17 +312,17 @@ p {
   margin: 10px 0;
   font-size: 14px;
   color: #333;
-  line-height: 20px;
+  line-height: 24px;
 }
 
 h1 {
   font-size: 36px;
   font-weight: 800;
   color: #fff;
-  text-shadow: 2px 2px 2px #24384e;
+  text-shadow: 0 2px 1px #24384e;
 }
 
-.feature-right p {
+section#feature p {
   color: #fff;
 }
 
@@ -343,12 +330,6 @@ h3 {
   color: #333;
   font-size: 18px;
   margin-top: 10px;
-}
-
-#what-we-do h3 {
-  margin: 0 0 0 45px;
-  line-height: 45px;
-
 }
 
 /* Buttons & Links */
@@ -393,8 +374,15 @@ h3 {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
-  .navbar .btn-navbar {
-    margin-top: 18px;
+  html {
+    background: $webstop-blue; /* Old browsers */
+    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 730px, #ffffff 730px, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(730px,$webstop-blue), color-stop(730px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 730px,#ffffff 730px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 730px,#ffffff 730px,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 730px,#ffffff 730px,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 730px,#ffffff 730px,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   }
 
   .navbar .nav {
@@ -419,6 +407,186 @@ h3 {
     box-shadow: 0;
   }
 
+  section#feature {
+    margin-top: 0;
+  }
+
+  section#feature .left-col {
+    text-align: center;
+  }
+
+  .left-col, .right-col {
+    float: none;
+    width: 100%;
+  }
+
+  .next {
+    display: none;
+  }
+
+  .center-button {
+    display: block;
+    text-align: center;
+  }
+
+  .left-col, .right-col {
+    border: none;
+  }
+
+  .price-col {
+    float: none;
+    margin: 20px 0 0 0;
+  }
+
+  .price-table {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .price-detail {
+    width: 100%;
+  }
+
+  .price-table li:nth-child(odd) {
+    margin-top: 20px;
+  }
+
+  h1 {
+    margin-top: 30px;
+  }
+
+  h1, h2, h3 .feature-right p {
+    text-align: center;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+  html {
+    background: $webstop-blue; /* Old browsers */
+    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 720px, #ffffff 720px, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(720px,$webstop-blue), color-stop(720px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 720px,#ffffff 720px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 720px,#ffffff 720px,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 720px,#ffffff 720px,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 720px,#ffffff 720px,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  }
+
+  .navbar .nav {
+    float: none;
+    margin: 10px 0 0 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+  }
+
+  .nav-collapse .nav > li {
+    margin-bottom: 10px;
+  }
+
+  .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a, .navbar .nav > .active  {
+    padding: 0 0 5px 0;
+    font-weight: normal;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: 0;
+  }
+
+  header {
+    margin: 100px 0 0 0;
+  }
+
+  .btn .btn-navbar {
+    margin-right: 0;
+  }
+
+  section#feature {
+      margin-top: 0;
+    }
+
+    .feature-left {
+      float: none;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .feature-right {
+      width: 100%;
+    }
+
+    .next {
+      display: none;
+    }
+
+    .center-button {
+      display: block;
+      text-align: center;
+    }
+
+    .left-col, .right-col {
+      border: none;
+    }
+
+    .price-col {
+      float: none;
+      margin: 20px 0 0 0;
+    }
+
+    .price-table {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .price-detail {
+      width: 100%;
+    }
+
+    .price-table li:nth-child(odd) {
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    h1, h2, h3 .feature-right p {
+      text-align: center;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  header {
+    margin: 100px 0 0 0;
+  }
+
+  html {
+    background: $webstop-blue; /* Old browsers */
+    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 707px, #ffffff 707px, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(707px,$webstop-blue), color-stop(707px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 707px,#ffffff 707px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 707px,#ffffff 707px,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 707px,#ffffff 707px,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 707px,#ffffff 707px,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  }
+
+  header {
+    margin: 100px 0 0 0;
+  }
+
+  section#feature {
+      margin-top: 0;
+    }
+
   .feature-left {
     float: none;
     width: 500px;
@@ -429,26 +597,45 @@ h3 {
     width: 100%;
   }
 
+  .next {
+    display: none;
+  }
+
+  .center-button {
+    display: block;
+    text-align: center;
+  }
+
+  .left-col, .right-col {
+    border: none;
+  }
+
+  .price-col {
+    float: none;
+    margin: 20px 0 0 0;
+  }
+
+  .price-table {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .price-detail {
+    width: 100%;
+  }
+
+  .price-table li:nth-child(odd) {
+    margin-top: 20px;
+  }
+
   h1 {
     margin-top: 30px;
   }
 
-  h1, h2, .feature-right p {
+  h1, h2, h3, p {
     text-align: center;
-  }
-}
-
-  /* Landscape phone to portrait tablet */
-  @media (max-width: 767px) {
-    header {
-      margin: 100px 0 0 0;
-    }
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  header {
-    margin: 100px 0 0 0;
   }
 }
 
