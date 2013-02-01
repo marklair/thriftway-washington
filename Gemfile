@@ -14,6 +14,7 @@ group :production do
  gem 'pg'
 end
 
+
 # View scripts
 gem 'haml', '~> 3.1.4'
 gem 'haml-rails', '~> 0.3.4'
