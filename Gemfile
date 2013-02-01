@@ -6,7 +6,13 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Database
-gem 'mysql2', '~> 0.3.11'
+group :test, :development do
+ gem 'mysql2', '~> 0.3.11'
+end
+
+group :production do
+ gem 'pg'
+end
 
 # View scripts
 gem 'haml', '~> 3.1.4'
