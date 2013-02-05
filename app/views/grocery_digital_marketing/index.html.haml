@@ -1,41 +1,125 @@
-%section#feature
-  %div.fluid-row
-    .left-col.span6
+= javascript_include_tag "scrollto"
+= javascript_include_tag "localscroll"
+
+%section#home
+  .row-fluid
+    .span6
       = image_tag "index/what-we-do.png"
-    .right-col.span6
+    
+    .span6
       %h1
         Digital Marketing Solutions for Grocers
       %p
         Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
     
-      %div.center-button
-        %a.button{:href => '#'} Learn More
+      %div.center-button-small-screen
+        %a.btn{:href => '#contact-us'} Contact Us
 
-      %a.next{:href=> '#what-we-do'}
-        = image_tag "index/next-arrow.png"
-        Next
+%section#solutions
+  %h1
+    Retailer Solutions
+  .row-fluid  
+    %a.retailer-type.span4{:href => '#chains'}
+      %span.icon-chains
+      Large Chains
+    %a.retailer-type.span4{:href => '#wholesalers'} 
+      %span.icon-wholesalers
+      Wholesalers
+    %a.retailer-type.span4{:href => '#independents'} 
+      %span.icon-independents
+      Independents
 
-    .clear
-
-%section#what-we-do
+%section#chains
   %h2
-    What We Do
-  %div.fluid-row  
-    .left-col.span6.intro 
-      %p
-        Webstop provides digital marketing tools that increase shopper engagment and build additional visits to your stores. Webstop's 15 years of experience with grocery digital marketing provides them the knowledge to help you.
+    Large Chains
 
-    .right-col.span6.intro
+  .row-fluid
+    .span4
+      %h3
+        %span.icon-starburst.icon
+        Overview
       %p
-        We offer web, mobile, digital coupons, email campains, social networking and awart-winning integrated grocery modules. No matter your positioning and size in the grocery industry, Webstop has the solution for you. 
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
 
-  %div.fluid-row
-    .left-col.span6
+    .span4
+      %h3
+        %span.icon-stats.icon
+        Value
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+    .span4
+      %h3
+        %span.icon-web.icon
+        Example
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+%section#wholesalers
+  %h2
+    Wholesalers
+
+  .row-fluid
+    .span4
+      %h3
+        %span.icon-starburst.icon
+        Overview
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+    .span4
+      %h3
+        %span.icon-stats.icon
+        Value
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+    .span4
+      %h3
+        %span.icon-web.icon
+        Example
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+%section#independents
+  %h2
+    Independents
+
+  .row-fluid
+    .span4
+      %h3
+        %span.icon-starburst.icon
+        Overview
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+    .span4
+      %h3
+        %span.icon-stats.icon
+        Value
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+    .span4
+      %h3
+        %span.icon-web.icon
+        Example
+      %p
+        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+
+    %div.center-button
+      %a.btn{:href => '#contact-us'} Contact Us
+
+%section#features
+  %h1
+    Features
+  .row-fluid
+    .span6
       %ul
         %li
           %h3
-            %span.icon-web.icon{:escape_attrs => true}
-            Web
+            %span.icon-tag.icon{:escape_attrs => true}
+            Weekly Ad
           %p
             Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
         %li
@@ -47,123 +131,79 @@
         %li
           %h3
             %span.icon-coupons.icon{:escape_attrs => true}
-            Digital Coupons
+            Coupons
           %p
             Retailer and manufacturer sponsored digital coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great calue and convenience.
-    .right-col.span6
+    .span6
       %ul
         %li
           %h3
-            %span.icon-newsletter.icon{:escape_attrs => true}
-            Email Campaigns
+            %span.icon-mail.icon{:escape_attrs => true}
+            Email Newsletters
           %p
             Webstop's industry-leading Grocery Newsletters includes advanced features that strongly support your digital marketing goals as a retailer. Website traffic will increase, providing more exposure to your brand, quality and value offerings.
         %li
           %h3
-            %span.icon-social.icon{:escape_attrs => true}
-            Social Networks
+            %span.icon-recipe.icon{:escape_attrs => true}
+            Recipes
           %p
             Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.
         %li
           %h3
-            %span.icon-modules.icon{:escape_attrs => true}
-            Integrated Grocery Modules
+            %span.icon-list.icon{:escape_attrs => true}
+            Shopping List
           %p
             Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.
-    .clear
 
-%section#what-weve-done
-  %h2
-    What We've Done
+    %div.center-button
+      %a.btn{:href => '#contact-us'} Contact Us
 
-  %p
-    Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-
-%section#digital-grocery
-  %h2
-    Digital Grocery - Made Easy!
-  %p
-    Enticing, appealing consumer features with extensive food content and great savings are provided in the most comprehensive digital marketing solution for independents and chains. These powerful features are quick and easy for consumers, and have the best content and capabilities from any source.
-
-  .digital-grocery-ad
-    .left-col
-      = image_tag "index/digital-grocery.jpg"
-    .right-col
-      %h1
-        Get a Full-Featured Consumer Website for FREE
-      %ul
-        %li
-          Full-featured consumer website
-        %li
-          Mobile optimized website
-        %li
-          Email campaign and weekly ad options
-        %li
-          Retailer branding and personalization
-        %li
-          Over 5,000 recipes
-        %li
-          Personalized shopping lists
-        %li
-          Hundreds of digital Print-At-Home digital coupons
-        %li
-          Social media integration
-    .clear
-
-  %center
-    %h3
-      Optional Weekly Low Cost Ads
-    %p
-      Supplement your Digital Grocery site with our Weekly Ad. Webstop has Weekly Ad options for all budgets.
-
-  %div
-    %ul.price-table
-      %li.price-col
-        %h4
-          Standard
-        %div.price-detail
-          %p
-            Upload unlimited PDF ads through our upload tool.
-
-      %li.price-col
-        %h4
-          Premium
-        %div.price-detail
-          %p
-            Fully interactive html digital ad with shopping list and recipe integration.
-
-      %li.price-col
-        %h4
-          Plus
-        %div.price-detail
-          %p
-            Send your ad images to us for a static digital ad.</p>
-         
-      %div.clear
-
-    %center
-      %a.button{:href => '#contact-us'} Contact Us to Sign Up Now
-
-%section#who-we-are
-  %h2
-    Who We Are
-  %p
-    Webstop, located in the Tampa Bay area of Florida, has been developing and maintaining advanced grocery websites since 1996. Our expertise in the grocery industry, along with our commitment to high quality integration of technology into custom marketing initatives, uniquely places us in the marketplace.
-
-  %div.left-col.span6
-    %h3
-      Custom Design & Development
-    %p
-      Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-
-  %div.right-col.span6
-    %h3
-      Dedicated Client Services Team
-    %p
-      Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-
-  .clear
-
-  %section#contact-us
-  %h2
+%section#contact-us
+  %h1
     Contact Us
+  .row-fluid
+    .span6
+      %h3
+        Send Us an Email
+      %form
+        %fieldset
+          %label Name
+          %input{:placeholder => "Name", :type => "text"}
+          .clear
+          %label Email
+          %input{:placeholder => "Email", :type => "email"}
+          .clear
+          %label Phone
+          %input{:placeholder => "Phone", :type => "tel"}
+          .clear
+          %label Company
+          %input{:placeholder => "Company", :type => "text"}
+          .clear
+          %label Message
+          %textarea{:placeholder => "Your message…", :type => "text"}
+          .clear
+          %button.btn{:type => "submit"} Submit
+    .span6
+      = image_tag "index/location.png"
+      .row-fluid
+        .span6
+          %h3
+            Phone
+          %span
+            Voice:
+          %a{:href => 'tel:+17279422797'} (727) 942-2797
+          %br
+          %span
+            Fax: (727) 942-2797
+        
+        .span6
+          %h3
+            Address
+          %address
+            Webstop.com, Inc.
+            %br
+            3488 East Lake Road
+            %br
+            Suite 201
+            %br
+            Palm Harbor, FL 34685
