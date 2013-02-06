@@ -2,7 +2,4 @@
 
   $(function(){
 
-    $('.datepicker').datepicker();
-
-    $.localScroll();
 })
