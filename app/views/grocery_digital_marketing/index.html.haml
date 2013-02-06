@@ -39,7 +39,14 @@
         %span.icon-starburst.icon
         Overview
       %p
-        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        Large chains need digital marketing features tailored to their brand. Webstop digital marketing solutions for chains include advanced features as the starting point and the custom features unique to each chain.
+      %ul
+        %li
+          Unique, retailer specific designs, layouts and advanced features
+        %li
+          Integrated with Webstop content & Grocery Website Modules
+        %li
+          Reinforces retailer brand and marketing programs
 
     .span4
       %h3
@@ -65,7 +72,9 @@
         %span.icon-starburst.icon
         Overview
       %p
-        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back. 
+      %p
+        Webstop's Multi-Retailer Digital System provides a unique website, mobile site and email newsletter feature for each independent retailer but also the ability to manage all retailer assets from one central location.
 
     .span4
       %h3
@@ -91,7 +100,9 @@
         %span.icon-starburst.icon
         Overview
       %p
-        Aecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        Independent retailers need a web presence. While anyone can buy a low cost website, it's important to consider the value the website provides.
+      %p
+        With Webstop's digital marketing solution for independents, retailers receive a state-of-the-art website and mobile site at an affordable price. Built using the same technology as Webstop's larger chain websites, independents are able to provide the same if not greater digital marketing features than their larger competitors.
 
     .span4
       %h3
@@ -160,32 +171,43 @@
 
 %section#contact-us
   %h1
-    Contact Us
+    Contact Us    
+
   .row-fluid
     .span6
       %h3
         Send Us an Email
       %form
         %fieldset
-          %label Name
-          %input{:placeholder => "Name", :type => "text"}
-          .clear
-          %label Email
-          %input{:placeholder => "Email", :type => "email"}
-          .clear
-          %label Phone
-          %input{:placeholder => "Phone", :type => "tel"}
-          .clear
-          %label Company
-          %input{:placeholder => "Company", :type => "text"}
-          .clear
-          %label Message
-          %textarea{:placeholder => "Your message…", :type => "text"}
-          .clear
-          %button.btn{:type => "submit"} Submit
+          .controls
+            %label Name
+            %input.span12{:placeholder => "First and last name", :type => "text"}
+            %label Email
+            %input.span12{:placeholder => "Email Address", :type => "text"}
+            %label Phone Number
+            %input.span12{:placeholder => "555-555-5555", :type => "tel"}
+            %label Company
+            %input.span12{:placeholder => "Company Name", :type => "text"}
+            %label Message
+            %textarea.span12{:rows => "5"}
+            %br
+            %button.btn{:type => "submit"} Submit
     .span6
-      = image_tag "index/location.png"
+      .responsive-iframe-container
+        <iframe width="570" height="193" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Webstop,+3488+East+Lake+Road+South+%23201,+Palm+Harbor,+FL&amp;aq=0&amp;oq=web&amp;sll=27.698638,-83.804601&amp;sspn=11.0762,19.753418&amp;ie=UTF8&amp;hq=webstop+3488+east+lake+road+south+201&amp;hnear=Palm+Harbor,+Pinellas,+Florida&amp;t=m&amp;ll=28.065316,-82.699585&amp;spn=0.033779,0.098019&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Webstop,+3488+East+Lake+Road+South+%23201,+Palm+Harbor,+FL&amp;aq=0&amp;oq=web&amp;sll=27.698638,-83.804601&amp;sspn=11.0762,19.753418&amp;ie=UTF8&amp;hq=webstop+3488+east+lake+road+south+201&amp;hnear=Palm+Harbor,+Pinellas,+Florida&amp;t=m&amp;ll=28.065316,-82.699585&amp;spn=0.033779,0.098019&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+      
       .row-fluid
+        .span6
+          %h3
+            Address
+          %address
+            Webstop.com, Inc.
+            %br
+            3488 East Lake Rd.
+            %br
+            Suite 201
+            %br
+            Palm Harbor, FL 34685
         .span6
           %h3
             Phone
@@ -195,15 +217,3 @@
           %br
           %span
             Fax: (727) 942-2797
-        
-        .span6
-          %h3
-            Address
-          %address
-            Webstop.com, Inc.
-            %br
-            3488 East Lake Road
-            %br
-            Suite 201
-            %br
-            Palm Harbor, FL 34685

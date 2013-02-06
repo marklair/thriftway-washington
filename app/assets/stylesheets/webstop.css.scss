@@ -136,10 +136,6 @@ section#contact-us img {
   box-shadow: 0px 0px 3px #7e7e7e;
 }
 
-section#contact-us .btn {
-  margin-left: 80px;
-}
-
 .retailer-type {
   background-color: $webstop-blue;
   padding: 45px 0;
@@ -164,12 +160,13 @@ section#contact-us .btn {
   text-align: center;
 }
 
-label, input {
-  float: left;
+#features ul {
+  margin: 0;
 }
 
-label {
-  width: 80px;
+#features li {
+  list-style: none;
+  margin: 0 0 20px 0;
 }
 
 ul {
@@ -177,8 +174,28 @@ ul {
 }
 
 li {
-  list-style: none;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 15px;
+}
+
+/* Responsive iframe */
+
+.responsive-iframe-container {
+  margin-top: 83px;
+  position: relative;
+  padding-bottom: 193px;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Typography */
