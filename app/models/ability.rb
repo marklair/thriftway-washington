@@ -7,7 +7,10 @@ class Ability
     if user.role? :admin
       can :manage, :all
     else
-      #can :read, :message
+      can :create, Message
+      #can :read, Message
+      #can :update, Message
+      #can :destroy, Message
     end
   end
 end

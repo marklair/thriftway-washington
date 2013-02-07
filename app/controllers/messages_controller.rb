@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  load_and_authorize_resource
+
   # GET /messages
   # GET /messages.json
   def index
@@ -45,7 +47,8 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         NotificationsMailer.new_message(@message).deliver
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        flash[:success] = 'Your message was successfully delivered!'
+        format.html { redirect_to :home }
         format.json { render json: @message, status: :created, location: @message }
       else
         format.html { render action: "new" }

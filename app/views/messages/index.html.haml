@@ -8,7 +8,7 @@
     %th Email
     %th Phone
     %th Company
-    %th Content
+    %th Date
     %th
     %th
     %th
@@ -19,7 +19,7 @@
       %td= message.email
       %td= message.phone
       %td= message.company
-      %td= message.content
+      %td= message.created_at
       %td= link_to 'Show', message
       %td= link_to 'Edit', edit_message_path(message)
       %td= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,6 +1,3 @@
-- user ||= User.new # guest user
-%h1= user.role? :admin
-
 = form_for @message do |f|
   - if @message.errors.any?
     #error_explanation.alert.alert-block.alert-error
@@ -16,8 +13,8 @@
     = f.label :email
     = f.email_field :email, class: 'span12', placeholder: 'Email Address'
   .field
-    = f.label :phone, "Phone Number"
-    = f.telephone_field :phone, class: 'span12', placeholder: '555-555-5555'
+    = f.label :phone
+    = f.telephone_field :phone, class: 'span12', placeholder: 'Phone Number'
   .field
     = f.label :company
     = f.text_field :company, class: 'span12', placeholder: 'Company Name'
