@@ -58,5 +58,6 @@ module Template
 
     # add app/assets/fonts to the asset path
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
   end
 end
