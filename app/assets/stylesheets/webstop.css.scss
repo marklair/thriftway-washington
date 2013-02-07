@@ -19,7 +19,7 @@ $body-type: #333;
   clear: both;
 }
 
-html {
+body {
   background: $webstop-blue; /* Old browsers */
   background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 430px, #ffffff 430px, #ffffff 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(430px,$webstop-blue), color-stop(430px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
@@ -29,12 +29,6 @@ html {
   background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 430px,#ffffff 430px,#ffffff 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
-
-body {
-  background-color: transparent;
-}
-
-
 
 #logo {
   float: left;
@@ -221,7 +215,7 @@ li {
   font-style: normal;
 }
 
-.icon-coupons:before, .icon-edit:before, .icon-photos:before, .icon-video:before, .icon-new:before, .icon-tag:before, .icon-cart:before, .icon-phone:before, .icon-mail:before, .icon-location:before, .icon-user:before, .icon-loading:before, .icon-settings:before, .icon-trash:before, .icon-list:before, .icon-tree:before, .icon-web:before, .icon-chains:before, .icon-starburst:before, .icon-half-star:before, .icon-star:before, .icon-heart:before, .icon-add:before, .icon-info:before, .icon-checkmark:before, .icon-delete:before, .icon-google-plus:before, .icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-github:before, .icon-apple:before, .icon-android:before, .icon-windows8:before, .icon-reddit:before, .icon-linkedin:before, .icon-pinterest:before, .icon-delicious:before, .icon-stumbleupon:before, .icon-paypal:before, .icon-yelp:before, .icon-pdf:before, .icon-foursquare:before, .icon-flickr:before, .icon-home:before, .icon-search:before, .icon-cookbook:before, .icon-camera:before, .icon-barcode:before, .icon-healthy:before, .icon-power:before, .icon-html5:before, .icon-css:before, .icon-html:before, .icon-chrome:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-power-2:before, .icon-interface:before, .icon-wholesalers:before, .icon-independents:before, .icon-social:before, .icon-mobile:before, .icon-stats:before, .icon-recipe:before {
+.icon-coupons:before, .icon-edit:before, .icon-photos:before, .icon-video:before, .icon-new:before, .icon-tag:before, .icon-cart:before, .icon-phone:before, .icon-mail:before, .icon-location:before, .icon-user:before, .icon-loading:before, .icon-settings:before, .icon-trash:before, .icon-list:before, .icon-tree:before, .icon-web:before, .icon-chains:before, .icon-starburst:before, .icon-half-star:before, .icon-star:before, .icon-heart:before, .icon-add:before, .icon-info:before, .icon-checkmark:before, .icon-delete:before, .icon-google-plus:before, .icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-github:before, .icon-apple:before, .icon-android:before, .icon-windows8:before, .icon-reddit:before, .icon-linkedin:before, .icon-pinterest:before, .icon-delicious:before, .icon-stumbleupon:before, .icon-paypal:before, .icon-yelp:before, .icon-pdf:before, .icon-foursquare:before, .icon-flickr:before, .icon-home:before, .icon-search:before, .icon-cookbook:before, .icon-camera:before, .icon-barcode:before, .icon-healthy:before, .icon-power:before, .icon-html5:before, .icon-css:before, .icon-html:before, .icon-chrome:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-power-2:before, .icon-interface:before, .icon-wholesalers:before, .icon-independents:before, .icon-social:before, .icon-mobile:before, .icon-stats:before, .icon-recipe:before, .icon-display:before {
   font-family: 'Iconstop';
   speak: none;
   font-style: normal;
@@ -439,6 +433,9 @@ li {
 .icon-recipe:before {
   content: "\66";
 }
+.icon-display:before {
+  content: "\67";
+}
 
 .icon {
   margin: 3px 10px 0 0;
@@ -530,7 +527,7 @@ h3 {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
-  html {
+  body {
     background: $webstop-blue; /* Old browsers */
     background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 665px, #ffffff 665px, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(665px,$webstop-blue), color-stop(665px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
@@ -580,11 +577,15 @@ h3 {
   h2 {
     display: block;
   }
+
+  label {
+    text-align: left;
+  }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    html {
+    body {
       background: $webstop-blue; /* Old browsers */
       background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 710px, #ffffff 710px, #ffffff 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(710px,$webstop-blue), color-stop(710px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
@@ -611,11 +612,15 @@ h3 {
     h2 {
       display: block;
     }
+
+    label {
+    text-align: left;
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  html {
+  body {
     background: $webstop-blue; /* Old browsers */
     background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 668px, #ffffff 668px, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(668px,$webstop-blue), color-stop(668px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
@@ -628,6 +633,10 @@ h3 {
 
   h1, h2, h3, p {
     text-align: center;
+  }
+
+  label {
+    text-align: left;
   }
 }
 
