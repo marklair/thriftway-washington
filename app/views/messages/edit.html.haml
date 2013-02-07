@@ -1,0 +1,10 @@
+%style body{background: #fff; padding-top: 96px;}
+
+%h1 Editing message
+
+.row-fluid
+  .span6= render 'form'
+
+= link_to 'Show', @message
+\|
+= link_to 'Back', messages_path

@@ -1,0 +1,23 @@
+%style body{background: #fff; padding-top: 96px;}
+
+%p#notice= notice
+
+%p
+  %b Name:
+  = @message.name
+%p
+  %b Email:
+  = @message.email
+%p
+  %b Phone:
+  = @message.phone
+%p
+  %b Company:
+  = @message.company
+%p
+  %b Content:
+  = @message.content
+
+= link_to 'Edit', edit_message_path(@message)
+\|
+= link_to 'Back', messages_path

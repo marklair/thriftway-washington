@@ -122,6 +122,10 @@ section#independents {
   border-bottom: 2px solid $gray;
 }
 
+section#contact-us {
+  margin-bottom: 600px;
+}
+
 section#contact-us img {
   margin: 30px 0 0 0;
   border: 5px solid #fff;
@@ -182,8 +186,8 @@ li {
   overflow: hidden;
 }
 
-.responsive-iframe-container iframe,   
-.vresponsive-iframe-container object,  
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
 .vresponsive-iframe-container embed {
   position: absolute;
   top: 0;

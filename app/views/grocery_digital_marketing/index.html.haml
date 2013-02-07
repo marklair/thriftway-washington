@@ -2,7 +2,7 @@
   .row-fluid
     .span6
       = image_tag "index/what-we-do.png"
-    
+
     .span6
       %h1
         Digital Marketing Solutions
@@ -10,21 +10,21 @@
         for Grocers
       %p
         Offer your consumers more with interactive circulars optimized for the web. Give your consumers the ability to add sale items to their online shopping list, recipes and clip relevant coupons to print later.
-    
+
       %div.center-button-small-screen
         %a.btn{:href => '#contact-us'} Contact Us
 
 %section#solutions
   %h1
     Retailer Solutions
-  .row-fluid  
+  .row-fluid
     %a.retailer-type.span4{:href => '#chains'}
       %span.icon-chains
       Large Chains
-    %a.retailer-type.span4{:href => '#wholesalers'} 
+    %a.retailer-type.span4{:href => '#wholesalers'}
       %span.icon-wholesalers
       Wholesalers
-    %a.retailer-type.span4{:href => '#independents'} 
+    %a.retailer-type.span4{:href => '#independents'}
       %span.icon-independents
       Independents
 
@@ -71,7 +71,7 @@
         %span.icon-starburst.icon
         Overview
       %p
-        Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back. 
+        Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back.
       %p
         Webstop's Multi-Retailer Digital System provides a unique website, mobile site and email newsletter feature for each independent retailer but also the ability to manage all retailer assets from one central location.
 
@@ -173,31 +173,33 @@
 
 %section#contact-us
   %h1
-    Contact Us    
+    Contact Us
 
   .row-fluid
     .span6
       %h3
         Send Us an Email
-      %form
-        %fieldset
-          .controls
-            %label Name
-            %input.span12{:placeholder => "First and last name", :type => "text"}
-            %label Email
-            %input.span12{:placeholder => "Email Address", :type => "text"}
-            %label Phone Number
-            %input.span12{:placeholder => "555-555-5555", :type => "tel"}
-            %label Company
-            %input.span12{:placeholder => "Company Name", :type => "text"}
-            %label Message
-            %textarea.span12{:rows => "5"}
-            %br
-            %button.btn{:type => "submit"} Submit
+      - @message = Message.new
+      = render 'messages/form'
+      / %form
+      /   %fieldset
+      /     .controls
+      /       %label Name
+      /       %input.span12{:placeholder => "First and last name", :type => "text"}
+      /       %label Email
+      /       %input.span12{:placeholder => "Email Address", :type => "text"}
+      /       %label Phone Number
+      /       %input.span12{:placeholder => "555-555-5555", :type => "tel"}
+      /       %label Company
+      /       %input.span12{:placeholder => "Company Name", :type => "text"}
+      /       %label Message
+      /       %textarea.span12{:rows => "5"}
+      /       %br
+      /       %button.btn{:type => "submit"} Submit
     .span6
       .responsive-iframe-container
         <iframe width="570" height="193" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Webstop,+3488+East+Lake+Road+South+%23201,+Palm+Harbor,+FL&amp;aq=0&amp;oq=web&amp;sll=27.698638,-83.804601&amp;sspn=11.0762,19.753418&amp;ie=UTF8&amp;hq=webstop+3488+east+lake+road+south+201&amp;hnear=Palm+Harbor,+Pinellas,+Florida&amp;t=m&amp;ll=28.065316,-82.699585&amp;spn=0.033779,0.098019&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Webstop,+3488+East+Lake+Road+South+%23201,+Palm+Harbor,+FL&amp;aq=0&amp;oq=web&amp;sll=27.698638,-83.804601&amp;sspn=11.0762,19.753418&amp;ie=UTF8&amp;hq=webstop+3488+east+lake+road+south+201&amp;hnear=Palm+Harbor,+Pinellas,+Florida&amp;t=m&amp;ll=28.065316,-82.699585&amp;spn=0.033779,0.098019&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-      
+
       .row-fluid
         .span6
           %h3
@@ -218,4 +220,4 @@
           %a{:href => 'tel:+17279422797'} (727) 942-2797
           %br
           %span
-            Fax: (727) 942-2797
+            Fax: (727) 386-4112
