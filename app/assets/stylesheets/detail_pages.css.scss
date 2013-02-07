@@ -1,0 +1,41 @@
+$webstop-blue: #369;
+$dark-blue: #214367;
+$light-blue: #d3e3f4;
+$orange: #ffad5b;
+$gray: #cbcbcb;
+$body-type: #333;
+
+body {
+  background: $webstop-blue; /* Old browsers */
+  background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 200px, #ffffff 200px, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(200px,$webstop-blue), color-stop(200px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#feature-header {
+  margin-top: 15px;
+  border: none;
+}
+
+#feature-header h1, #feature-header p {
+  color: white;
+  text-shadow: 0 2px 1px #24384e;
+}
+
+#feature-header h1 {
+  margin: 0;
+}
+
+.icon {
+  margin: 0 30px 0 0;
+  font-size: 32px;
+}
+
+ul.feature-detail li {
+  margin: 40px 0;
+  list-style: none;
+}

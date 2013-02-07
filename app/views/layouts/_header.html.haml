@@ -1,24 +1,19 @@
-.navbar.navbar-fixed-top
+.navbar.navbar-fixed-top#top
   .container
     %a.btn.btn-navbar{'data-toggle' => 'collapse', 'data-target' => '.nav-collapse'}
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
     #logo  
-      %a.brand{:href => "#top"}
+      %a.brand{:href => "index#top"}
         = image_tag "index/logo.png"
     .nav-collapse
       %ul.nav
         %li#scaffolding-nav
-          %a{:href => '#top'} Home
+          %a{:href => 'index#top'} Home
         %li#base-nav
-          %a{:href => '#solutions'} Solutions
-          %ul.dropdown-menu{:role => "menu"}
-            %li
-              test
-            %li
-              test
+          %a{:href => 'index#solutions'} Solutions
         %li#components-nav
-          %a{:href => '#features'} Features
+          %a{:href => 'index#features'} Features
         %li#grocery-nav
-          %a{:href => '#contact-us'} Contact Us
+          %a{:href => 'index#contact-us'} Contact Us
