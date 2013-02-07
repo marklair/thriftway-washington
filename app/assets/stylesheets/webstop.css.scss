@@ -20,7 +20,7 @@ $body-type: #333;
 }
 
 body {
-  background: $webstop-blue; /* Old browsers */
+  background: white; /* Old browsers */
   background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 430px, #ffffff 430px, #ffffff 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(430px,$webstop-blue), color-stop(430px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 430px,#ffffff 430px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
