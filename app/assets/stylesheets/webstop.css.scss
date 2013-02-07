@@ -175,6 +175,20 @@ li {
   margin: 0 0 10px 15px;
 }
 
+#chains img, #wholesalers img, #independents img {
+  margin: 0 20px 20px 0;
+  float: left;
+}
+
+#chains h3, #wholesalers h3, #independents h3 {
+  margin-top: 0;
+}
+
+.center-image {
+  width: 75px;
+  margin: 0 auto;
+}
+
 /* Responsive iframe */
 
 .responsive-iframe-container {
@@ -635,8 +649,12 @@ h3 {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   }
 
-  h1, h2, h3, p {
+  h1, h2{
     text-align: center;
+  }
+
+  h3 {
+    text-align: left;
   }
 
   label {
