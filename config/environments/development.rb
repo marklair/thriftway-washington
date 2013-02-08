@@ -34,4 +34,8 @@ Template::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # for local precompiling of assets
+  config.assets.prefix = "/dev-assets"
+
 end
