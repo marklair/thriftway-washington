@@ -1,3 +1,5 @@
+= stylesheet_link_tag    "index"
+
 %section#home
   .row-fluid
     .span6
@@ -18,97 +20,58 @@
   %h1
     Retailer Solutions
   .row-fluid
-    %a.retailer-type.span4{:href => '#chains'}
-      %span.icon-chains
-      Large Chains
-    %a.retailer-type.span4{:href => '#wholesalers'}
-      %span.icon-wholesalers
-      Wholesalers
-    %a.retailer-type.span4{:href => '#independents'}
-      %span.icon-independents
-      Independents
-
-%section#chains
-  %h2
-    Large Chains
-
-  .row-fluid
     .span4
-      %h3
-        Overview
-      %p
-        Large chains need digital marketing features tailored to their brand. Webstop digital marketing solutions for chains include advanced features as the starting point and the custom features unique to each chain.
-      %ul
-        %li
-          Unique, retailer specific designs, layouts and advanced features
-        %li
-          Integrated with Webstop content & Grocery Website Modules
-        %li
-          Reinforces retailer brand and marketing programs
-
+      .retailer-type{:href => '#chains'}
+        %span.icon-chains
+        Large Chains
+      .retailer-col   
+        %p
+          Large chains need digital marketing features tailored to their brand. Webstop digital marketing solutions for chains include advanced features as the starting point and the custom features unique to each chain.
+        %ul
+          %li
+            Unique, retailer specific designs, layouts and advanced features
+          %li
+            Integrated with Webstop content & Grocery Website Modules
+          %li
+            Reinforces retailer brand and marketing programs
+        %h3
+          Example
+        =image_tag 'index/tops-logo.jpg'
+        %p
+          Webstop provides TOPS Friendly Markets with a fully customized solution to meet their brand needs. For TOPS Coupon Central, Webstop developed the most advanced integration of paperless digital coupons available. Coupons are now available via the website and mobile.
+          %a{:href => 'http://www.topsmarkets.com'} View the Site ›
     .span4
-      %h3
-        = image_tag "index/tops.jpg"
-
+      .retailer-type{:href => '#wholesalers'}
+        %span.icon-wholesalers
+        Wholesalers
+      .retailer-col
+        %p
+          Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back.
+        %p
+          Webstop's Multi-Retailer Digital System provides a unique website, mobile site and email newsletter feature for each independent retailer but also the ability to manage all retailer assets from one central location.
+        %h3
+          Example
+        =image_tag 'index/iga-logo.jpg'
+        %p
+          Webstop launched 800 websites in one day for IGA, and IGAs across the U.S. are now using these sites to engage with their shoppers and increase sales. 
+          %a{:href => 'http://www.igalink.iga.com'} Learn More ›
     .span4
-      %h3
-        Example
-      %p
-        Webstop provides TOPS Friendly Markets with a fully customized solution to meet their brand needs. For TOPS Coupon Central, Webstop developed the most advanced integration of paperless digital coupons available. Coupons are now available via the website and mobile.
-        %a{:href => 'http://www.topsmarkets.com'} View the Site ›
+      .retailer-type{:href => '#independents'}
+        %span.icon-independents
+        Independents
+      .retailer-col  
+        %p
+          Independent retailers need a web presence. While anyone can buy a low cost website, it's important to consider the value the website provides.
+        %p
+          With Webstop's digital marketing solution for independents, retailers receive a state-of-the-art website and mobile site at an affordable price. Built using the same technology as Webstop's larger chain websites, independents are able to provide the same if not greater digital marketing features than their larger competitors.
+        %h3
+          Example
+        =image_tag 'index/msm-logo.jpg'
+        %p
+          Mollie Stone's Markets partnered with Webstop to provide their shoppers with unique digital marketing features that builds on Webstop's technology foundation.
+          %a{:href => 'http://www.molliestones.com'} View the Site ›
   %div.center-button
-    %a.btn{:href => '#contact-us'} Get Started Now
-
-%section#wholesalers
-  %h2
-    Wholesalers
-
-  .row-fluid
-    .span4
-      %h3
-        Overview
-      %p
-        Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back.
-      %p
-        Webstop's Multi-Retailer Digital System provides a unique website, mobile site and email newsletter feature for each independent retailer but also the ability to manage all retailer assets from one central location.
-
-    .span4
-      =image_tag "index/iga.jpg"
-
-    .span4
-      %h3
-        Example
-      %p
-        Webstop launched 800 websites in one day for IGA, and IGAs across the U.S. are now using these sites to engage with their shoppers and increase sales. 
-        %a{:href => 'http://www.igalink.iga.com'} Learn More ›
-  %div.center-button
-    %a.btn{:href => '#contact-us'} Get Started Now
-
-%section#independents
-  %h2
-    Independents
-
-  .row-fluid
-    .span4
-      %h3
-        Overview
-      %p
-        Independent retailers need a web presence. While anyone can buy a low cost website, it's important to consider the value the website provides.
-      %p
-        With Webstop's digital marketing solution for independents, retailers receive a state-of-the-art website and mobile site at an affordable price. Built using the same technology as Webstop's larger chain websites, independents are able to provide the same if not greater digital marketing features than their larger competitors.
-
-    .span4
-      =image_tag "index/msm.jpg"
-        
-    .span4
-      %h3
-        Example
-      %p
-        Mollie Stone's Markets partnered with Webstop to provide their shoppers with unique digital marketing features that builds on Webstop's technology foundation.
-        %a{:href => 'http://www.molliestones.com'} View the Site ›
-
-  %div.center-button
-    %a.btn{:href => '#contact-us'} Get Started Now
+    %a.btn{:href => '#features'} Learn More About Our Features
 
 %section#features
   %h1
