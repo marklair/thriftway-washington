@@ -60,7 +60,7 @@ module Template
     config.assets.initialize_on_precompile = false
 
     # add app/assets/fonts to the asset path
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    #config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
   end
 end
