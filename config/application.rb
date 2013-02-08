@@ -62,5 +62,9 @@ module Template
     # add app/assets/fonts to the asset path
     #config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
+    # Precompile additional assets (application.js,
+    # application.css, and all non-JS/CSS are already added)
+    config.assets.precompile += %w( index.css.scss )
+
   end
 end
