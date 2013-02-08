@@ -17,7 +17,7 @@ body {
 }
 
 #feature-header {
-  margin-top: 90px;
+  margin-top: 14px;
   border: none;
 }
 
@@ -60,6 +60,7 @@ ul.feature-detail li {
 @media (min-width: 768px) and (max-width: 979px) {
 
   body {
+    padding-top: 0;
     background: $webstop-blue; /* Old browsers */
     background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 200px, #ffffff 200px, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(200px,$webstop-blue), color-stop(200px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
@@ -83,6 +84,7 @@ ul.feature-detail li {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body {
+    padding-top: 0;
     background: $webstop-blue; /* Old browsers */
     background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 200px, #ffffff 200px, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(200px,$webstop-blue), color-stop(200px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
@@ -114,13 +116,14 @@ ul.feature-detail li {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   body {
+    padding-top: 0;
     background: $webstop-blue; /* Old browsers */
-    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 245px, #ffffff 245px, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(245px,$webstop-blue), color-stop(245px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 245px,#ffffff 245px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 245px,#ffffff 245px,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 245px,#ffffff 245px,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 245px,#ffffff 245px,#ffffff 100%); /* W3C */
+    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 230px, #ffffff 230px, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(230px,$webstop-blue), color-stop(230px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   }
 }
