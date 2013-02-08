@@ -64,7 +64,7 @@ module Template
 
     # Precompile additional assets (application.js,
     # application.css, and all non-JS/CSS are already added)
-    config.assets.precompile += %w( index.css.scss )
+    config.assets.precompile += %w( index.css )
 
   end
 end
