@@ -5,4 +5,11 @@ body{
 section#home h1, section#home p {
     color: #333 !important;
     text-shadow: 0;
+    text-shadow: none;
   }
+
+#feature-header h1, #feature-header p {
+  color: #333;
+  text-shadow: 0;
+  text-shadow: none;
+}
