@@ -7,14 +7,13 @@ $light-grey: #ececec;
 $body-type: #333;
 
 @mixin two-tone-background($break-point: 430px, $top-color: #336699, $bottom-color: #ffffff){
-  background: $top-color; /* Old browsers */
+  background: $bottom-color; /* Old browsers */
   background: -moz-linear-gradient(top, $top-color 0%, $top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop($break-point,$top-color), color-stop($break-point, $bottom-color), color-stop(100%, $bottom-color)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* IE10+ */
   background: linear-gradient(to bottom, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-color', endColorstr='$bottom-color',GradientType=0 ); /* IE6-9 */
 }
 
 body{
