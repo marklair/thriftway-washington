@@ -168,37 +168,7 @@ section#home p {
   color: #fff;
 }
 
-/* Buttons & Links */
 
-.btn, .btn:visited, button, button:visited {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #fff;
-  padding: 10px 15px;
-  border: 1px solid #1e590f;
-  border-radius: 5px;
-  background: -webkit-gradient( linear, left top, left bottom,
-        from(#287d12), to(#266f13) ) ;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2),
-        0 1px 0px rgba(0,0,0,.08);
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  cursor: pointer;
-}
-
-.btn:hover, .btn:active, button:hover, button:active {
-  background: -webkit-gradient( linear, left top, left bottom,
-        from(#236d0f), to(#206010) ) ;
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn:active, button:active {
-  background: -webkit-gradient( linear, left top, left bottom,
-        from(#206010), to(#236d0f) ) ;
-  text-decoration: none;
-}
 
 
 /* Responsive Layout */
