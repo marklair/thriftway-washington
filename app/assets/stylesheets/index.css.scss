@@ -6,15 +6,21 @@ $gray: #cbcbcb;
 $light-grey: #ececec;
 $body-type: #333;
 
-body {
-  background: white;
-  background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 430px, #ffffff 430px, #ffffff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(430px,$webstop-blue), color-stop(430px,#ffffff), color-stop(100%,#ffffff));
-  background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 430px,#ffffff 430px,#ffffff 100%);
-  background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 430px,#ffffff 430px,#ffffff 100%);
-  background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 430px,#ffffff 430px,#ffffff 100%);
-  background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 430px,#ffffff 430px,#ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 );
+@mixin two-tone-background($break-point: 430px, $top-color: #336699, $bottom-color: #ffffff){
+  background: $top-color; /* Old browsers */
+  background: -moz-linear-gradient(top, $top-color 0%, $top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop($break-point,$top-color), color-stop($break-point, $bottom-color), color-stop(100%, $bottom-color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-color', endColorstr='$bottom-color',GradientType=0 ); /* IE6-9 */
+}
+
+body{
+  background: #fff;
+  padding-top: 76px;
+  @include two-tone-background();
 }
 
 section {
@@ -172,16 +178,9 @@ section#home p {
   .solution-overview{min-height: 515px;}
   .solution-example{min-height: 415px;}
 
-  body {
+  body{
     padding-top: 0;
-    background: $webstop-blue; /* Old browsers */
-    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 665px, #ffffff 665px, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(665px,$webstop-blue), color-stop(665px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 665px,#ffffff 665px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 665px,#ffffff 665px,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 665px,#ffffff 665px,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 665px,#ffffff 665px,#ffffff 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    @include two-tone-background($break-point: 715px);
   }
 
   .navbar .nav {
@@ -231,16 +230,10 @@ section#home p {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    body {
+
+    body{
       padding-top: 0;
-      background: $webstop-blue; /* Old browsers */
-      background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 710px, #ffffff 710px, #ffffff 100%); /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(710px,$webstop-blue), color-stop(710px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 710px,#ffffff 710px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 710px,#ffffff 710px,#ffffff 100%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 710px,#ffffff 710px,#ffffff 100%); /* IE10+ */
-      background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 710px,#ffffff 710px,#ffffff 100%); /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+      @include two-tone-background($break-point: 810px);
     }
 
     section#home {
@@ -269,18 +262,19 @@ section#home p {
   }
 }
 
+/* Landscape phones - sub break point */
+@media (max-width: 530px) {
+  body{
+    padding-top: 0;
+    @include two-tone-background($break-point: 780px);
+  }
+}
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  body {
+  body{
     padding-top: 0;
-    background: $webstop-blue; /* Old browsers */
-    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 668px, #ffffff 668px, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(668px,$webstop-blue), color-stop(668px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 668px,#ffffff 668px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 668px,#ffffff 668px,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 668px,#ffffff 668px,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 668px,#ffffff 668px,#ffffff 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    @include two-tone-background($break-point: 780px);
   }
 
   #home h1 {
