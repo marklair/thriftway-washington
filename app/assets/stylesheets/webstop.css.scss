@@ -431,11 +431,22 @@ h3 {
 
 /* Large desktop */
 @media (min-width: 1200px) {
-
+  /* retailer solutions */
+  .solution-overview{min-height: 300px;}
+  .solution-example{min-height: 305px;}
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  /* retailer solutions */
+  .solution-overview{min-height: 370px;}
+  .solution-example{min-height: 335px;}
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+
+  /* retailer solutions */
+  .solution-overview{min-height: 515px;}
+  .solution-example{min-height: 415px;}
 
   body {
     background: $webstop-blue; /* Old browsers */
