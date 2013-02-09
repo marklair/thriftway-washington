@@ -71,14 +71,60 @@ section#contact-us img {
   background-color: $light-grey;
 }
 
-#features ul {
-  margin: 0;
+.feature_link, .feature_link:hover {
+  color: #333;
+  text-decoration: none;
+  display: block;
 }
 
-#features li {
-  list-style: none;
-  margin: 0 0 20px 0;
+.feature_link:hover, #features .span6:hover {
+
 }
+
+#features .span6:hover {
+  margin-left: -20px;
+  margin-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  @media (min-width: 1200px){
+    margin-left: -29px;
+    margin-right: 29px;
+    padding-left: 29px;
+  }
+  background-image: -moz-linear-gradient(left, #eee, #fff);
+  background-image: -ms-linear-gradient(left, #eee, #fff);
+  background-image: -o-linear-gradient(left, #eee, #fff);
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(#eee), to(#fff));
+  background-image: -webkit-linear-gradient(left, #eee, #fff);
+  background-image: linear-gradient(left, #eee, #fff);
+}
+
+#features .span6:nth-of-type(2):hover {
+  margin-left: 0;
+
+  @media (min-width: 1200px){
+    padding-left: 29px;
+  }
+  @media (max-width: 767px) {
+    margin-left: -20px;
+  }
+  @media (max-width: 480px) {
+    margin-left: -20px;
+  }
+}
+
+.column-1-3 {
+  width: 33.3333%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+// .link{
+//   color: #0088cc;
+//   text-decoration: none;
+// }
+
 
 ul {
   margin: 0;
@@ -231,29 +277,30 @@ section#home p {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
-    body{
-      padding-top: 0;
-      @include two-tone-background($break-point: 810px);
-    }
+  body{
+    padding-top: 0;
+    @include two-tone-background($break-point: 810px);
+  }
 
-    section#home {
-      margin: 0 0 60px 0;
-      text-align: center;
-    }
 
-    .retailer-type {
-      margin: 30px 0;
-    }
+  section#home {
+    margin: 0 0 60px 0;
+    text-align: center;
+  }
 
-    h1, h2, h3, #contact-us {
-      text-align: center;
-    }
+  .retailer-type {
+    margin: 30px 0;
+  }
 
-    h2 {
-      display: block;
-    }
+  h1, h2, h3, #contact-us {
+    text-align: center;
+  }
 
-    label {
+  h2 {
+    display: block;
+  }
+
+  label {
     text-align: left;
   }
 
