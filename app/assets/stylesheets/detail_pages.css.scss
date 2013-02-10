@@ -66,6 +66,10 @@ ul.feature-detail li {
   margin-top: 70px;
 }
 
+.row-fluid .image-callout {
+  float: right;
+}
+
 /* Responsive Layout */
 
 /* Large desktop */
@@ -87,6 +91,15 @@ ul.feature-detail li {
 
   h1, h2 {
     text-align: left;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#feature-header {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
   }
 }
 
@@ -112,11 +125,29 @@ ul.feature-detail li {
   img {
     text-align: center;
   }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#feature-header {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
   body {
     padding-top: 0;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#feature-header {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
   }
 }

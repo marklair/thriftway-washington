@@ -29,7 +29,7 @@ section {
 }
 
 section#home {
-  margin: 0 0 20px 0;
+  margin: 0 -20px 20px -20px;
   padding: 15px 0 40px 0;
   border: none;
   background-color: $webstop-blue;
@@ -169,8 +169,6 @@ section#home p {
 }
 
 
-
-
 /* Responsive Layout */
 
 /* Large desktop */
@@ -195,12 +193,11 @@ section#home p {
 
   body{
     padding-top: 0;
-    @include two-tone-background($break-point: 715px);
   }
 
   .navbar .nav {
     float: none;
-    margin: 10px 0 0 0;
+    margin: 0;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -241,6 +238,15 @@ section#home p {
   label {
     text-align: left;
   }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#home {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+  }
 }
 
 /* Landscape phone to portrait tablet */
@@ -248,7 +254,6 @@ section#home p {
 
   body{
     padding-top: 0;
-    @include two-tone-background($break-point: 810px);
   }
 
 
@@ -276,13 +281,30 @@ section#home p {
   .retailer-type {
     margin: 0;
   }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#home {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+  }
 }
 
 /* Landscape phones - sub break point */
 @media (max-width: 530px) {
   body{
     padding-top: 0;
-    @include two-tone-background($break-point: 780px);
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#home {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
   }
 }
 
@@ -290,7 +312,6 @@ section#home p {
 @media (max-width: 480px) {
   body{
     padding-top: 0;
-    @include two-tone-background($break-point: 780px);
   }
 
   #home h1 {
@@ -311,6 +332,15 @@ section#home p {
 
   .retailer-type {
     margin: 0;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#home {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
   }
 }
 
