@@ -7,8 +7,6 @@
 
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
-    /[if IE]
-      = stylesheet_link_tag    "temp-ie"
 
     /= csrf_meta_tags
 
@@ -20,7 +18,7 @@
 
   %body#top{'data-spy' => 'scroll', 'data-target' => '.navbar'}
     = render :partial => "layouts/header"
-    
+
     = render :partial => "layouts/messages"
     = yield
     .footer
