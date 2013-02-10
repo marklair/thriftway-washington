@@ -1,52 +1,53 @@
 = stylesheet_link_tag    "detail_pages"
 
-#weekly-ad  
+#mobile
   %section#feature-header
-    %h1
-      Mobile Technology
-    %p
-      Expand your reach with and advanced mobile site
-  
-  %section#body-text  
-    .row-fluid
-      .span8
-        %h2
-          Overview
-        %ul
-          %li
-            Smart phone sales are expected to exceed PC sales in 2012
-          %li
-            43% of mobile users have smart phones
-          %li
-            Are you reaching your shoppers in the mobile space?
+    .container
+      %h1
+        Mobile Technology
+      %p
+        Expand your reach with and advanced mobile site
+  .container
+    %section#body-text  
+      .row-fluid
+        .span8
+          %h2
+            Overview
+          %ul
+            %li
+              Smart phone sales are expected to exceed PC sales in 2012
+            %li
+              43% of mobile users have smart phones
+            %li
+              Are you reaching your shoppers in the mobile space?
 
-        %p
-          As a retailer you want your information to be as available as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the mobile technology your shoppers want.
+          %p
+            As a retailer you want your information to be as available as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the mobile technology your shoppers want.
 
-        %h2
-          Mobile Site Features
+          %h2
+            Mobile Site Features
 
-        %p
-          Webstop provides the features shoppers want in a mobile format:
-          
-        %ul.feature-detail
-          %li
-            %span.icon-tag.icon
-            Interactive digital circular
-          %li
-            %span.icon-list.icon
-            Interactive shopping list for in-store shopping
-          %li
-            %span.icon-recipe.icon
-            Over 6,000 recipes to build sales
-          %li
-            %span.icon-location.icon
-            Store locator with Google Maps integration
-          %li
-            %span.icon-coupons.icon
-            Paperless digital coupons
-      .span4
-        .image-center  
-          = image_tag "index/mobile.png"
-        %div.center-button
-          %a.btn{:href => 'index#contact-us'} Curious? Contact Us For More Info
+          %p
+            Webstop provides the features shoppers want in a mobile format:
+            
+          %ul.feature-detail
+            %li
+              %span.icon-tag.icon
+              Interactive digital circular
+            %li
+              %span.icon-list.icon
+              Interactive shopping list for in-store shopping
+            %li
+              %span.icon-recipe.icon
+              Over 6,000 recipes to build sales
+            %li
+              %span.icon-location.icon
+              Store locator with Google Maps integration
+            %li
+              %span.icon-coupons.icon
+              Paperless digital coupons
+        .span4
+          .image-center  
+            = image_tag "index/mobile.png"
+          %div.center-button
+            %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info

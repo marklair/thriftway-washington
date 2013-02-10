@@ -20,11 +20,9 @@
 
   %body#top{'data-spy' => 'scroll', 'data-target' => '.navbar'}
     = render :partial => "layouts/header"
-    .container
-      = render :partial => "layouts/messages"
-      = yield
+    
+    = render :partial => "layouts/messages"
+    = yield
     .footer
       = yield :footer
     = yield :scripts
-
-

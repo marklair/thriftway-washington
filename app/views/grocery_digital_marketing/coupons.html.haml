@@ -1,54 +1,56 @@
 = stylesheet_link_tag    "detail_pages"
 
-#weekly-ad  
+#recipes
   %section#feature-header
-    %h1
-      Digital Coupons
-    %p
-      Paperless and print-at-home, the most savings in one place
+    .container
+      %h1
+        Digital Coupons
+      %p
+        Paperless and print-at-home, the most savings in one place
   
-  %section#body-text  
-    .row-fluid
-      .span8
-        %h2
-          Overview
-        %ul
-          %li
-            Redemption of internet coupons grew 360% last year
-          %li
-            92.5 million internet users will use internet coupons in 2012
-          %li
-            Shopping basket increases over 25% with digital coupons
+  .container
+    %section#body-text  
+      .row-fluid
+        .span8
+          %h2
+            Overview
+          %ul
+            %li
+              Redemption of internet coupons grew 360% last year
+            %li
+              92.5 million internet users will use internet coupons in 2012
+            %li
+              Shopping basket increases over 25% with digital coupons
 
-        %p
-          Retailer and manufacturer sponsored coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great value and convenience.
-        %h2
-          Weekly Ad and Shopping List Features
+          %p
+            Retailer and manufacturer sponsored coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great value and convenience.
+          %h2
+            Weekly Ad and Shopping List Features
 
-        %p
-          Webstop's Weekly Ad provides and engaging digital experience for your shoppers:
-          
-        %ul.feature-detail
-          %li
-            %span.icon-display.icon
-            Designed for digital, not a low-res version of print ad
-          %li
-            %span.icon-search.icon
-            Multiple browse and search options
-          %li
-            %span.icon-list.icon
-            Shopping List integration with a single click
-          %li
-            %span.icon-recipe.icon
-            Recipe links displayed with suggested meal ideas
-          %li
-            %span.icon-mobile.icon
-            Mobile weekly ad with same digital content
-          %li
-            %span.icon-coupons.icon
-            Digital coupon integration in weekly ad
-      .span4
-        .image-center
-          = image_tag "index/coupons.png"
-        %div.center-button
-          %a.btn{:href => 'index#contact-us'} Curious? Contact Us For More Info
+          %p
+            Webstop's Weekly Ad provides and engaging digital experience for your shoppers:
+            
+          %ul.feature-detail
+            %li
+              %span.icon-display.icon
+              Designed for digital, not a low-res version of print ad
+            %li
+              %span.icon-search.icon
+              Multiple browse and search options
+            %li
+              %span.icon-list.icon
+              Shopping List integration with a single click
+            %li
+              %span.icon-recipe.icon
+              Recipe links displayed with suggested meal ideas
+            %li
+              %span.icon-mobile.icon
+              Mobile weekly ad with same digital content
+            %li
+              %span.icon-coupons.icon
+              Digital coupon integration in weekly ad
+        .span4
+          .image-center
+            = image_tag "index/coupons.png"
+          %div.center-button
+            %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info

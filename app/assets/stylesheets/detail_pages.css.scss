@@ -6,19 +6,35 @@ $gray: #cbcbcb;
 $light-grey: #ececec;
 $body-type: #333;
 
-body {
-  background: #fff; /* Old browsers */
-  background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 200px, #ffffff 200px, #ffffff 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(200px,$webstop-blue), color-stop(200px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* IE10+ */
-  background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* W3C */
+@mixin container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix();
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  @include container-fixed();
 }
 
 #feature-header {
-  margin-top: 14px;
+  padding: 15px 0 40px 0;
   border: none;
+  background: $webstop-blue;
 }
 
 #feature-header h1, #feature-header p {
@@ -42,6 +58,7 @@ ul.feature-detail li {
 
 .center-button {
   margin: 0 auto;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -61,14 +78,6 @@ ul.feature-detail li {
 
   body {
     padding-top: 0;
-    background: $webstop-blue; /* Old browsers */
-    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 200px, #ffffff 200px, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(200px,$webstop-blue), color-stop(200px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   }
 
   #feature-header {
@@ -85,14 +94,6 @@ ul.feature-detail li {
 @media (max-width: 767px) {
   body {
     padding-top: 0;
-    background: $webstop-blue; /* Old browsers */
-    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 200px, #ffffff 200px, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(200px,$webstop-blue), color-stop(200px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 200px,#ffffff 200px,#ffffff 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   }
 
   #feature-header {
@@ -117,13 +118,5 @@ ul.feature-detail li {
 @media (max-width: 480px) {
   body {
     padding-top: 0;
-    background: $webstop-blue; /* Old browsers */
-    background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 230px, #ffffff 230px, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(230px,$webstop-blue), color-stop(230px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 230px,#ffffff 230px,#ffffff 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$webstop-blue', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   }
 }

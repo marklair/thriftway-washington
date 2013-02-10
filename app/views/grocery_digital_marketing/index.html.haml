@@ -1,192 +1,194 @@
 = stylesheet_link_tag    "index"
 
 %section#home
-  .row-fluid
-    .span6
-      = image_tag "index/what-we-do.png"
+  .container
+    .row-fluid
+      .span6
+        = image_tag "index/what-we-do.png"
 
-    .span6
-      %h1
-        Digital Marketing Solutions for&nbsp;Grocers
-      %p
-        Webstop provides digital marketing tools that increase shopper engagement and build additional visits to your stores. Webstop's 15 years of experience with grocery digital marketing provides them the knowledge to help you. No matter your positioning and size in the grocery industry, Webstop has the solution for you.
+      .span6
+        %h1
+          Digital Marketing Solutions for&nbsp;Grocers
+        %p
+          Webstop provides digital marketing tools that increase shopper engagement and build additional visits to your stores. Webstop's 15 years of experience with grocery digital marketing provides them the knowledge to help you. No matter your positioning and size in the grocery industry, Webstop has the solution for you.
 
-      %div.center-button-small-screen
-        %a.btn.btn-primary{href: '#solutions'} Find Your Solution
+        %div.center-button-small-screen
+          %a.btn.btn-primary{href: '#solutions'} Find Your Solution
 
-%section#solutions
-  %h1
-    Retailer Solutions
-  .row-fluid
-    .span4
-      .retailer-type
-        %span.icon-chains
-        Large Chains
-      .retailer-col
-        .solution-overview
-          %p
-            Large chains need digital marketing features tailored to their brand. Webstop digital marketing solutions for chains include advanced features as the starting point and the custom features unique to each chain.
-          %ul
-            %li
-              Unique, retailer specific designs, layouts and advanced features
-            %li
-              Integrated with Webstop content & Grocery Website Modules
-            %li
-              Reinforces retailer brand and marketing programs
-        .solution-example
+.container
+  %section#solutions
+    %h1
+      Retailer Solutions
+    .row-fluid
+      .span4
+        .retailer-type
+          %span.icon-chains
+          Large Chains
+        .retailer-col
+          .solution-overview
+            %p
+              Large chains need digital marketing features tailored to their brand. Webstop digital marketing solutions for chains include advanced features as the starting point and the custom features unique to each chain.
+            %ul
+              %li
+                Unique, retailer specific designs, layouts and advanced features
+              %li
+                Integrated with Webstop content & Grocery Website Modules
+              %li
+                Reinforces retailer brand and marketing programs
+          .solution-example
+            %h3
+              Example
+            .center-image
+              =image_tag 'index/tops-logo.jpg'
+            %p
+              Webstop provides TOPS Friendly Markets with a fully customized solution to meet their brand needs. For TOPS Coupon Central, Webstop developed the most advanced integration of paperless digital coupons available. Coupons are now available via the website and mobile.
+              %a{href: 'http://www.topsmarkets.com', target: '_blank'} View the Site ›
+          .center-button
+            %a.btn.btn-primary{href: '#features'} Learn More About Our Features
+      .span4
+        .retailer-type
+          %span.icon-wholesalers
+          Wholesalers
+        .retailer-col
+          .solution-overview
+            %p
+              Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back.
+            %p
+              Webstop's Multi-Retailer Digital System provides a unique website, mobile site and email newsletter feature for each independent retailer but also the ability to manage all retailer assets from one central location.
+          .solution-example
+            %h3
+              Example
+            .center-image
+              =image_tag 'index/iga-logo.jpg'
+            %p
+              Webstop's Multi-Retailer Digital System for Wholesalers was perfect for IGA.
+            %p
+              Webstop launched 800 websites and mobile sites on the same day for IGA, and IGAs across the U.S. are now using these sites to engage with their shoppers and increase sales.
+              %a{href: 'http://www.igalink.iga.com', target: '_blank'} Learn More ›
+          .center-button
+            %a.btn.btn-primary{href: '#features'} Learn More About Our Features
+      .span4
+        .retailer-type
+          %span.icon-independents
+          Independents
+        .retailer-col
+          .solution-overview
+            %p
+              Independent retailers need a web presence. While anyone can buy a low cost website, it's important to consider the value the website provides.
+            %p
+              With Webstop's digital marketing solution for independents, retailers receive a state-of-the-art website and mobile site at an affordable price. Built using the same technology as Webstop's larger chain websites, independents are able to provide the same if not greater digital marketing features than their larger competitors.
+          .solution-example
+            %h3
+              Example
+            .center-image
+              =image_tag 'index/msm-logo.jpg'
+            %p
+              Mollie Stone's Markets partnered with Webstop to provide their shoppers with unique digital marketing features that build on Webstop's technology foundation.
+              %a{href: 'http://www.molliestones.com', target: '_blank'} View the Site ›
+          .center-button
+            %a.btn.btn-primary{href: '#features'} Learn More About Our Features
+
+  %section#features
+    %h1
+      Features
+    .row-fluid
+      .span6
+        %a.feature_link{href: 'weekly_ad'}
           %h3
-            Example
-          .center-image
-            =image_tag 'index/tops-logo.jpg'
+            %span.icon-tag.icon{:escape_attrs => true}
+            Weekly Ad
           %p
-            Webstop provides TOPS Friendly Markets with a fully customized solution to meet their brand needs. For TOPS Coupon Central, Webstop developed the most advanced integration of paperless digital coupons available. Coupons are now available via the website and mobile.
-            %a{href: 'http://www.topsmarkets.com', target: '_blank'} View the Site ›
-        .center-button
-          %a.btn.btn-primary{href: '#features'} Learn More About Our Features
-    .span4
-      .retailer-type
-        %span.icon-wholesalers
-        Wholesalers
-      .retailer-col
-        .solution-overview
-          %p
-            Wholesalers need a digital marketing solution for their independent retailers. The solution should offer varying levels of engagement based on retailer need and advanced features that keep shoppers coming back.
-          %p
-            Webstop's Multi-Retailer Digital System provides a unique website, mobile site and email newsletter feature for each independent retailer but also the ability to manage all retailer assets from one central location.
-        .solution-example
+            Webstop has the weekly ad and shopping list technology for the next generation of shoppers and their retailers. Build shopper engagement by making the digital ad transition now.
+          %p.btn-link Learn More ›
+      .span6
+        %a.feature_link{href: 'newsletters'}
           %h3
-            Example
-          .center-image
-            =image_tag 'index/iga-logo.jpg'
+            %span.icon-mail.icon{:escape_attrs => true}
+            Grocery Newsletters
           %p
-            Webstop's Multi-Retailer Digital System for Wholesalers was perfect for IGA.
-          %p
-            Webstop launched 800 websites and mobile sites on the same day for IGA, and IGAs across the U.S. are now using these sites to engage with their shoppers and increase sales.
-            %a{href: 'http://www.igalink.iga.com', target: '_blank'} Learn More ›
-        .center-button
-          %a.btn.btn-primary{href: '#features'} Learn More About Our Features
-    .span4
-      .retailer-type
-        %span.icon-independents
-        Independents
-      .retailer-col
-        .solution-overview
-          %p
-            Independent retailers need a web presence. While anyone can buy a low cost website, it's important to consider the value the website provides.
-          %p
-            With Webstop's digital marketing solution for independents, retailers receive a state-of-the-art website and mobile site at an affordable price. Built using the same technology as Webstop's larger chain websites, independents are able to provide the same if not greater digital marketing features than their larger competitors.
-        .solution-example
+            Webstop's industry-leading Grocery Newsletters includes advanced features that strongly support your digital marketing goals as a retailer. Website traffic will increase, providing more exposure to your brand, quality and value offerings.
+          %p.btn-link Learn More ›
+    .row-fluid
+      .span6
+        %a.feature_link{href: 'mobile'}
           %h3
-            Example
-          .center-image
-            =image_tag 'index/msm-logo.jpg'
+            %span.icon-mobile.icon{:escape_attrs => true}
+            Mobile Technology
           %p
-            Mollie Stone's Markets partnered with Webstop to provide their shoppers with unique digital marketing features that build on Webstop's technology foundation.
-            %a{href: 'http://www.molliestones.com', target: '_blank'} View the Site ›
-        .center-button
-          %a.btn.btn-primary{href: '#features'} Learn More About Our Features
-
-%section#features
-  %h1
-    Features
-  .row-fluid
-    .span6
-      %a.feature_link{href: 'weekly_ad'}
-        %h3
-          %span.icon-tag.icon{:escape_attrs => true}
-          Weekly Ad
-        %p
-          Webstop has the weekly ad and shopping list technology for the next generation of shoppers and their retailers. Build shopper engagement by making the digital ad transition now.
-        %p.btn-link Learn More ›
-    .span6
-      %a.feature_link{href: 'newsletters'}
-        %h3
-          %span.icon-mail.icon{:escape_attrs => true}
-          Grocery Newsletters
-        %p
-          Webstop's industry-leading Grocery Newsletters includes advanced features that strongly support your digital marketing goals as a retailer. Website traffic will increase, providing more exposure to your brand, quality and value offerings.
-        %p.btn-link Learn More ›
-  .row-fluid
-    .span6
-      %a.feature_link{href: 'mobile'}
-        %h3
-          %span.icon-mobile.icon{:escape_attrs => true}
-          Mobile Technology
-        %p
-          As a retailer you want your information to be as available as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the mobile technology your shoppers want.
-        %p.btn-link Learn More ›
-    .span6
-      %a.feature_link{href: 'recipes'}
-        %h3
-          %span.icon-recipe.icon{:escape_attrs => true}
-          Recipes
-        %p
-          Webstop offers thousands of delicious recipes that integrate with your weekly ad, shopping list and coupons to save shoppers time and money while enhancing their shopping experience. All recipes are available on the website, mobile site and via email.
-        %p.btn-link Learn More ›
-  .row-fluid
-    .span6
-      %a.feature_link{href: 'coupons'}
-        %h3
-          %span.icon-coupons.icon{:escape_attrs => true}
-          Digital Coupons
-        %p
-          Retailer and manufacturer sponsored digital coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great value and convenience.
-        %p.btn-link Learn More ›
-    .span6
-      %a.feature_link{href: 'shopping_list'}
-        %h3
-          %span.icon-list.icon{:escape_attrs => true}
-          Shopping List
-        %p
-          A retailer's digital presence isn't complete without a comprehensive, interactive shopping list. Quick list creation with weekly ad items, recipes, digital coupons and easy entry helps consumers shop quickly and be confident that they purchased everything they need.
-        %p.btn-link Learn More ›
-
-%section#contact-us
-  %h1
-    Contact Us
-
-  .row-fluid
-    .span6
-      %h3
-        Send Us an Email
-      - @message = Message.new
-      = render 'messages/form'
-      / %form
-      /   %fieldset
-      /     .controls
-      /       %label Name
-      /       %input.span12{:placeholder => "First and last name", :type => "text"}
-      /       %label Email
-      /       %input.span12{:placeholder => "Email Address", :type => "text"}
-      /       %label Phone Number
-      /       %input.span12{:placeholder => "555-555-5555", :type => "tel"}
-      /       %label Company
-      /       %input.span12{:placeholder => "Company Name", :type => "text"}
-      /       %label Message
-      /       %textarea.span12{:rows => "5"}
-      /       %br
-      /       %button.btn.btn-primary{:type => "submit"} Submit
-    .span6
-      =image_tag 'index/location.jpg'
-
-      .row-fluid
-        .span6
+            As a retailer you want your information to be as available as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the mobile technology your shoppers want.
+          %p.btn-link Learn More ›
+      .span6
+        %a.feature_link{href: 'recipes'}
           %h3
-            Address
-          %address
-            Webstop.com, Inc.
+            %span.icon-recipe.icon{:escape_attrs => true}
+            Recipes
+          %p
+            Webstop offers thousands of delicious recipes that integrate with your weekly ad, shopping list and coupons to save shoppers time and money while enhancing their shopping experience. All recipes are available on the website, mobile site and via email.
+          %p.btn-link Learn More ›
+    .row-fluid
+      .span6
+        %a.feature_link{href: 'coupons'}
+          %h3
+            %span.icon-coupons.icon{:escape_attrs => true}
+            Digital Coupons
+          %p
+            Retailer and manufacturer sponsored digital coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great value and convenience.
+          %p.btn-link Learn More ›
+      .span6
+        %a.feature_link{href: 'shopping_list'}
+          %h3
+            %span.icon-list.icon{:escape_attrs => true}
+            Shopping List
+          %p
+            A retailer's digital presence isn't complete without a comprehensive, interactive shopping list. Quick list creation with weekly ad items, recipes, digital coupons and easy entry helps consumers shop quickly and be confident that they purchased everything they need.
+          %p.btn-link Learn More ›
+
+  %section#contact-us
+    %h1
+      Contact Us
+
+    .row-fluid
+      .span6
+        %h3
+          Send Us an Email
+        - @message = Message.new
+        = render 'messages/form'
+        / %form
+        /   %fieldset
+        /     .controls
+        /       %label Name
+        /       %input.span12{:placeholder => "First and last name", :type => "text"}
+        /       %label Email
+        /       %input.span12{:placeholder => "Email Address", :type => "text"}
+        /       %label Phone Number
+        /       %input.span12{:placeholder => "555-555-5555", :type => "tel"}
+        /       %label Company
+        /       %input.span12{:placeholder => "Company Name", :type => "text"}
+        /       %label Message
+        /       %textarea.span12{:rows => "5"}
+        /       %br
+        /       %button.btn.btn-primary{:type => "submit"} Submit
+      .span6
+        =image_tag 'index/location.jpg'
+
+        .row-fluid
+          .span6
+            %h3
+              Address
+            %address
+              Webstop.com, Inc.
+              %br
+              3488 East Lake Rd.
+              %br
+              Suite 201
+              %br
+              Palm Harbor, FL 34685
+          .span6
+            %h3
+              Phone
+            %span
+              Voice:
+            %a{href: 'tel:+17279422797'} (727) 942-2797
             %br
-            3488 East Lake Rd.
-            %br
-            Suite 201
-            %br
-            Palm Harbor, FL 34685
-        .span6
-          %h3
-            Phone
-          %span
-            Voice:
-          %a{href: 'tel:+17279422797'} (727) 942-2797
-          %br
-          %span
-            Fax: (727) 386-4112
+            %span
+              Fax: (727) 386-4112
