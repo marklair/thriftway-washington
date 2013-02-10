@@ -1,17 +1,19 @@
 = stylesheet_link_tag    "detail_pages"
 
-#weekly-ad  
+#weekly-ad
   %section#feature-header
-    %h1
-      Grocery Newsletters
-    %p
-      Expand your reach with advanced email newsletters
-  
-  %section#body-text  
+    %h1 Grocery Newsletters
+    %p Expand your reach with advanced email newsletters
+
+  %section#body-text
     .row-fluid
+      .span4.image-callout
+        .image-center
+          = image_tag "index/newsletter.png"
+        / %div.center-button
+        /   %a.btn{:href => 'index#contact-us'} Curious? Contact Us For More Info
       .span8
-        %h2
-          Overview
+        %h2 Overview
         %ul
           %li
             Powerful communication direct to customers
@@ -23,9 +25,9 @@
         %p
           Webstop's industry-leading Grocery Newsletters include advanced features that strongly support your digital marketing goals as a retailer. Website traffic will increase providing more exposure your brand, quality and value offerings.
 
-        %h2
-          Grocery Newsletter Features
-          
+    .row-fluid
+      .span6
+        %h2 Grocery Newsletter Features
         %ul.feature-detail
           %li
             %span.icon-photos.icon
@@ -48,8 +50,7 @@
           %li
             %span.icon-web.icon
             Extensive website integration
-      .span4
-        .image-center
-          = image_tag "index/newsletter.png"
-        %div.center-button
-          %a.btn{:href => 'index#contact-us'} Curious? Contact Us For More Info
+      .span6
+        %h2 Curious? Contact Us
+        - @message = Message.new
+        = render 'messages/form'
