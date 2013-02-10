@@ -87,59 +87,8 @@
           %a.btn.btn-primary{href: '#features'} Learn More About Our Features
 
 %section#features
-  %h1
-    Features
-  .row-fluid
-    .span6
-      %a.feature_link{href: 'weekly_ad'}
-        %h3
-          %span.icon-tag.icon{:escape_attrs => true}
-          Weekly Ad
-        %p
-          Webstop has the weekly ad and shopping list technology for the next generation of shoppers and their retailers. Build shopper engagement by making the digital ad transition now.
-        %p.btn-link Learn More ›
-    .span6
-      %a.feature_link{href: 'newsletters'}
-        %h3
-          %span.icon-mail.icon{:escape_attrs => true}
-          Grocery Newsletters
-        %p
-          Webstop's industry-leading Grocery Newsletters includes advanced features that strongly support your digital marketing goals as a retailer. Website traffic will increase, providing more exposure to your brand, quality and value offerings.
-        %p.btn-link Learn More ›
-  .row-fluid
-    .span6
-      %a.feature_link{href: 'mobile'}
-        %h3
-          %span.icon-mobile.icon{:escape_attrs => true}
-          Mobile Technology
-        %p
-          As a retailer you want your information to be as available as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the mobile technology your shoppers want.
-        %p.btn-link Learn More ›
-    .span6
-      %a.feature_link{href: 'recipes'}
-        %h3
-          %span.icon-recipe.icon{:escape_attrs => true}
-          Recipes
-        %p
-          Webstop offers thousands of delicious recipes that integrate with your weekly ad, shopping list and coupons to save shoppers time and money while enhancing their shopping experience. All recipes are available on the website, mobile site and via email.
-        %p.btn-link Learn More ›
-  .row-fluid
-    .span6
-      %a.feature_link{href: 'coupons'}
-        %h3
-          %span.icon-coupons.icon{:escape_attrs => true}
-          Digital Coupons
-        %p
-          Retailer and manufacturer sponsored digital coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great value and convenience.
-        %p.btn-link Learn More ›
-    .span6
-      %a.feature_link{href: 'shopping_list'}
-        %h3
-          %span.icon-list.icon{:escape_attrs => true}
-          Shopping List
-        %p
-          A retailer's digital presence isn't complete without a comprehensive, interactive shopping list. Quick list creation with weekly ad items, recipes, digital coupons and easy entry helps consumers shop quickly and be confident that they purchased everything they need.
-        %p.btn-link Learn More ›
+  %h1 Features
+  = render 'grocery_digital_marketing/features'
 
 %section#contact-us
   %h1
@@ -147,8 +96,7 @@
 
   .row-fluid
     .span6
-      %h3
-        Send Us an Email
+      %h3 Send Us an Email
       - @message = Message.new
       = render 'messages/form'
       / %form
