@@ -31,6 +31,7 @@ $body-type: #333;
   @include container-fixed();
 }
 
+/* header */
 #feature-header {
   padding: 15px 0 40px 0;
   border: none;
@@ -46,11 +47,60 @@ $body-type: #333;
   margin: 0;
 }
 
+
+.feature-detail li {
+  font-size: 16px;
+  line-height: 31px;
+}
+
+/* overview */
+#overview {
+  padding: 70px 0 20px;
+  border-bottom: 1px solid #ccc;
+  background: #eee;
+  @media (max-width: 767px) {
+    margin: 0 -20px 0 -20px;
+    padding: 70px 20px 20px;
+  }
+  @media (max-width: 480px) {
+    margin: 0 -20px 0 -20px;
+    padding: 70px 20px 20px;
+  }
+  .screenshot {
+    float: right;
+    @media (max-width: 480px) {
+      float: none;
+    }
+  }
+} // end #overview
+
+/* sub-navigation */
+.features-nav-section .heading {
+  margin-top: 90px;
+  text-transform:uppercase;
+}
+
+.features-navigation li {
+  // font-size: 24px;
+  // line-height: 32px;
+  // height: 32px;
+  list-style: none;
+}
+
+.nav-icon {
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+/* Feature list */
 .icon {
   margin: 0 30px 0 0;
   font-size: 32px;
   line-height: 32px;
   height: 32px;
+  vertical-align: top;
   float: left;
 }
 
@@ -63,10 +113,6 @@ ul.feature-detail li {
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
-}
-
-#body-text {
-  margin-top: 70px;
 }
 
 .row-fluid .image-callout {
