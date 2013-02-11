@@ -3,21 +3,14 @@
 #weekly-ad
   %section#feature-header
     .container
-      %h1
-        Weekly Ad
-      %p
-        Capture shopper attention with a Weekly Ad designed for the digital world
-
-
-  %section#overview
-    .container
       .row-fluid
         .span4.screenshot
-          .image-center
+          .center-image
             = image_tag "index/weekly-ad.png"
         .span8
-          %h2
-            Overview
+          %h1
+            Weekly Ad
+
           %ul
             %li
               Shoppers who access weekly ads online spend more in store - Nielson
@@ -28,38 +21,38 @@
 
           %p
             Webstop has the weekly ad and shopping list technology for the next generation  of shoppers and their retailers. Build shopper engagement by making the digital ad transition now.
+
+.container
   %section#features-list
-    .container
-      .row-fluid
-        .span8
-          %h2
-            Weekly Ad and Shopping List Features
+    .row-fluid
+      .span8
+        %h2
+          Weekly Ad and Shopping List Features
 
-          %p
-            Webstop's Weekly Ad provides and engaging digital experience for your shoppers:
+        %p
+          Webstop's Weekly Ad provides and engaging digital experience for your shoppers:
 
-          %ul.feature-detail
-            %li
-              %span.icon-display.icon
-              Designed for digital, not a low-res version of print ad
-            %li
-              %span.icon-search.icon
-              Multiple browse and search options
-            %li
-              %span.icon-list.icon
-              Shopping List integration with a single click
-            %li
-              %span.icon-recipe.icon
-              Recipe links displayed with suggested meal ideas
-            %li
-              %span.icon-mobile.icon
-              Mobile weekly ad with same digital content
-            %li
-              %span.icon-coupons.icon
-              Digital coupon integration in weekly ad
-        .span4
-          %div.center-button
-            %a.btn.btn-primary.btn-large{:href => 'index#contact-us'} Curious? Contact Us For More Info
-          .features-nav-section
-            %h4.heading More Features To Explore
-            = render 'grocery_digital_marketing/features_navigation'
+        %ul.feature-detail
+          %li
+            %span.icon-display.icon
+            Designed for digital, not a low-res version of print ad
+          %li
+            %span.icon-search.icon
+            Multiple browse and search options
+          %li
+            %span.icon-list.icon
+            Shopping List integration with a single click
+          %li
+            %span.icon-recipe.icon
+            Recipe links displayed with suggested meal ideas
+          %li
+            %span.icon-mobile.icon
+            Mobile weekly ad with same digital content
+          %li
+            %span.icon-coupons.icon
+            Digital coupon integration in weekly ad
+        %a.btn.btn-primary.btn-large{:href => 'index#contact-us'} Curious? Contact Us For More Info
+      .span4
+        .features-nav-section
+          %h4.heading More Features To Explore
+          = render 'grocery_digital_marketing/features_navigation'
