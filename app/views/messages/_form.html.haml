@@ -22,21 +22,4 @@
     = f.label :content, "Message"
     = f.text_area :content, class: 'span12', rows: '5'
   .actions
-    = f.submit 'Send Message', class: 'btn btn-primary'
-
-
-/ %form
-/   %fieldset
-/     .controls
-/       %label Name
-/       %input.span12{:placeholder => "First and last name", :type => "text"}
-/       %label Email
-/       %input.span12{:placeholder => "Email Address", :type => "text"}
-/       %label Phone Number
-/       %input.span12{:placeholder => "555-555-5555", :type => "tel"}
-/       %label Company
-/       %input.span12{:placeholder => "Company Name", :type => "text"}
-/       %label Message
-/       %textarea.span12{:rows => "5"}
-/       %br
-/       %button.btn{:type => "submit"} Submit
+    = f.submit 'Send Message', class: 'btn btn-primary btn-large'

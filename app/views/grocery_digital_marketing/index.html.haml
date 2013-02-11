@@ -13,7 +13,7 @@
           Webstop provides digital marketing tools that increase shopper engagement and build additional visits to your stores. Webstop's 15 years of experience with grocery digital marketing provides them the knowledge to help you. No matter your positioning and size in the grocery industry, Webstop has the solution for you.
 
         %div.center-button-small-screen
-          %a.btn.btn-primary{href: '#solutions'} Find Your Solution
+          %a.btn.btn-primary.btn-large{href: '#solutions'} Find Your Solution
 
 .container
   %section#solutions
@@ -97,27 +97,13 @@
   %section#contact-us
     %h1
       Contact Us
-  
+
     .row-fluid
       .span6
         %h3 Send Us an Email
         - @message = Message.new
         = render 'messages/form'
-        / %form
-        /   %fieldset
-        /     .controls
-        /       %label Name
-        /       %input.span12{:placeholder => "First and last name", :type => "text"}
-        /       %label Email
-        /       %input.span12{:placeholder => "Email Address", :type => "text"}
-        /       %label Phone Number
-        /       %input.span12{:placeholder => "555-555-5555", :type => "tel"}
-        /       %label Company
-        /       %input.span12{:placeholder => "Company Name", :type => "text"}
-        /       %label Message
-        /       %textarea.span12{:rows => "5"}
-        /       %br
-        /       %button.btn.btn-primary{:type => "submit"} Submit
+
       .span6
         =image_tag 'index/location.jpg'
 
