@@ -29,9 +29,14 @@ body {
 
 #logo {
   float: left;
-  width: 157px;
+  width: 127px;
   height: 45px;
   overflow: hidden;
+}
+
+#logo img {
+  width: 127px;
+  height: 128px;
 }
 
 .navbar {
