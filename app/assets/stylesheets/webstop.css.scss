@@ -7,6 +7,8 @@ $orange: #ffad5b;
 $gray: #cbcbcb;
 $light-grey: #ececec;
 $body-type: #333;
+$light-btn-color: #287d12;
+$dark-btn-color: #266f13;
 
 ::selection {
   background: $webstop-blue;
@@ -114,6 +116,72 @@ li {
 .center-button {
   margin: 0 auto;
   text-align: center;
+}
+
+/* Links and Buttons */
+
+a {
+  color: $webstop-blue;
+}
+
+a:hover {
+  color: $dark-blue;
+}
+
+.btn-primary {
+  color: 
+    white;
+  text-shadow: 0 -1px 0 
+    rgba(0, 0, 0, 0.25);
+  background-color: 
+    $dark-btn-color;
+  background-image: -moz-linear-gradient(top, 
+    $light-btn-color, 
+    $dark-btn-color);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(
+    $light-btn-color), to(
+    $dark-btn-color));
+  background-image: -webkit-linear-gradient(top, 
+    $light-btn-color, 
+    $dark-btn-color);
+  background-image: -o-linear-gradient(top, 
+    $light-btn-color, 
+    $dark-btn-color);
+  background-image: linear-gradient(to bottom, 
+    $light-btn-color, 
+    $dark-btn-color);
+  background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-btn-color', endColorstr='$dark-btn-color', GradientType=0);
+  border-color: 
+    $dark-btn-color;
+}
+
+.btn-primary:hover {
+  color: 
+    white;
+  text-shadow: 0 -1px 0 
+    rgba(0, 0, 0, 0.25);
+  background-color: 
+    darken($dark-btn-color, 5%);
+  background-image: -moz-linear-gradient(top, 
+    darken($light-btn-color, 5%), 
+    darken($dark-btn-color, 5%));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(
+    darken($light-btn-color, 5%)), to(
+    darken($dark-btn-color, 5%)));
+  background-image: -webkit-linear-gradient(top, 
+    darken($light-btn-color, 5%), 
+    darken($dark-btn-color, 5%));
+  background-image: -o-linear-gradient(top, 
+    darken($light-btn-color, 5%), 
+    darken($dark-btn-color, 5%));
+  background-image: linear-gradient(to bottom, 
+    darken($light-btn-color, 5%), 
+    darken($dark-btn-color, 5%));
+  background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-btn-color', endColorstr='$dark-btn-color', GradientType=0);
+  border-color: 
+    darken($dark-btn-color, 5%);
 }
 
 /* Typography */

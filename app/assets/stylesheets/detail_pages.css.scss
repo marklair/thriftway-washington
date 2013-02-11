@@ -106,11 +106,15 @@ ul.feature-detail li {
 .center-button, .center-image {
   margin: 0 auto;
   margin-top: 20px;
-  text-align: center;
 }
 
 .row-fluid .image-callout {
   float: right;
+}
+
+.center-justified-text {
+  width: 90%;
+  margin: 0px auto;
 }
 
 /* Responsive Layout */
@@ -140,7 +144,7 @@ ul.feature-detail li {
     margin-bottom: 0;
   }
 
-  section#feature-header, #feature-header ul {
+  section#feature-header {
     margin: 0 -20px 0 -20px;
     padding: 20px;
   }
@@ -155,10 +159,6 @@ ul.feature-detail li {
   #feature-header {
     margin-top: 0;
     border: none;
-  }
-
-  #feature-header p, #feature-header ul {
-    text-align: center;
   }
 
   h2 {
@@ -196,9 +196,5 @@ ul.feature-detail li {
   section#feature-header {
     margin: 0 -20px 0 -20px;
     padding: 20px;
-  }
-
-    #feature-header p {
-    text-align: center;
   }
 }
