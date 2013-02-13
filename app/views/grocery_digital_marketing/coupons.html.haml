@@ -3,17 +3,13 @@
 #recipes
   %section#feature-header
     .container
-      %h1
-        Digital Coupons
-      %p
-        Paperless and print-at-home, the most savings in one place
-  
-  .container
-    %section#body-text  
       .row-fluid
+        .span4.screenshot
+          .center-image
+            = image_tag "index/coupons.png"
         .span8
-          %h2
-            Overview
+          %h1
+            Digital Coupons
           %ul
             %li
               Redemption of internet coupons grew 360% last year
@@ -24,8 +20,13 @@
 
           %p
             Retailer and manufacturer sponsored coupons provide great consumer savings and high website return visits. With high traffic weekly ads, recipes and coupons in a well-organized shopping list, consumers shop your stores for great value and convenience.
+  
+  .container
+    %section#body-text  
+      .row-fluid
+        .span8
           %h2
-            Weekly Ad and Shopping List Features
+            Digital Coupon Features
 
           %p
             Webstop's Weekly Ad provides and engaging digital experience for your shoppers:
@@ -49,8 +50,8 @@
             %li
               %span.icon-coupons.icon
               Digital coupon integration in weekly ad
+          %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
         .span4
-          .image-center
-            = image_tag "index/coupons.png"
-          %div.center-button
-            %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
+          .features-nav-section
+            %h4.heading More Features To Explore
+            = render 'grocery_digital_marketing/features_navigation'

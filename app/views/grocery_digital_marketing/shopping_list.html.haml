@@ -3,24 +3,25 @@
 #shopping-list
   %section#feature-header
     .container
-      %h1
-        Shopping List
-      %p
-        Help shoppers organize a list that works best in your store.
-  .container
-    %section#body-text
       .row-fluid
+        .span4.screenshot
+          .center-image
+            = image_tag "index/shopping-list.png"
         .span8
-          %h2
-            Overview
+          %h1
+            Shopping List
           %ul
             %li Shoppers who create an online shopping list buy 25% more per trip
             %li Consolidated shopping lists save time and missed items
             %li Web, mobile and email digital channels are necessary
 
-          %p
-            A retailer's digital presence isn't complete without a comprehensive, interactive shopping list. Quick list creation with weekly ad items, recipes, digital coupons and easy entry helps consumers shop quickly and be confident that they purchased everything they need.
+            %p
+              A retailer's digital presence isn't complete without a comprehensive, interactive shopping list. Quick list creation with weekly ad items, recipes, digital coupons and easy entry helps consumers shop quickly and be confident that they purchased everything they need.
 
+  .container
+    %section#body-text
+      .row-fluid
+        .span8
           %h2
             Shopping List Features
 
@@ -46,8 +47,9 @@
             %li
               %span.icon-cart.icon
               Mobile features tailored for in-store experience, "Groceries in Cart" tracking
-        .span4
-          .image-center
-            = image_tag "index/shopping-list.png"
-          %div.center-button
             %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
+
+        .span4
+          .features-nav-section
+            %h4.heading More Features To Explore
+            = render 'grocery_digital_marketing/features_navigation'

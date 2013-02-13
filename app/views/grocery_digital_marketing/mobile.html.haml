@@ -3,16 +3,13 @@
 #mobile
   %section#feature-header
     .container
-      %h1
-        Mobile Technology
-      %p
-        Expand your reach with and advanced mobile site
-  .container
-    %section#body-text  
       .row-fluid
+        .span4.screenshot
+          .center-image
+            = image_tag "index/mobile.png"
         .span8
-          %h2
-            Overview
+          %h1
+            Mobile Technology
           %ul
             %li
               Smart phone sales are expected to exceed PC sales in 2012
@@ -23,7 +20,11 @@
 
           %p
             As a retailer you want your information to be as available as possible. Websites and email newsletters are an essential foundation for your digital marketing but are no longer enough. Expand your reach by using the mobile technology your shoppers want.
-
+  
+  .container
+    %section#body-text  
+      .row-fluid
+        .span8
           %h2
             Mobile Site Features
 
@@ -46,8 +47,9 @@
             %li
               %span.icon-coupons.icon
               Paperless digital coupons
+          %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
         .span4
-          .image-center  
-            = image_tag "index/mobile.png"
-          %div.center-button
-            %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
+          .features-nav-section
+            %h4.heading More Features To Explore
+            = render 'grocery_digital_marketing/features_navigation'
+            

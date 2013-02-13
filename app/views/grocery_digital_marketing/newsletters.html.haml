@@ -2,21 +2,14 @@
 
 #newsletters
   %section#feature-header
-    .container  
-      %h1 Grocery Newsletters
-      %p Expand your reach with advanced email newsletters
-  .container
-    %section#body-text
+    .container
       .row-fluid
-        .span4.image-callout
-          .image-center
+        .span4.screenshot
+          .center-image
             = image_tag "index/newsletter.png"
-          %div.center-button
-            %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
         
         .span8
-          %h2 Overview
-          
+          %h1 Grocery Newsletters
           %ul
             %li
               Powerful communication direct to customers
@@ -24,9 +17,12 @@
               Let shoppers know about sales, promos, contests, food ideas
             %li
               Improved customer interaction leads to increased sales
-
+  .container
+    %section#body-text
+      .row-fluid        
+        .span8
           %h2 Grocery Newsletter Features
-        
+
           %ul.feature-detail
             %li
               %span.icon-photos.icon
@@ -49,11 +45,8 @@
             %li
               %span.icon-web.icon
               Extensive website integration
-        /.span6
-        /  %h2 Curious? Contact Us
-        /  - @message = Message.new
-        /  = render 'messages/form'
-
-  /%hr
-  /%h2 More Features To Explore
-  /= render 'grocery_digital_marketing/features'
+          %a.btn.btn-primary{:href => 'index#contact-us'} Curious? Contact Us For More Info
+        .span4
+          .features-nav-section
+            %h4.heading More Features To Explore
+            = render 'grocery_digital_marketing/features_navigation'
