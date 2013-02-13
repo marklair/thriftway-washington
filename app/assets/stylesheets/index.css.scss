@@ -16,11 +16,6 @@ $body-type: #333;
   background: linear-gradient(to bottom, $top-color 0%,$top-color $break-point, $bottom-color $break-point, $bottom-color 100%); /* W3C */
 }
 
-body{
-  background: #fff;
-  padding-top: 76px;
-}
-
 section {
   margin: -76px 0 40px 0;
   padding: 76px 0 40px 0;
