@@ -1,0 +1,21 @@
+= stylesheet_link_tag    "detail_pages"
+
+#downloads
+  %section#feature-header
+    .container
+      %h1 Downloads
+
+.container
+  %section#features-list
+    .row-fluid
+      .span8
+        %h2 Conference Slides
+
+
+        %ul.feature-detail
+          %li= link_to "Print to Digital at the 2013 NGA Show", image_path('downloads/print_to_digital_slides_NGA_conference_2013.pdf')
+
+      .span4
+        .features-nav-section
+          %h4.heading More Features To Explore
+          = render 'grocery_digital_marketing/features_navigation'
