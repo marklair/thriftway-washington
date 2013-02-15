@@ -150,8 +150,14 @@ a:hover {
   background-image: linear-gradient(to bottom, 
     $light-btn-color, 
     $dark-btn-color);
-  border-color: 
-    $dark-btn-color;
+  border-top: 
+    1px solid $dark-btn-color;
+  border-right: 
+    1px solid darken($dark-btn-color, 5%);
+  border-bottom: 
+    1px solid darken($dark-btn-color, 5%);
+  border-left: 
+    1px solid darken($dark-btn-color, 5%);
 }
 
 .btn-primary:hover {
