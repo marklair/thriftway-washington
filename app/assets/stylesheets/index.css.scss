@@ -30,6 +30,10 @@ section#home {
   background-color: $webstop-blue;
 }
 
+section#home .btn {
+  margin-top: 20px;
+}
+
 section#solutions, section#chains, section#wholesalers, section#independents {
   border-bottom: 0;
 }
@@ -88,7 +92,6 @@ section#contact-us img {
   margin-left: -20px;
   margin-right: 20px;
   padding-left: 20px;
-  border-radius: 5px;
   @media (min-width: 1200px){
     margin-left: -29px;
     margin-right: 29px;
