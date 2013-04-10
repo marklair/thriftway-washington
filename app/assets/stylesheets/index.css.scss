@@ -224,6 +224,13 @@ section#home p {
     box-shadow: 0;
   }
 
+  section {
+    margin: 76px 0 40px 0;
+    padding: 0 0 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $gray;
+  }
+
   section#home {
     margin: 0 0 60px 0;
     text-align: center;
@@ -235,7 +242,7 @@ section#home p {
   }
 
   h1, h2, h3 {
-    text-align: center;
+    text-align: left;
   }
 
   h2 {
@@ -273,8 +280,8 @@ section#home p {
     margin: 30px 0;
   }
 
-  h1, h2, h3, #contact-us {
-    text-align: center;
+  h1, h2, h3 {
+    text-align: left;
   }
 
   h2 {
@@ -293,6 +300,13 @@ section#home p {
     margin-bottom: 0;
   }
 
+  section {
+    margin: 66px 0 40px 0;
+    padding: 10px 0 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $gray;
+  }
+
   section#home {
     margin: 0 -20px 0 -20px;
     padding: 20px;
@@ -309,9 +323,20 @@ section#home p {
     margin-bottom: 0;
   }
 
+  section {
+    margin: 66px 0 40px 0;
+    padding: 10px 0 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $gray;
+  }
+
   section#home {
     margin: 0 -20px 0 -20px;
     padding: 20px;
+  }
+
+  h1, h2, h3 {
+    text-align: left;
   }
 }
 
@@ -343,6 +368,13 @@ section#home p {
 
   .navbar-fixed-top {
     margin-bottom: 0;
+  }
+
+  section {
+    margin: 66px 0 40px 0;
+    padding: 10px 0 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $gray;
   }
 
   section#home {
