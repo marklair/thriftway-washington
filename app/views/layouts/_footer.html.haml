@@ -1,19 +1,14 @@
-.navbar.navbar-fixed-top#top
-  .container
-    %a.btn.btn-navbar{'data-toggle' => 'collapse', 'data-target' => '.nav-collapse'}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    #logo
-      %a.brand{:href => "/#top"}
-        = image_tag "index/logo.png"
-    .nav-collapse
-      %ul.nav
-        %li#scaffolding-nav
-          %a{:href => '/#top'} Home
-        %li#base-nav
-          %a{:href => '/#solutions'} Solutions
-        %li#components-nav
-          %a{:href => '/#features'} Features
-        %li#grocery-nav
-          %a{:href => '/#contact-us'} Contact Us
+.container
+  #footer
+    .row-fluid
+      %h2
+        Webstop, Inc.
+      %span
+        Digital Marketing Solutions for Grocers
+      .social  
+        %p
+          %span.icon-twitter
+          %a{href: 'http://www.twitter.com/webstop', target: '_blank'} Twitter
+        %p
+          %span.icon-facebook
+          %a{href: 'https://www.facebook.com/pages/Webstopcom-Inc/232892230331', target: '_blank'} Facebook
