@@ -21,8 +21,8 @@ $dark-btn-color: #266f13;
 }
 
 body {
-  padding: 76px 0 400px 0;
-  padding: 66px 0 400px 0\9;
+  padding: 76px 0 0 0;
+  padding: 66px 0 0 0\9;
 }
 
 .clear {
@@ -123,6 +123,10 @@ li {
   text-align: center;
 }
 
+.social {
+  margin-top: 20px;
+}
+
 /* Links and Buttons */
 
 a {
@@ -131,6 +135,22 @@ a {
 
 a:hover {
   color: $dark-blue;
+}
+
+.address-phone-container a {
+  color: white;
+}
+
+.address-phone-container a:hover {
+  text-decoration: none;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  text-decoration: underline;
 }
 
 .btn-primary {
@@ -191,6 +211,10 @@ a:hover {
     darken($dark-btn-color, 5%);
 }
 
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
 /* Feature Navigation */
 
 .features-nav-section .heading {
@@ -217,6 +241,37 @@ a:hover {
 .features-navigation a:hover {
   background-color: $gray;
   text-decoration: none;
+}
+
+.address-phone-container {
+  display: inline-block;
+  margin-top: 83px;
+  padding: 40px 150px 43px 45px;
+  background: $webstop-blue;
+  color: white;
+}
+
+.address-phone-container .icon-phone, .address-phone-container .icon-location {
+  float: left;
+  margin-right: 10px;
+}
+
+.address {
+  margin-top: 20px;
+}
+
+address {
+  float: left;
+}
+
+.numbers {
+  float: left;
+}
+
+#footer {
+  margin-top: 40px;
+  padding: 40px 45px;
+  background: $webstop-blue;
 }
 
 /* Typography */
@@ -280,10 +335,26 @@ h2 {
   margin: 20px 0 20px 0;
 }
 
+#footer h2 {
+  margin: 0;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 1px #24384e;
+}
+
 h3 {
   color: $body-type;
   font-size: 18px;
   margin-top: 10px;
+}
+
+#footer span {
+  color: white;
+}
+
+.social p {
+  font-size: 12px;
+  margin: 0;
 }
 
 /* Buttons & Links */

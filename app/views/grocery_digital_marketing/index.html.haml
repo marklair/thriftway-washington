@@ -105,22 +105,24 @@
         = render 'messages/form'
 
       .span6
-        .row-fluid
-          .span6
-            %h3
-              Address
+        .address-phone-container 
+          .phone
+            %span.icon-phone
+            .numbers
+              %span
+                Voice:
+              %a{href: 'tel:+17279422797'} (727) 942-2797
+              %br
+              %span
+                Fax: (727) 386-4112
+            .clear
+
+          .address
+            %span.icon-location
             %address
               Webstop.com, Inc.
               %br
               4746 Kylemore Court
               %br
               Palm Harbor, FL 34685
-          .span6
-            %h3
-              Phone
-            %span
-              Voice:
-            %a{href: 'tel:+17279422797'} (727) 942-2797
-            %br
-            %span
-              Fax: (727) 386-4112
+            .clear
