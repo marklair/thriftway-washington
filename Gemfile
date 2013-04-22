@@ -27,6 +27,10 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.6'
 end
 
+group :test, :development do
+  gem 'newrelic_rpm'
+end
+
 # Authlogic User Authentication
 gem 'authlogic', '~> 3.0.3'
 gem 'cancan', '~> 1.6.7'
