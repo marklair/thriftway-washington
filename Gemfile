@@ -27,7 +27,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.6'
 end
 
-group :test, :development do
+group :production do
   gem 'newrelic_rpm'
 end
 
