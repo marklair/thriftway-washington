@@ -1,0 +1,174 @@
+$webstop-blue: #369;
+$dark-blue: #214367;
+$light-blue: #d3e3f4;
+$orange: #ffad5b;
+$gray: #cbcbcb;
+$light-grey: #ececec;
+$body-type: #333;
+
+@mixin container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix();
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  @include container-fixed();
+}
+
+/* Hide Nav and Footer */
+
+.navbar {
+  display: none;
+}
+
+#footer {
+  display: none;
+}
+
+/* Rest of Page */
+
+body {
+  background-color: #f9f8de;
+  background-image: url('lead_pages/newsletter_lead_bg.jpg');
+  background-repeat: repeat-x;
+  font-family: Georgia, Times, serif;
+}
+
+.lead-header {
+  text-align: center;
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+form {
+  background-color: white;
+  border: 1px solid #00816e;
+  padding: 25px 30px;
+  color: white;
+}
+
+.lead-footer {
+  margin-top: 30px;
+  background-color: #dcdbca;
+  padding: 5px 0 5px 0;
+}
+
+.lead-footer p {
+  font-family: Georgia, Times, serif;
+  font-style: italic;
+}
+
+.lead-footer span {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.link {
+  text-align: right;
+}
+
+a, a:hover {
+  color: #00816e;
+}
+
+/* Responsive Layout */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  #feature-header {
+    margin-top: 0;
+    border: none;
+  }
+
+  h1, h2 {
+    text-align: left;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#feature-header {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  body {
+    padding-top: 0;
+  }
+
+  #feature-header {
+    margin-top: 0;
+    border: none;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  #body-text {
+    margin-top: 20px;
+  }
+
+  img {
+    text-align: center;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#feature-header {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body {
+    padding-top: 0;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  section#feature-header {
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+  }
+}

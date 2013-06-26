@@ -1,0 +1,32 @@
+= stylesheet_link_tag "lead_pages"
+
+#newsletter-lead
+  .container
+    .row-fluid
+      .span12  
+        %section.lead-header
+          = image_tag "lead_pages/newsletter_lead_header.png"
+  .container
+    .row-fluid
+      .span8
+        %section.info
+          = image_tag "lead_pages/newsletter_lead_info.png"
+      .span4
+        .form
+          %p
+            Webstop provides web, mobile and all other digital marketing solutions for Grocers. 
+          - @message = Message.new
+          = render 'messages/form'
+  
+  %section.lead-footer
+    .container
+      .row-fluid
+        .span8
+          %p
+            %span
+              Sources:
+            Information based on Webstop Analytics from a 7 store chain and Nielsen Digital Shopping Report
+
+        .span4
+          %p.link
+            %a{href: 'http://www.webstop.com/newsletters'} webstop.com/newsletters
