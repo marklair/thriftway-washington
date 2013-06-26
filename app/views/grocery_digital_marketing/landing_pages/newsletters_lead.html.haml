@@ -1,0 +1,59 @@
+= stylesheet_link_tag    "detail_pages"
+
+#weekly-ad
+  %section#feature-header
+    .container
+      .row-fluid
+        .span6.screenshot
+          .center-image
+            = image_tag "index/weekly-ad.png"
+        .span6
+          .center-justified-text
+            %h1
+              Weekly Ad
+
+            %ul
+              %li
+                Shoppers who access weekly ads online spend more in store - Nielson
+              %li
+                The weekly ad is the most popular feature on grocery websites
+              %li
+                93% of retailers display their weekly ad online, so how are you differentiating yours?
+
+            %p
+              Webstop has the weekly ad and shopping list technology for the next generation  of shoppers and their retailers. Build shopper engagement by making the digital ad transition now.
+
+.container
+  %section#features-list
+    .row-fluid
+      .span8
+        %h2
+          Weekly Ad Features
+
+        %p
+          Webstop's Weekly Ad provides and engaging digital experience for your shoppers:
+
+        %ul.feature-detail
+          %li
+            %span.icon-display.icon
+            Designed for digital, not a low-res version of print ad
+          %li
+            %span.icon-search.icon
+            Multiple browse and search options
+          %li
+            %span.icon-list.icon
+            Shopping List integration with a single click
+          %li
+            %span.icon-recipe.icon
+            Recipe links displayed with suggested meal ideas
+          %li
+            %span.icon-mobile.icon
+            Mobile weekly ad with same digital content
+          %li
+            %span.icon-coupons.icon
+            Digital coupon integration in weekly ad
+        %a.btn.btn-primary.btn-large{:href => 'index#contact-us'} Curious? Contact Us For More Info
+      .span4
+        .features-nav-section
+          %h4.heading More Features To Explore
+          = render 'grocery_digital_marketing/features_navigation'
