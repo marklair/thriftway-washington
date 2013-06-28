@@ -85,7 +85,12 @@ Template::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  match ':action' => 'grocery_digital_marketing#:action'
+  #match ':action' => 'grocery_digital_marketing#:action'
+
+  get 'grocery_digital_marketing/newsletters_lead', :to => 'grocery_digital_marketing#newsletters_lead', :as => :newsletters_lead
+  post 'grocery_digital_marketing/create', :to => 'grocery_digital_marketing#create', :as => :post_newsletters_lead
+
   root :to => "grocery_digital_marketing#index", :as => :home
+
   # extras: http://d.pr/Vt7w
 end

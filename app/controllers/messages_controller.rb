@@ -43,9 +43,11 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(params[:message])
+    @message.message_type = 'contact'
+    @message.errors.add(:content, "must not be empty") if @message.content.blank?
 
     respond_to do |format|
-      if @message.save
+      if @message.errors.size == 0 && @message.save
         NotificationsMailer.new_message(@message).deliver
         flash[:success] = 'Your message was successfully delivered!'
         format.html { redirect_to :home }
