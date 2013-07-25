@@ -1,0 +1,283 @@
+@font-face {
+	font-family: 'Iconstop';
+	src:url('Iconstop.eot');
+	src:url('Iconstop.eot?#iefix') format('embedded-opentype'),
+		url('Iconstop.svg#Iconstop') format('svg'),
+		url('Iconstop.woff') format('woff'),
+		url('Iconstop.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'Iconstop';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+
+.icon-coupons:before, .icon-edit:before, .icon-photos:before, .icon-video:before, .icon-new:before, .icon-tag:before, .icon-cart:before, .icon-phone:before, .icon-mail:before, .icon-location:before, .icon-chat:before, .icon-user:before, .icon-loading:before, .icon-settings:before, .icon-trash:before, .icon-list:before, .icon-tree:before, .icon-web:before, .icon-link:before, .icon-starburst:before, .icon-half-star:before, .icon-star:before, .icon-heart:before, .icon-add:before, .icon-info:before, .icon-checkmark:before, .icon-delete:before, .icon-google-plus:before, .icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-github:before, .icon-apple:before, .icon-android:before, .icon-windows8:before, .icon-reddit:before, .icon-linkedin:before, .icon-pinterest:before, .icon-delicious:before, .icon-stumbleupon:before, .icon-paypal:before, .icon-yelp:before, .icon-pdf:before, .icon-foursquare:before, .icon-flickr:before, .icon-home:before, .icon-search:before, .icon-cookbook:before, .icon-camera:before, .icon-barcode:before, .icon-healthy:before, .icon-power:before, .icon-html5:before, .icon-css:before, .icon-html:before, .icon-chrome:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before {
+	font-family: 'Iconstop';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-coupons:before {
+	content: "\25";
+}
+.icon-edit:before {
+	content: "\23";
+}
+.icon-photos:before {
+	content: "\21";
+}
+.icon-video:before {
+	content: "\24";
+}
+.icon-new:before {
+	content: "\26";
+}
+.icon-tag:before {
+	content: "\27";
+}
+.icon-cart:before {
+	content: "\28";
+}
+.icon-phone:before {
+	content: "\29";
+}
+.icon-mail:before {
+	content: "\2a";
+}
+.icon-location:before {
+	content: "\2b";
+}
+.icon-chat:before {
+	content: "\2c";
+}
+.icon-user:before {
+	content: "\2d";
+}
+.icon-loading:before {
+	content: "\2e";
+}
+.icon-settings:before {
+	content: "\2f";
+}
+.icon-trash:before {
+	content: "\30";
+}
+.icon-list:before {
+	content: "\31";
+}
+.icon-tree:before {
+	content: "\32";
+}
+.icon-web:before {
+	content: "\33";
+}
+.icon-link:before {
+	content: "\34";
+}
+.icon-starburst:before {
+	content: "\35";
+}
+.icon-half-star:before {
+	content: "\36";
+}
+.icon-star:before {
+	content: "\37";
+}
+.icon-heart:before {
+	content: "\38";
+}
+.icon-add:before {
+	content: "\39";
+}
+.icon-info:before {
+	content: "\3b";
+}
+.icon-checkmark:before {
+	content: "\3c";
+}
+.icon-delete:before {
+	content: "\3a";
+}
+.icon-google-plus:before {
+	content: "\3d";
+}
+.icon-facebook:before {
+	content: "\3e";
+}
+.icon-instagram:before {
+	content: "\3f";
+}
+.icon-twitter:before {
+	content: "\40";
+}
+.icon-feed:before {
+	content: "\41";
+}
+.icon-youtube:before {
+	content: "\42";
+}
+.icon-vimeo:before {
+	content: "\43";
+}
+.icon-github:before {
+	content: "\45";
+}
+.icon-apple:before {
+	content: "\46";
+}
+.icon-android:before {
+	content: "\47";
+}
+.icon-windows8:before {
+	content: "\48";
+}
+.icon-reddit:before {
+	content: "\49";
+}
+.icon-linkedin:before {
+	content: "\4a";
+}
+.icon-pinterest:before {
+	content: "\4c";
+}
+.icon-delicious:before {
+	content: "\4d";
+}
+.icon-stumbleupon:before {
+	content: "\4e";
+}
+.icon-paypal:before {
+	content: "\50";
+}
+.icon-yelp:before {
+	content: "\51";
+}
+.icon-pdf:before {
+	content: "\52";
+}
+.icon-foursquare:before {
+	content: "\4f";
+}
+.icon-flickr:before {
+	content: "\44";
+}
+.icon-home:before {
+	content: "\22";
+}
+.icon-search:before {
+	content: "\53";
+}
+.icon-cookbook:before {
+	content: "\54";
+}
+.icon-camera:before {
+	content: "\55";
+}
+.icon-barcode:before {
+	content: "\56";
+}
+.icon-healthy:before {
+	content: "\57";
+}
+.icon-power:before {
+	content: "\58";
+}
+.icon-html5:before {
+	content: "\59";
+}
+.icon-css:before {
+	content: "\5a";
+}
+.icon-html:before {
+	content: "\5b";
+}
+.icon-chrome:before {
+	content: "\5c";
+}
+.icon-firefox:before {
+	content: "\5d";
+}
+.icon-IE:before {
+	content: "\5e";
+}
+.icon-opera:before {
+	content: "\5f";
+}
+.icon-safari:before {
+	content: "\60";
+}
+
+section, header, footer {display: block;}
+
+.glyph {
+font-size: 16px;
+float: left;
+text-align: center;
+background: #eee;
+padding: .75em;
+margin: .75em 1.5em .75em 0;
+width: 7em;
+border-radius: .25em;
+box-shadow: inset 0 0 0 1px #f8f8f8, 0 0 0 1px #CCC;
+}
+.glyph input {
+width: 100%;
+text-align: center;
+font-family: consolas, monospace;
+}
+.glyph input, .mtm {
+margin-top: .75em;
+}
+.w-main {
+width: 80%;
+}
+.centered {
+margin-left: auto;
+margin-right: auto;
+}
+.fs1 {
+font-size: 2em;
+}
+header {
+margin: 2em 0;
+padding-bottom: .5em;
+color: #666;
+box-shadow: 0 2px #eee;
+}
+header h1 {
+font-size: 2em;
+font-weight: normal;
+}
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after, .clear { clear: both; }
+footer {
+margin-top: 2em;
+padding: .5em 0;
+box-shadow: 0 -2px #eee;
+}
+
+.box1 {
+font-size: 16px;
+display: inline-block;
+width: 15em;
+padding: .25em .5em;
+background: #eee;
+margin: .5em 1em .5em 0;
+}

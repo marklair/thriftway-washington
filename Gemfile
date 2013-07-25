@@ -1,20 +1,19 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'thin'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Database
 group :test, :development do
- gem 'mysql2', '~> 0.3.11'
+  gem 'mysql2', '~> 0.3.11'
 end
 
 group :production do
- gem 'pg', '~> 0.14.1'
+  gem 'unicorn'
+  gem 'pg'
 end
-
 
 # View scripts
 gem 'haml', '~> 3.1.4'
@@ -28,10 +27,6 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.6'
 end
 
-group :production do
-  gem 'newrelic_rpm'
-end
-
 # Authlogic User Authentication
 gem 'authlogic', '~> 3.0.3'
 gem 'cancan', '~> 1.6.7'
@@ -43,7 +38,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  # gem 'therubyracer'
 
   gem 'uglifier', '~> 1.2.3'
 

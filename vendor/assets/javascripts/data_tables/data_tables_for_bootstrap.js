@@ -168,30 +168,11 @@ if ( $.fn.DataTable.TableTools ) {
 // 	} );
 
 /* TABLE DATA-API
-  * ============ */
+ * ============== */
 $(function () {
-		$(window).on('load', function () {
+	$(window).on('load', function () {
     $('[data-table]').each(function () {
-    	$(this).dataTable()
-    //   $(this).dataTable( {
-				// "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-				// "sPaginationType": "bootstrap",
-				// "oLanguage": {
-				// 	"sLengthMenu": "_MENU_ records per page"
-				// }
-	   //  })
-    })
-  })
-
-
-	// $('body').on('click.table.data-api', '[data-table="true"]', function (e) {
-	//   e.preventDefault()
-	//   $(this).dataTable( {
-	// 		"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-	// 		"sPaginationType": "bootstrap",
-	// 		"oLanguage": {
-	// 			"sLengthMenu": "_MENU_ records per page"
-	// 		}
- //    })
- //  })
-} );
+    	$(this).dataTable();
+    });
+  });
+});

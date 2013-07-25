@@ -1,19 +1,46 @@
-.navbar.navbar-fixed-top#top
-  .container
-    %a.btn.btn-navbar{'data-toggle' => 'collapse', 'data-target' => '.nav-collapse'}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    #logo
-      %a.brand{:href => "/#top"}
-        = image_tag "index/logo.png"
-    .nav-collapse
-      %ul.nav
-        %li#scaffolding-nav
-          %a{:href => '/#top'} Home
-        %li#base-nav
-          %a{:href => '/#solutions'} Solutions
-        %li#components-nav
-          %a{:href => '/#features'} Features
-        %li#grocery-nav
-          %a{:href => '/#contact-us'} Contact Us
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{'data-toggle' => 'collapse', 'data-target' => '.nav-collapse'}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "/guides/index"} Style Guide
+      .nav-collapse
+        %ul.nav
+          %li#scaffolding-nav
+            %a{:href => '/guides/bootstrap/scaffolding'} Scaffolding
+          %li#base-nav
+            %a{:href => '/guides/bootstrap/base'} Base Styles
+          %li#components-nav
+            %a{:href => '/guides/bootstrap/components'} Base Components
+          %li#grocery-nav
+            %a{:href => '/guides/grocery'} Grocery Components
+          %li#javascript-nav
+            %a{:href => '/guides/bootstrap/javascript'} Plugins
+          / %li#less-nav
+          /   %a{:href => '/guides/bootstrap/less'} Themes
+          / %li#testing-nav
+          /   %a{:href => '/guides/bootstrap/testing'} Testing
+        / %ul.nav.pull-right
+        /   %li.divider-vertical
+        /   %li.dropdown
+        /     %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown"}
+        /       %span.icon-user.icon-white.icon
+        /       Account
+        /       %span.caret
+        /     %ul.dropdown-menu
+
+        /       - if current_user
+        /         %li= link_to "View Account", user_path(current_user.id)
+        /         %li= link_to "Edit Account", edit_user_path(current_user.id)
+        /         %li= link_to "Logout", :logout
+        /       - else
+        /         %li= link_to "Register", new_account_path
+        /         %li= link_to "Login", :login
+        /         %li.divider
+        /         %li=link_to "Forgot password", new_password_reset_path
+        /       -if can? :read, User
+        /         %li.divider
+        /         %li= link_to "Browse Accounts", users_path
+

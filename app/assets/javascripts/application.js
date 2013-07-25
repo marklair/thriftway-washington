@@ -17,6 +17,6 @@
 //= require data_tables/jquery.dataTables.min
 //= require data_tables/data_tables_for_bootstrap
 //= require date_picker/bootstrap-datepicker
-//= require webstop
-//= require localscroll
-//= require scrollto
+//= require redactor/redactor
+//= require redactor_data_api
+
