@@ -1,5 +1,7 @@
 Template::Application.routes.draw do
 
+  resources :messages
+
   get "locations/index"
 
   get "tests/edge_cases"

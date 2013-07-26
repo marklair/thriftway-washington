@@ -1,0 +1,41 @@
+= form_for @message do |f|
+  - if @message.errors.any?
+    #error_explanation.alert.alert-block.alert-error
+      %a.close{'data-dismiss' => 'alert', :href => '#'} x
+      %h4.alert-heading= "Sorry, #{pluralize(@message.errors.count, "error")} occurred…"
+      - @message.errors.full_messages.each do |msg|
+        %p= msg
+
+  .field.row-fluid
+    = f.label :firstname, "First Name*"
+    = f.text_field :firstname, class: 'span11', placeholder: 'First Name'
+  .field
+    = f.label :lastname, "Last Name*"
+    = f.text_field :lastname, class: 'span11', placeholder: 'Last Name'
+  .field.row-fluid
+    = f.label :email, "Email*"
+    = f.email_field :email, class: 'span11', placeholder: 'Email Address'
+  .field.row-fluid
+    = f.label :address
+    = f.text_field :address, class: 'span11', placeholder: 'Street Address'
+  .field.row-fluid
+    = f.text_field :city, class: 'span6', placeholder: 'City'
+    = f.text_field :state, class: 'span2', placeholder: 'State'
+    = f.text_field :zip, class: 'span3', placeholder: 'Zip Code'
+  .field.row-fluid
+    = f.label :phone, "Phone Number*"
+    = f.text_field :phone, class: 'span11', placeholder: 'Phone Number'
+  .field.row-fluid
+    = f.label :topic, "Area of Interest*"
+    = collection_select(:message, :message_topic_id, MessageTopic.all, :id, :name, :prompt => true)
+  .field.row-fluid
+    = f.label :content, "Message*"
+    = f.text_area :content, class: 'span11', rows: '5'
+  .actions.row-fluid
+    = f.submit 'Send Message', class: 'btn btn-primary btn-large'
+  .field.row-fluid
+    %p 
+      %br
+      %br
+      %small
+        * indicates required field
