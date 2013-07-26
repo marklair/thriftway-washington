@@ -1,0 +1,28 @@
+.container
+
+  #logo-tagline
+    %a.brand{:href => "index"}
+      = image_tag "logo-thriftway-washington.png"
+
+  .clear
+
+  .navbar
+    .navbar-inner
+      %ul.nav
+        %li
+          %a{:href => '/home'}
+            %span.icon-home
+            Home
+        %li
+          %a{:href => '/locations/index'}
+            %span.icon-location
+            Store Locations
+        %li
+          %a{:href => '/about_us'}
+            %span.icon-user
+            About Us
+        %li
+          %a{:href => '/contact_us'}
+            %span.icon-mail
+            Contact Us
+  .clear

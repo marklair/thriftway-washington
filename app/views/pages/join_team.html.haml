@@ -1,0 +1,35 @@
+%section
+  .container#form
+    .row-fluid
+      .span6
+        .contact-container
+          %h2
+            Thanks for connecting with the Fresh Thyme Farmers Market team! 
+          %p
+            We love hearing from members of our communities, vendor partners and potential Fresh Thyme team members.  Feel free to comment, ask questions and subscribe to our email list. 
+          %p 
+            Once your form is completed, your message will be sent directly to the Fresh Thyme team for response.
+          %p
+            For the most current Fresh Thyme updates, “like” us on Facebook.
+          %p
+            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FFreshThymeFarmersMarkets%3Ffref%3Dts&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+
+      .span6
+        .form-container
+          %h2 What can we help you with?
+          - @message = Message.new
+          = render 'messages/form'
+          -#
+            %ul.form-types
+              %li
+                Subscribe to our Newsletter
+              %li
+                Suggest a Location
+              %li
+                Become a Vendor Partner
+              %li
+                Join the Fresh Thyme Team
+              %li
+                Submit a Media Inquiry
+              %li
+                Share Comments & Suggestions

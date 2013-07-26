@@ -1,0 +1,100 @@
+$webstop-blue: #369;
+$light-blue: #d3e3f4;
+$dark-gray: #333;
+$haml: #63878b;
+$sass: #cc6699;
+
+@mixin border_container {
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+html {
+  background: $webstop-blue; /* Old browsers */
+  background: -moz-linear-gradient(top, $webstop-blue 0%, $webstop-blue 450px, #ffffff 450px, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$webstop-blue), color-stop(450px,$webstop-blue), color-stop(450px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $webstop-blue 0%,$webstop-blue 450px,#ffffff 450px,#ffffff 100%); /* W3C */
+}
+
+img {
+    margin-bottom: 20px;
+  }
+
+header {
+  margin: 30px 0;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+[class*="span"] {
+  margin-left: 0;
+}
+
+.row, .row-fluid {
+  margin-bottom: 20px;
+}
+
+.feature {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ad-block {
+  margin-bottom: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  text-align: center;
+}
+
+.haml {
+  background-color: $haml;
+}
+
+.sass {
+  background-color: $sass;
+}
+
+h3 {
+  line-height: 30px;
+}
+
+/* Responsive Layout */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  header {
+    margin: 10px 0 0 0;
+  }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  header {
+    margin: 100px 0 0 0;
+  }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  header {
+    margin: 100px 0 0 0;
+  }
+}
+

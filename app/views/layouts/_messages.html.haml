@@ -1,0 +1,25 @@
+- if flash[:notice]
+  #notice.alert.alert-block{'data-alert' => 'alert'}
+    %a.close{'data-dismiss' => 'alert', :href => '#'} x
+    %h4.alert-heading Please Note:
+    %p= flash[:notice]
+
+- if flash[:information]
+  #success.alert.alert-block.alert-info
+    %a.close{'data-dismiss' => 'alert', :href => '#'} x
+    %h4.alert-heading We thought you should know... 
+    %p= flash[:information]
+      
+- if flash[:error]
+  #warning.alert.alert-block.alert-error
+    %a.close{'data-dismiss' => 'alert', :href => '#'} x
+    %h4.alert-heading Sorry, an error has occurred...
+    %p= flash[:error]
+      
+- if flash[:success]
+  #success.alert.alert-block.alert-success
+    %a.close{'data-dismiss' => 'alert', :href => '#'} x
+    %h4.alert-heading Congratulations! 
+    %p= flash[:success]
+
+

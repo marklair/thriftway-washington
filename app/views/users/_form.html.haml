@@ -1,0 +1,29 @@
+= form_for(@user) do |f|
+
+  - if @user.errors.any?
+    - @errors = @user.errors
+    = render :partial => "layouts/full_error_messages"
+    
+  .field
+    = f.label :username
+    = f.text_field :username
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :password
+    = f.password_field :password
+  .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  .field
+    = f.label :roles
+    %ul.unstyled
+      -for role in User::ROLES
+        %li
+          %label.checkbox
+            = check_box_tag "user[roles][]", role, @user.roles.include?(role), :class => 'checkbox'
+            =h role.humanize
+    = hidden_field_tag "user[roles][]", "" 
+  .form-actions
+    = f.submit :class => 'btn btn-primary'
