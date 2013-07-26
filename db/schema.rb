@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326023136) do
+ActiveRecord::Schema.define(:version => 20130726155826) do
+
+  create_table "locations", :force => true do |t|
+    t.string   "storenumber"
+    t.string   "unified"
+    t.string   "storename"
+    t.string   "adgroup"
+    t.string   "url"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.integer  "sort"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"

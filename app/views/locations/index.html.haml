@@ -1,0 +1,23 @@
+%h1.heading.first-heading.major-heading
+  Store Locations
+%section
+  %table.data_table#locations
+    %thead
+      %tr.heading.middle-heading
+        %th City / Store Name
+        %th Address
+        %th Phone Number
+        %th Website
+
+
+    %tbody
+      - @locations.sort_by { |location| location[:sort] }.each do |location|
+        %tr
+          %td
+            %strong= location.city
+            = location.storename
+          %td= location.address
+          %td= location.phone
+          %td
+            %strong= link_to location.url
+  %div.clear

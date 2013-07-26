@@ -1,5 +1,7 @@
 Template::Application.routes.draw do
 
+  get "locations/index"
+
   get "tests/edge_cases"
 
   get "tests/main_tags"
