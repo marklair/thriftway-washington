@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726155826) do
+ActiveRecord::Schema.define(:version => 20130726192704) do
 
   create_table "locations", :force => true do |t|
     t.string   "storenumber"
@@ -28,6 +28,30 @@ ActiveRecord::Schema.define(:version => 20130726155826) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "message_topics", :force => true do |t|
+    t.string   "name"
+    t.string   "forwarding_address"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.integer  "message_topic_id"
+    t.text     "content"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "messages", ["message_topic_id"], :name => "index_messages_on_message_topic_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"
