@@ -1,5 +1,6 @@
 Template::Application.routes.draw do
 
+
   resources :messages
 
   get "locations/index"
