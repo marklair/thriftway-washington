@@ -15,10 +15,6 @@ class CreateMessages < ActiveRecord::Migration
 
       t.timestamps
     end
-    create_table :message_topics do |t|
-      t.string :name
-      t.string :forwarding_address
-    end
     add_index :messages, :message_topic_id
   end
 end
