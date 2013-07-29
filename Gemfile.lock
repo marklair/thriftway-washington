@@ -160,6 +160,6 @@ DEPENDENCIES
   rspec-rails (~> 2.6)
   sass-rails (~> 3.2.5)
   therubyracer
-  thin
+  thin (~> 1.5.1)
   uglifier (~> 1.2.3)
   unicorn
