@@ -1,24 +1,16 @@
 .container
   %section#footer
-    .row-fluid
-      .span12#social
-        %h2
-          Follow our progress on
-        %ul
+    .navbar
+      .navbar-inner
+        %ul.nav
           %li
-            %a{:href => 'https://www.facebook.com/Thriftway'}
-              = image_tag "facebook.png"
-              Facebook
+            %a.span.icon-home{:href => '/index'}
           %li
-            %a{:href => 'https://twitter.com/Thriftway'}
-              = image_tag "twitter.png"
-              Twitter
+            %a{:href => '/locations/index'}
+              %span.icon-location
           %li
-            %a{:href => 'http://pinterest.com/Thriftway/'}
-              = image_tag "pinterest.png"
-              Pinterest
+            %a{:href => '/about_us'}
+              %span.icon-user
           %li
-            %a{:href => 'http://instagram.com/Thriftway'}
-              = image_tag "instagram.png"
-              Instagram
-
+            %a{:href => '/contact_us'}
+              %span.icon-mail
