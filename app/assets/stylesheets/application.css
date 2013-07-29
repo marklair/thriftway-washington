@@ -15,6 +15,11 @@
  *= require redactor/redactor
  *= require icons
 */
+html {
+    background: #ffffff !important;
+    background: url('background-plain.jpg') repeat-x !important;
+}
+
 body {
     background: transparent url('background.jpg') repeat-x !important;
 }
@@ -55,4 +60,21 @@ body {
     color: #aaaaaa;
     text-decoration: none;
     text-shadow: 0 0 0 white;
+}
+
+.copyright {
+    color: white;
+    line-height: 20px;
+    float: right;
+    margin: 10px 10px 0 0;
+    font-style: oblique;
+
+}
+
+a {
+    color: #007e60;
+}
+
+h3 {
+    color: #007e60;
 }

@@ -1,6 +1,23 @@
-%section
-  .container#about-us
-    .container-page
+= stylesheet_link_tag "about"
+
+.container
+  .row-fluid
+    .span12
       .row-fluid
-        %h2
-          About Us
+        .span3
+          = image_tag "about/about-image.png", :width=> "285", :height=> "285"
+        .span9
+          %h3
+            Washington Thriftway
+          %p
+            Thriftway offers local, fresh foods, providing outstanding customer service and supporting the communities we serve. From on-the-go delights to expert advice on meal preparation, our staff is eager to make your shopping experience second to none. In every department you'll find exceptional quality, selection and value. We offer a wide variety of fresh local produce, quality meats, and the convenience of in-store bakeries and hot delis. Discover the local ownership difference.
+          %p.link
+            For information about the Thriftway group, please contact
+            %br
+            %strong= link_to "Northwest Grocers", "http://www.northwestgrocers.com", :target => "_blank"
+
+
+
+
+.container
+  %section#row3

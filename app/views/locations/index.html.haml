@@ -1,3 +1,5 @@
+= javascript_include_tag "data-table"
+
 %section
   .container#about-us
     .container-page
@@ -5,7 +7,7 @@
         %h1.heading.first-heading.major-heading
           Store Locations
         %section
-          %table.table.table-bordered#locations
+          %table.table{:class => "table-bordered", "data-table" => ""}
             %thead
               %tr.heading.middle-heading
                 %th City / Store Name
@@ -21,7 +23,7 @@
                     %strong= location.city
                     = location.storename
                   %td= location.address
-                  %td= location.phone
+                  %td= number_to_phone(location.phone, area_code: true)
                   %td
-                    %strong= link_to location.url
+                    %strong= link_to location.url, location.url, :target => "_blank"
           %div.clear

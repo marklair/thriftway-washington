@@ -4,13 +4,12 @@
       .navbar-inner
         %ul.nav
           %li
-            %a.span.icon-home{:href => '/index'}
+            -#%a.span.icon-home{:href => '/index'}
+            %a.span{:href => '/index'}Home
           %li
-            %a{:href => '/locations/index'}
-              %span.icon-location
+            %a.span{:href => '/locations/index'}Store Locations
           %li
-            %a{:href => '/about_us'}
-              %span.icon-user
-          %li
-            %a{:href => '/contact_us'}
-              %span.icon-mail
+            %a.span{:href => '/about_us'}About Us
+          -#%li
+            %a.span{:href => '/contact_us'}Contact Us
+        %p.copyright= "&copy;".html_safe + " 2013 Northwest Grocers | Powered by Webstop"
