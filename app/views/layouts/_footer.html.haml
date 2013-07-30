@@ -5,11 +5,11 @@
         %ul.nav
           %li
             -#%a.span.icon-home{:href => '/index'}
-            %a.span{:href => '/index'}Home
+            =link_to "Home", home_path
           %li
-            %a.span{:href => '/locations/index'}Store Locations
+            = link_to "Store Locations", locations_path
           %li
-            %a.span{:href => '/about_us'}About Us
+            = link_to "About Us", '/about_us'
           -#%li
             %a.span{:href => '/contact_us'}Contact Us
         %p.copyright= "&copy;".html_safe + " 2013 Northwest Grocers | Powered by Webstop"
