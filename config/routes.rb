@@ -2,8 +2,9 @@ Template::Application.routes.draw do
 
 
   resources :messages
+  resources :locations
 
-  get "locations/index"
+  #get "locations/index"
 
   get "tests/edge_cases"
 
