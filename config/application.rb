@@ -58,5 +58,8 @@ module Template
 
     # add app/assets/fonts to the asset path
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    
+    # Added by Roy to fix asset precompile breakage on Heroku.  Active Record is unavailable during asset precompilation.
+    config.assets.initialize_on_precompile = false
   end
 end
