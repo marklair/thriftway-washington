@@ -4,8 +4,10 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    fields = {:subject => "Thriftway Washington Contact: #{message.message_topic.name}"}
-    fields[:cc] = message.message_topic.forwarding_address unless message.message_topic.forwarding_address.blank?
+    fields = {:subject => "Thriftway Washington Contact:"}
+    # for inclusion of message topics
+    #fields = {:subject => "Thriftway Washington Contact: #{message.message_topic.name}"}
+    #fields[:cc] = message.message_topic.forwarding_address unless message.message_topic.forwarding_address.blank?
     mail(fields)
   end
 
