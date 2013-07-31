@@ -25,7 +25,7 @@
   .field.row-fluid
     = f.label :phone, "Phone Number*"
     = f.text_field :phone, class: 'span11', placeholder: 'Phone Number'
-  .field.row-fluid
+  -#.field.row-fluid
     = f.label :topic, "Area of Interest*"
     = collection_select(:message, :message_topic_id, MessageTopic.all, :id, :name, :prompt => true)
   .field.row-fluid
