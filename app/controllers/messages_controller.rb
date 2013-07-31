@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  #load_and_authorize_resource
+  load_and_authorize_resource
 
   # GET /messages
   # GET /messages.json
@@ -37,7 +37,6 @@ class MessagesController < ApplicationController
   # GET /messages/1/edit
   def edit
     @message = Message.find(params[:id])
-
   end
 
   # POST /messages
