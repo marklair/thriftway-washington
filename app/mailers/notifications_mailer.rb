@@ -1,6 +1,6 @@
 class NotificationsMailer < ActionMailer::Base
   default from: "support@webstop.com"
-  default to:   "mark@webstop.com" # change
+  default to:   "info@thriftway.com" # change
 
   def new_message(message)
     @message = message
